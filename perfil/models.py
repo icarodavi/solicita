@@ -6,9 +6,6 @@ import re
 from utils.validacpf import valida_cpf
 
 
-# Create your models here.
-
-
 class Perfil(models.Model):
     usuario = models.OneToOneField(
         User, verbose_name=_("Usuário"), on_delete=models.CASCADE)
@@ -43,7 +40,7 @@ class Perfil(models.Model):
 
         cpf_enviado = self.cpf or None
         cpf_salvo = None
-        perfil = PerfilUsuario.objects.filter(cpf=cpf_enviado).first()
+        perfil = Perfil.objects.filter(cpf=cpf_enviado).first()
 
         if perfil:
             cpf_salvo = perfil.cpf
