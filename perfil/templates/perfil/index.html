@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block titulo %}| Login{% endblock titulo %}
+
+{% block conteudo %}
+<div class="content-header">
+    <div class="container">
+      <div class="row mb-2">
+{% comment %} <section class="content"> {% endcomment %}
+    <div class="container-fluid">
+      <div class="row">
+        <!-- left column -->
+        <div class="col-md-12">
+          <!-- jquery validation -->
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">Login <small>para acessar o sistema entre com seu login e senha</small></h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form id="quickForm">
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Usuário</label>
+                  <input type="text" name="user" class="form-control" id="exampleInputEmail1" placeholder="Digite seu usuário">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Senha</label>
+                  <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Digite sua senha">
+                </div>
+                <div class="form-group mb-0">
+                  
+                    <span class=""><a href="#">Esqueci minha senha</a>.</span>
+                  
+                </div>
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary">Entrar</button>
+              </div>
+            </form>
+          </div>
+          <!-- /.card -->
+          </div>
+        <!--/.col (left) -->
+        <!-- right column -->
+        <div class="col-md-6">
+
+        </div>
+        <!--/.col (right) -->
+      </div>
+      <!-- /.row -->
+    </div><!-- /.container-fluid -->
+  {% comment %} </section> {% endcomment %}
+</div></div></div>
+  <!-- /.content -->
+{% endblock conteudo %}
