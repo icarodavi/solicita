@@ -19,4 +19,5 @@ sqlparse==0.4.2
 toml==0.10.2
 typing_extensions==4.1.1
 tzdata==2022.1
+whitenoise==6.0.0
 wrapt==1.13.3
