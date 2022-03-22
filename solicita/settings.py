@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'secretaria',
     'solicitacao',
     'perfil',
+    'produto',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
