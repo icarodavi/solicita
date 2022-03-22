@@ -6,4 +6,4 @@ from django.views.generic import View
 
 class SolicitacaoIndex(View):
     def get(self, *args, **kwargs):
-        return HttpResponse('SOLICITAÇÃO')
+        return HttpResponse('SOLICITAÇÃO!')
