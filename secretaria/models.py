@@ -10,3 +10,6 @@ class Secretaria(models.Model):
     endereco = models.CharField(max_length=200)
     secretario = models.CharField(max_length=120)
     ativo = models.BooleanField()
+
+    def __str__(self):
+        return f'{self.nome} - {self.prefeitura}'

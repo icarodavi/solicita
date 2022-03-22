@@ -1,3 +1,10 @@
 from django.contrib import admin
+from .models import Secretaria
 
-# Register your models here.
+
+class SecretariaAdmin(admin.ModelAdmin):
+    list_display = ['nome', 'prefeitura', 'secretario', 'ativo']
+    list_editable = ['ativo']
+
+
+admin.site.register(Secretaria, SecretariaAdmin)
