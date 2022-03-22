@@ -148,3 +148,8 @@ MESSAGE_TAGS = {
 }
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# CONFIGURAÇÕES DE AUTENTICAÇÃO
+LOGIN_REDIRECT_URL = 'solicitacao:index'
+LOGOUT_REDIRECT_URL = 'perfil:login'
+LOGIN_URL = 'perfil:login'

@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load crispy_forms_tags %}
 {% block titulo %}| Login{% endblock titulo %}
 
 {% block conteudo %}
@@ -11,6 +11,7 @@
       <div class="row">
         <!-- left column -->
         <div class="col-md-12">
+          {% comment %} 
           <!-- jquery validation -->
           <div class="card card-primary">
             <div class="card-header">
@@ -36,7 +37,7 @@
               </div>
               <!-- /.card-body -->
               <div class="card-footer">
-                <button type="submit" class="btn btn-primary">Entrar</button>
+                <button type="submit"/ class="btn btn-p/rimary">Entrar</button>
               </div>
             </form>
           </div>
@@ -45,13 +46,33 @@
         <!--/.col (left) -->
         <!-- right column -->
         <div class="col-md-6">
-
+ {% endcomment %}
+ <div class="card card-info">
+  <div class="card-header">
+    <h3 class="card-title">Login <small>para acessar o sistema entre com seu login e senha</small></h3>
+  </div>
+    <form id="quickForm" method="POST">
+      <div class="card-body">
+        <div class="form-group">
+          {% csrf_token %}
+    {{ form|crispy }}
+    <p><a href="#">Esqueci minha senha</a></p>
+    <button type="submit" class="btn btn-info">Entrar</button>
         </div>
+      </div>
+    </form>
+        </div>
+      </div>
         <!--/.col (right) -->
       </div>
       <!-- /.row -->
-    </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.container-fluid -->
   {% comment %} </section> {% endcomment %}
-</div></div></div>
+</div>
+</div>
+</div>
+</div>
   <!-- /.content -->
+
 {% endblock conteudo %}
