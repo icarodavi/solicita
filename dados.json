@@ -200,6 +200,126 @@
   }
 },
 {
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "prefeitura",
+    "model": "prefeitura"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "secretaria",
+    "model": "secretaria"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "solicitacao",
+    "model": "solicitacaoitem"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "solicitacao",
+    "model": "solicitacao"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "perfil",
+    "model": "perfil"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "produto",
+    "model": "variacao"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "produto",
+    "model": "produto"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "0xw9bhb1rwvfaptqhdfsj974ftidjr0s",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQBf-FsyFAgQWP3v0GssAiVQNJaU_Gf9cmPej1zcx7sYDbWsM2aAlzZmcm2el3i5ge1HaQ79hunafe1mWOfFf4QQe_9kzPy-H-HVQc9VuXiSw5MEUKbb3xhAKkdiJr6R0mHY1XIKIrkwZHqAQokJiiUHZSqBV7fwDANjaw:1nX14K:FuQ_g5O6L2ZrJYT1qoDhHRa0FRfcrdNzouSig2HokGg",
+    "expire_date": "2022-04-06T13:30:32.255Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "82f3ywgdnk2pw28xczenemixih4y0egu",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQBf-FsyFAgQWP3v0GssAiVQNJaU_Gf9cmPej1zcx7sYDbWsM2aAlzZmcm2el3i5ge1HaQ79hunafe1mWOfFf4QQe_9kzPy-H-HVQc9VuXiSw5MEUKbb3xhAKkdiJr6R0mHY1XIKIrkwZHqAQokJiiUHZSqBV7fwDANjaw:1nX4Dq:9_AA_1u1Zb2Hk8zNt-qk9JdG-ziqs6pGP87an_qu8p4",
+    "expire_date": "2022-04-06T16:52:34.313Z"
+  }
+},
+{
   "model": "auth.permission",
   "pk": 1,
   "fields": {
@@ -839,22 +959,6 @@
     "date_joined": "2022-03-19T20:05:46Z",
     "groups": [],
     "user_permissions": []
-  }
-},
-{
-  "model": "sessions.session",
-  "pk": "0xw9bhb1rwvfaptqhdfsj974ftidjr0s",
-  "fields": {
-    "session_data": ".eJxVjMEOwiAQBf-FsyFAgQWP3v0GssAiVQNJaU_Gf9cmPej1zcx7sYDbWsM2aAlzZmcm2el3i5ge1HaQ79hunafe1mWOfFf4QQe_9kzPy-H-HVQc9VuXiSw5MEUKbb3xhAKkdiJr6R0mHY1XIKIrkwZHqAQokJiiUHZSqBV7fwDANjaw:1nX14K:FuQ_g5O6L2ZrJYT1qoDhHRa0FRfcrdNzouSig2HokGg",
-    "expire_date": "2022-04-06T13:30:32.255Z"
-  }
-},
-{
-  "model": "sessions.session",
-  "pk": "82f3ywgdnk2pw28xczenemixih4y0egu",
-  "fields": {
-    "session_data": ".eJxVjMEOwiAQBf-FsyFAgQWP3v0GssAiVQNJaU_Gf9cmPej1zcx7sYDbWsM2aAlzZmcm2el3i5ge1HaQ79hunafe1mWOfFf4QQe_9kzPy-H-HVQc9VuXiSw5MEUKbb3xhAKkdiJr6R0mHY1XIKIrkwZHqAQokJiiUHZSqBV7fwDANjaw:1nX4Dq:9_AA_1u1Zb2Hk8zNt-qk9JdG-ziqs6pGP87an_qu8p4",
-    "expire_date": "2022-04-06T16:52:34.313Z"
   }
 },
 {
