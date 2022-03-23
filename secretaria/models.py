@@ -1,4 +1,3 @@
-from tkinter import CASCADE
 from django.db import models
 from prefeitura.models import Prefeitura
 # Create your models here.
