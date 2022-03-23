@@ -47,13 +47,13 @@ class Produto(models.Model):
             quality=50
         )
 
-    def get_preco_format(self):
-        return utils.formata_preco(self.preco_marketing)
-    get_preco_format.short_description = 'Preço'
+    # def get_preco_format(self):
+    #     return utils.formata_preco(self.preco_marketing)
+    # get_preco_format.short_description = 'Preço'
 
-    def get_preco_promocional_format(self):
-        return utils.formata_preco(self.preco_marketing_promocional)
-    get_preco_promocional_format.short_description = 'Preço promocional'
+    # def get_preco_promocional_format(self):
+    #     return utils.formata_preco(self.preco_marketing_promocional)
+    # get_preco_promocional_format.short_description = 'Preço promocional'
 
 
 class Variacao(models.Model):

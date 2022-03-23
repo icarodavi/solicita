@@ -3,10 +3,12 @@ from perfil.models import Perfil
 from secretaria.models import Secretaria
 from django.utils.translation import gettext as _
 
+
 class Solicitacao(models.Model):
     usuario = models.ForeignKey(Perfil, on_delete=models.CASCADE)
     secretaria = models.ForeignKey(Secretaria, on_delete=models.DO_NOTHING)
     qtd_total = models.PositiveIntegerField()
+    data = models.DateField('Data')
     status = models.CharField(default='P', max_length=1, choices=(
         ('A', 'Aprovado'), ('C', 'Criado'), ('R', 'Reprovado'),
         ('P', 'Pendente'), ('E', 'Enviado'), ('F', 'Finalizado'),))
@@ -30,8 +32,8 @@ class SolicitacaoItem(models.Model):
         _("Imagem"), max_length=2000, blank=True, null=True)
 
     def __str__(self):
-        return f'Item do Pedido nº {self.pedido.id}'
+        return f'Item da Solicitação nº {self.solicitacao.id}'
 
     class Meta:
-        verbose_name = 'Item do Pedido'
-        verbose_name_plural = 'Itens do Pedido'
+        verbose_name = 'Item da Solicitação'
+        verbose_name_plural = 'Itens da Solicitação'

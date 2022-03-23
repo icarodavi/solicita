@@ -1,10 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<!--
-This is a starter template page. Use this page to start your new project from
-scratch. This page gets rid of all links and provides the needed markup only.
--->
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,26 +9,28 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="{% static 'plugins/fontawesome-free/css/all.min.css' %}">
+  {% comment %} <link rel="stylesheet" href="{% static 'plugins/fontawesome-free/css/all.min.css' %}"> {% endcomment %}
   <!-- Theme style -->
   <link rel="stylesheet" href="{% static 'dist/css/adminlte.min.css' %}">
+
+  {% include 'partials/_head.html' %}
 </head>
 <body class="hold-transition layout-top-nav">
-<div class="wrapper">
+{% comment %} <div class="wrapper"> {% endcomment %}
 
       {% include 'partials/_nav_left.html' %}
 
       {% include 'partials/_nav_right.html' %}
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  {% comment %} <div class="content-wrapper"> {% endcomment %}
     {% block conteudo %}{% endblock conteudo %}
     {% comment %} {% include 'partials/_inicial.html' %} {% endcomment %}
 
   {% include 'partials/_aside.html' %}
 
   {% include 'partials/_footer.html' %}
-</div>
+{% comment %} </div> {% endcomment %}
 <!-- ./wrapper -->
 
 </body>
