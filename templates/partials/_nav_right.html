@@ -1,7 +1,24 @@
 {% load static %}
 <!-- Right navbar links -->
+{% if request.user.is_authenticated %}
 <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
   <!-- Messages Dropdown Menu -->
+  <li class="nav-item dropdown">
+    <a class="nav-link" data-toggle="dropdown" href="#">
+      <i class="fa-solid fa-circle-user"></i> {{request.user.first_name}} <i class="fa-solid fa-angle-down"></i>
+      {% comment %} <span class="badge badge-danger navbar-badge">3</span> {% endcomment %}
+    </a>
+    <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+      <!-- <li><a href="#" class="dropdown-item">Alterar Perfil</a></li> -->
+      <li><a href="#" class="dropdown-item">Alterar dados</a></li>
+      <li class="dropdown-divider"></li>
+      <li><a href="#" class="dropdown-item">Alterar senha</a></li>
+      <li class="dropdown-divider"></li>
+      <li><a href="{% url 'perfil:logout' %}" class="dropdown-item">Sair do Sistema</a></li>
+    </ul>
+  </li>
+  
+  {% comment %}
   <li class="nav-item dropdown">
     <a class="nav-link" data-toggle="dropdown" href="#">
       <i class="fas fa-comments"></i>
@@ -59,7 +76,7 @@
       <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
     </div>
   </li>
-  <!-- Notifications Dropdown Menu -->
+   <!-- Notifications Dropdown Menu -->
   <li class="nav-item dropdown">
     <a class="nav-link" data-toggle="dropdown" href="#">
       <i class="far fa-bell"></i>
@@ -90,8 +107,9 @@
     <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
       <i class="fas fa-th-large"></i>
     </a>
-  </li>-->
+  </li>--> {% endcomment %}
 </ul>
+{% endif %}
 </div>
 </nav>
 <!-- /.navbar -->

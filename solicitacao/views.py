@@ -11,3 +11,10 @@ from .models import Solicitacao, SolicitacaoItem
 class SolicitacaoIndex(LoginRequiredMixin, ListView):
     model = Solicitacao
     template_name = 'solicitacao/index.html'
+    context_object_name = 'solicitacoes'
+    paginate_by = 10
+
+    def get_queryset(self):
+        qs = super().get_queryset()
+        qs = qs.select_related('secretaria')
+        return qs
