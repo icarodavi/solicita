@@ -6,6 +6,7 @@ from django.utils.translation import gettext as _
 
 class Solicitacao(models.Model):
     usuario = models.ForeignKey(Perfil, on_delete=models.CASCADE)
+    objeto = models.TextField('Objeto', blank=True,  null=True)
     secretaria = models.ForeignKey(Secretaria, on_delete=models.DO_NOTHING)
     qtd_total = models.PositiveIntegerField()
     data = models.DateField('Data')

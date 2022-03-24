@@ -15,3 +15,6 @@ class Secretaria(models.Model):
 
     def get_nome(self):
         return f'{self.prefeitura} - {self.nome}'
+
+    def get_nome_secretaria(self):
+        return f'{self.nome} - {self.prefeitura}'
