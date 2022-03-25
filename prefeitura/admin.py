@@ -4,7 +4,7 @@ from .models import Prefeitura
 
 
 class PrefeituraAdmin(admin.ModelAdmin):
-    list_display = ['nome', 'site', 'ativo']
+    list_display = ['nome', 'site', 'logotipo', 'ativo']
     list_editable = ['ativo']
 
 
