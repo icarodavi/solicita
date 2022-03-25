@@ -8,7 +8,7 @@ class Prefeitura(models.Model):
     site = models.CharField(max_length=100, blank=True, null=True)
     logotipo = models.ImageField(
         'Logotipo', upload_to='prefeitura/%Y/%m', blank=True, null=True)
-    ativo = models.BooleanField()
+    ativo = models.BooleanField(default=True)
 
     def __str__(self):
         return f'Prefeitura de {self.nome}'
@@ -19,7 +19,5 @@ class Prefeitura(models.Model):
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
         max_img_size = 800
-        print(self, 'SELF')
-        print(self.logotipo, 'logotipo')
         if self.logotipo:
             resize_image(self.logotipo, max_img_size)

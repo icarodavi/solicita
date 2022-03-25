@@ -48,8 +48,8 @@
                     <td>{% if prefeitura.logotipo %}<img src="{{prefeitura.logotipo.url}}" class="img-fluid" style="width:50px;"/>{% else %}Prefeitura sem logotipo{% endif %}</td>
                     <td>
                       <ul class="navbar-nav navbar-no-expand ml-2">
-                        <li class="nav-item ml-2"><a href="#{{produto.id}}" class="btn btn-primary"><i class="fas fa-pen-to-square"></i></a></li>
-                        <li class="nav-item ml-2"><a href="#{{produto.id}}" class="btn btn-danger"><i class="fas fa-trash-can"></i></a></li>
+                        <li class="nav-item ml-2"><a href="{% url 'prefeitura:edit' prefeitura.id %}" class="btn btn-primary"><i class="fas fa-pen-to-square"></i></a></li>
+                        <li class="nav-item ml-2"><a href="{% url 'prefeitura:del' prefeitura.id %}" class="btn btn-danger"><i class="fas fa-trash-can"></i></a></li>
                       </ul>
                     
                     </td>
