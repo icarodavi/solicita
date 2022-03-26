@@ -57,15 +57,15 @@
                 <li>
                   <a tabindex="-1" href="{% url 'prefeitura:index' %}" class="dropdown-item">Listar</a>
                 </li>
-                <li class="dropdown-submenu">
-                  <a id="dropdownSubMenu3" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false" class="dropdown-item dropdown-toggle">Secretarias</a>
-                  <ul aria-labelledby="dropdownSubMenu3" class="dropdown-menu border-0 shadow">
-                    <li><a href="{% url 'secretaria:add' %}" class="dropdown-item">Adicionar Secretaria</a></li>
-                    <li><a href="{% url 'secretaria:index' %}" class="dropdown-item">Listar Secretarias</a></li>
-                  </ul>
-                </li>
               </ul>
+              <li class="dropdown-submenu dropdown-hover">
+                <a id="dropdownSubMenu3" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false" class="dropdown-item dropdown-toggle">Secretarias</a>
+                <ul aria-labelledby="dropdownSubMenu3" class="dropdown-menu border-0 shadow">
+                  <li><a href="{% url 'secretaria:add' %}" class="dropdown-item">Adicionar Secretaria</a></li>
+                  <li><a href="{% url 'secretaria:index' %}" class="dropdown-item">Listar Secretarias</a></li>
+                </ul>
+              </li>
             </li>
             <li class="dropdown-submenu dropdown-hover">
               <a id="dropdownSubMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
