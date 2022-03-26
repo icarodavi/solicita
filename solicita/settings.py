@@ -163,11 +163,9 @@ django_heroku.settings(locals())
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-print(DEBUG)
 if DEBUG:
     def show_toolbar(request):
         return True
-    print('passou aqui')
     DEBUG_TOOLBAR_CONFIG = {
         "SHOW_TOOLBAR_CALLBACK": show_toolbar,
     }
