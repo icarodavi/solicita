@@ -163,7 +163,7 @@ django_heroku.settings(locals())
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-if config('DEBUG'):
+if DEBUG:
     def show_toolbar(request):
         return True
     DEBUG_TOOLBAR_CONFIG = {
