@@ -47,12 +47,11 @@
                     <td>{{produto.nome}}</td>
                     <td>{{produto.descricao_curta}}</td>
                     <td>{{produto.get_tipo_display}}</td>
-                    {% comment %} <td>{{solicitacao.qtd_total}}</td> {% endcomment %}
-                    <td>{% if produto.imagem %}<img src="{{produto.imagem.url}}"/>{% else %}Produto sem Imagem{% endif %}</td>
+                    <td>{% if produto.imagem %}<img src="{{produto.imagem.url}}" class="img-fluid" style="width:50px;" />{% else %}Produto sem Imagem{% endif %}</td>
                     <td>
                       <ul class="navbar-nav navbar-no-expand ml-2">
-                        <li class="nav-item ml-2"><a href="#{{produto.id}}" class="btn btn-primary"><i class="fas fa-pen-to-square"></i></a></li>
-                        <li class="nav-item ml-2"><a href="#{{produto.id}}" class="btn btn-danger"><i class="fas fa-trash-can"></i></a></li>
+                        <li class="nav-item ml-2"><a href="{% url 'produto:edit' produto.id %}" class="btn btn-primary"><i class="fas fa-pen-to-square"></i></a></li>
+                        <li class="nav-item ml-2"><a href="{% url 'produto:del' produto.id %}" class="btn btn-danger"><i class="fas fa-trash-can"></i></a></li>
                       </ul>
                     
                     </td>
@@ -65,7 +64,6 @@
                     <th>Produto</th>
                     <th>Descrição</th>
                     <th>Tipo</th>
-                    {% comment %} <th>Quantidade de Itens</th> {% endcomment %}
                     <th>Imagem</th>
                     <th>Ações</th>
                   </tr>

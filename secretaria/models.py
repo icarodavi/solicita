@@ -8,7 +8,7 @@ class Secretaria(models.Model):
     prefeitura = models.ForeignKey(Prefeitura, on_delete=models.CASCADE)
     endereco = models.CharField(max_length=200)
     secretario = models.CharField(max_length=120)
-    ativo = models.BooleanField()
+    ativo = models.BooleanField(default=True)
 
     def __str__(self):
         return f'{self.nome} - {self.prefeitura}'

@@ -4,8 +4,8 @@
 {% block titulo %}| Listagem de Prefeituras{% endblock titulo %}
 {% block conteudo %}
 <div class="wrapper">
-<!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
@@ -22,7 +22,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
-           <div class="card">
+            <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Listagem das prefeituras</h3>
               </div>
@@ -30,40 +30,43 @@
               <div class="card-body">
                 <table id="tabela" class="table table-bordered table-striped">
                   <thead>
-                  <tr>
-                    <th>ID</th>
-                    <th>Prefeitura</th>
-                    <th>Site</th>
-                    <th>Logotipo</th>
-                    {% comment %} <th>Total de Itens</th> {% endcomment %}
-                    <th>Ações</th>
-                  </tr>
+                    <tr>
+                      <th>ID</th>
+                      <th>Prefeitura</th>
+                      <th>Site</th>
+                      <th>Logotipo</th>
+                      {% comment %} <th>Total de Itens</th> {% endcomment %}
+                      <th>Ações</th>
+                    </tr>
                   </thead>
                   <tbody>
                     {% for prefeitura in prefeituras %}
-                  <tr>
-                    <td>{{prefeitura.id}}</td>
-                    <td>{{prefeitura.get_prefeitura}}</td>
-                    <td>{{prefeitura.site}}</td>
-                    <td>{% if prefeitura.logotipo %}<img src="{{prefeitura.logotipo.url}}" class="img-fluid" style="width:50px;"/>{% else %}Prefeitura sem logotipo{% endif %}</td>
-                    <td>
-                      <ul class="navbar-nav navbar-no-expand ml-2">
-                        <li class="nav-item ml-2"><a href="{% url 'prefeitura:edit' prefeitura.id %}" class="btn btn-primary"><i class="fas fa-pen-to-square"></i></a></li>
-                        <li class="nav-item ml-2"><a href="{% url 'prefeitura:del' prefeitura.id %}" class="btn btn-danger"><i class="fas fa-trash-can"></i></a></li>
-                      </ul>
-                    
-                    </td>
-                  </tr>
-                  {% endfor %}
+                    <tr>
+                      <td>{{prefeitura.id}}</td>
+                      <td>{{prefeitura.get_prefeitura}}</td>
+                      <td>{{prefeitura.site}}</td>
+                      <td>{% if prefeitura.logotipo %}<img src="{{prefeitura.logotipo.url}}" class="img-fluid"
+                          style="width:50px;" />{% else %}Prefeitura sem logotipo{% endif %}</td>
+                      <td>
+                        <ul class="navbar-nav navbar-no-expand ml-2">
+                          <li class="nav-item ml-2"><a href="{% url 'prefeitura:edit' prefeitura.id %}"
+                              class="btn btn-primary"><i class="fas fa-pen-to-square"></i></a></li>
+                          <li class="nav-item ml-2"><a href="{% url 'prefeitura:del' prefeitura.id %}"
+                              class="btn btn-danger"><i class="fas fa-trash-can"></i></a></li>
+                        </ul>
+
+                      </td>
+                    </tr>
+                    {% endfor %}
                   </tbody>
                   <tfoot>
-                  <tr>
-                    <th>ID</th>
-                    <th>Prefeitura</th>
-                    <th>Site</th>
-                    <th>Logotipo</th>
-                    <th>Ações</th>
-                  </tr>
+                    <tr>
+                      <th>ID</th>
+                      <th>Prefeitura</th>
+                      <th>Site</th>
+                      <th>Logotipo</th>
+                      <th>Ações</th>
+                    </tr>
                   </tfoot>
                 </table>
                 <div class="row">

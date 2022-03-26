@@ -47,8 +47,8 @@
                     <td>{{secretaria.prefeitura.get_prefeitura}}</td>
                     <td>
                       <ul class="navbar-nav navbar-no-expand ml-2">
-                        <li class="nav-item ml-2"><a href="#{{secretaria.id}}" class="btn btn-primary"><i class="fas fa-pen-to-square"></i></a></li>
-                        <li class="nav-item ml-2"><a href="#{{secretaria.id}}" class="btn btn-danger"><i class="fas fa-trash-can"></i></a></li>
+                        <li class="nav-item ml-2"><a href="{% url 'secretaria:edit' secretaria.id %}" class="btn btn-primary"><i class="fas fa-pen-to-square"></i></a></li>
+                        <li class="nav-item ml-2"><a href="{% url 'secretaria:del' secretaria.id %}" class="btn btn-danger"><i class="fas fa-trash-can"></i></a></li>
                       </ul>
                     
                     </td>
