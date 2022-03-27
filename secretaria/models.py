@@ -18,3 +18,6 @@ class Secretaria(models.Model):
 
     def get_nome_secretaria(self):
         return f'{self.nome} - {self.prefeitura}'
+
+    def get_logotipo(self):
+        return self.prefeitura.logotipo.path

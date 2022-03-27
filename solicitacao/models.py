@@ -26,8 +26,8 @@ class SolicitacaoItem(models.Model):
     solicitacao = models.ForeignKey(Solicitacao, on_delete=models.CASCADE)
     produto = models.CharField(_('Produto'), max_length=255)
     produto_id = models.PositiveIntegerField(_('Produto_ID'), )
-    variacao = models.CharField(_('Variação'), max_length=255)
-    variacao_id = models.PositiveIntegerField(_('Variação_ID'), )
+    # variacao = models.CharField(_('Variação'), max_length=255)
+    # variacao_id = models.PositiveIntegerField(_('Variação_ID'), )
     quantidade = models.PositiveIntegerField(_('Quantidade'))
     imagem = models.CharField(
         _("Imagem"), max_length=2000, blank=True, null=True)
