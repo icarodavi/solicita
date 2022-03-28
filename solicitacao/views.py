@@ -94,6 +94,7 @@ class SolicitacaoDOCX(LoginRequiredMixin, View):
         response = HttpResponse(media_storage.location,
                                 content_type='application/docx')
         response['Content-Disposition'] = 'attachment; filename="report.docx"'
+        docx.close()
         # return DownloadResponse(self.request, str(settings.MEDIA_ROOT), 'report.docx')
         # docx_path.close()
         return response
