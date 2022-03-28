@@ -179,7 +179,7 @@ DEFAULT_FILE_STORAGE = 'solicita.storage_backends.PublicMediaStorage'
 STATICFILES_STORAGE = 'solicita.storage_backends.StaticStorage'
 AWS_PRIVATE_MEDIA_LOCATION = 'media/private'
 PRIVATE_FILE_STORAGE = 'solicita.storage_backends.PrivateMediaStorage'
-
+AWS_STATIC_LOCATION = 'static'
 AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400',
 }
