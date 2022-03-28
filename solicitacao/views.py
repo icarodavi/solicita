@@ -1,3 +1,4 @@
+from io import BytesIO
 from django.core.files.storage import default_storage as storage
 from django.core.files.base import ContentFile
 import os
@@ -83,8 +84,9 @@ class SolicitacaoDOCX(LoginRequiredMixin, View):
         document = Document()
         docx = HtmlToDocx()
         docx.add_html_to_document(html, document)
-        document.save(docx_path)
-        with open(docx_path, "rb") as doc:
+        doc_buffer = BytesIO()
+        document.save(doc_buffer)
+        with open(ContentFile(doc_buffer.getvalue()), "rb") as doc:
             response = HttpResponse(doc, content_type='application/docx')
         response['Content-Disposition'] = 'attachment; filename="report.docx"'
         # return DownloadResponse(self.request, str(settings.MEDIA_ROOT), 'report.docx')
