@@ -78,7 +78,8 @@ class SolicitacaoDOCX(LoginRequiredMixin, View):
         html = template.render(context)
         # Cria o arquivo DOCX
         # image_read = storage.open(image_name, "r")
-        docx_path = storage.open(settings.MEDIA_ROOT + str('report.docx'), "r")
+        docx_path = storage.open(
+            str(settings.MEDIA_ROOT) + str('report.docx'), "r")
         document = Document()
         docx = HtmlToDocx()
         docx.add_html_to_document(html, document)
