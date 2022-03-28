@@ -1,5 +1,6 @@
 import os
 from io import BytesIO
+from xhtml2pdf import pisa
 
 from django.conf import settings
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -12,7 +13,6 @@ from django.views.generic.list import ListView
 from docx import Document
 from htmldocx import HtmlToDocx
 from solicita.storage_backends import PublicMediaStorage
-from xhtml2pdf import pisa
 
 from .models import Solicitacao
 
@@ -84,19 +84,23 @@ class SolicitacaoDOCX(LoginRequiredMixin, View):
         # docx_path = storage.open(
         #     str(settings.MEDIA_ROOT) + str('report.docx'), "r")
         # print(docx_path)
-        document = Document()
-        docx = HtmlToDocx()
+        default_doc: PublicMediaStorage = media_storage.open('default.docx')
+        document: Document = Document(docx=default_doc.location)
+        default_doc.close()
+        docx: HtmlToDocx = HtmlToDocx()
         docx.closed = docx.close
         docx.add_html_to_document(html, document)
-        doc_buffer = BytesIO()
+        document.save('report.docx')
+        # doc_buffer = BytesIO()
         # doc_ok = document.save(doc_buffer)
-        doc_buffer.write(bytes(docx.rawdata, 'utf-8'))
-        doc_buffer.seek(0)
-        print(doc_buffer)
-        media_storage.save('report.docx', ContentFile(doc_buffer))
+        # doc_buffer.write(bytes(docx.rawdata, 'utf-8'))
+        # doc_buffer.seek(0)
+        # print(doc_buffer)
+        with open('report.docx', "rb") as doc_ok:
+            media_storage.save('report.docx', doc_ok)
         # with open(ContentFile(doc_buffer.getvalue()), "rb") as doc:
-        response = HttpResponse(media_storage.location,
-                                content_type='application/docx')
+            response = HttpResponse(media_storage.location,
+                                    content_type='application/docx')
         response['Content-Disposition'] = 'attachment; filename="report.docx"'
         # return DownloadResponse(self.request, str(settings.MEDIA_ROOT), 'report.docx')
         # docx_path.close()
