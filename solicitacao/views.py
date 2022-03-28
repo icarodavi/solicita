@@ -86,6 +86,7 @@ class SolicitacaoDOCX(LoginRequiredMixin, View):
         # print(docx_path)
         document = Document()
         docx = HtmlToDocx()
+        docx.closed = docx.close
         docx.add_html_to_document(html, document)
         # doc_buffer = BytesIO()
         # document.save(doc_buffer)
