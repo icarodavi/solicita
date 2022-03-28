@@ -1,3 +1,5 @@
+from django.core.files.storage import default_storage as storage
+from django.core.files.base import ContentFile
 import os
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http.response import HttpResponse
@@ -74,9 +76,9 @@ class SolicitacaoDOCX(LoginRequiredMixin, View):
         # Busca o template e o renderiza
         template = get_template(template_path)
         html = template.render(context)
-
         # Cria o arquivo DOCX
-        docx_path = os.path.join(settings.MEDIA_ROOT, str('report.docx'))
+        # image_read = storage.open(image_name, "r")
+        docx_path = storage.open(settings.MEDIA_ROOT + str('report.docx'), "r")
         document = Document()
         docx = HtmlToDocx()
         docx.add_html_to_document(html, document)
@@ -85,4 +87,5 @@ class SolicitacaoDOCX(LoginRequiredMixin, View):
             response = HttpResponse(doc, content_type='application/docx')
         response['Content-Disposition'] = 'attachment; filename="report.docx"'
         # return DownloadResponse(self.request, str(settings.MEDIA_ROOT), 'report.docx')
+        docx_path.close()
         return response
