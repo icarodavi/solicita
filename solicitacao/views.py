@@ -90,7 +90,7 @@ class SolicitacaoDOCX(LoginRequiredMixin, View):
         docx.add_html_to_document(html, document)
         doc_buffer = BytesIO()
         # doc_ok = document.save(doc_buffer)
-        doc_buffer.write(docx)
+        doc_buffer.write(bytes(docx))
         doc_buffer.seek(0)
         media_storage.save('report.docx', ContentFile(doc_buffer.getvalue()))
         # with open(ContentFile(doc_buffer.getvalue()), "rb") as doc:
