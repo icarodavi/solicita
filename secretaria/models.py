@@ -20,4 +20,4 @@ class Secretaria(models.Model):
         return f'{self.nome} - {self.prefeitura}'
 
     def get_logotipo(self):
-        return self.prefeitura.logotipo.path
+        return self.prefeitura.logotipo.url
