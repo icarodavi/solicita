@@ -89,12 +89,12 @@ class SolicitacaoDOCX(LoginRequiredMixin, View):
         docx.add_html_to_document(html, document)
         # doc_buffer = BytesIO()
         # document.save(doc_buffer)
+        docx.close()
         media_storage.save('report.docx', docx)
         # with open(ContentFile(doc_buffer.getvalue()), "rb") as doc:
         response = HttpResponse(media_storage.location,
                                 content_type='application/docx')
         response['Content-Disposition'] = 'attachment; filename="report.docx"'
-        docx.close()
         # return DownloadResponse(self.request, str(settings.MEDIA_ROOT), 'report.docx')
         # docx_path.close()
         return response
