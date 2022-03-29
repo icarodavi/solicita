@@ -103,7 +103,7 @@ class SolicitacaoDOCX(LoginRequiredMixin, View):
         # doc_buffer.write(bytes(docx.rawdata, 'utf-8'))
         # doc_buffer.seek(0)
         # print(doc_buffer)
-        media_storage.save('report.docx', document)
+        media_storage.save('report.docx', ContentFile(document))
         # with open('report.docx', "rb") as doc_ok:
         # with open(ContentFile(doc_buffer.getvalue()), "rb") as doc:
         response = HttpResponse(media_storage.location,
