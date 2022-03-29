@@ -1,12 +1,14 @@
-import imp
-from django.shortcuts import render, redirect
-from django.urls import reverse_lazy
-from django.views.generic.list import ListView
-from django.views.generic import UpdateView, DeleteView
-from django.views import View
+from pprint import pprint
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .models import Produto
+from django.shortcuts import redirect, render
+from django.http import JsonResponse
+from django.urls import reverse_lazy
+from django.views import View
+from django.views.generic import DeleteView, UpdateView
+from django.views.generic.list import ListView
+
 from .forms import ProdutoForm
+from .models import Produto
 
 
 class ProdutoList(LoginRequiredMixin, ListView):
@@ -50,3 +52,27 @@ class ProdutoDeleteView(LoginRequiredMixin, DeleteView):
     model = Produto
     template_name = "produto/delete.html"
     success_url = reverse_lazy('produto:index')
+
+
+class ProdutoSearch(LoginRequiredMixin, View):
+    model = Produto
+
+    def get(self, *args, **kwargs):
+        search = self.request.GET['search']
+        payload = []
+        if search:
+            objs: Produto = Produto.objects.filter(nome__icontains=search)
+            for item in objs:
+                payload.append({
+                    'id': item.id,
+                    'nome': item.nome,
+                    'descricao_curta': item.descricao_curta,
+                    'descricao_longa': item.descricao_longa,
+                    'imagem': item.imagem.name,
+                    'url': item.slug
+                })
+
+        return JsonResponse({
+            'status': 200,
+            'data': payload
+        })

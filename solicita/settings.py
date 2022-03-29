@@ -162,33 +162,33 @@ LOGIN_URL = 'perfil:login'
 
 django_heroku.settings(locals())
 
+# STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+# STATIC_URL = 'https://solicitacao.herokuapp.com/static/'
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
 AWS_S3_FILE_OVERWRITE = True
-AWS_DEFAULT_ACL = None
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400',
 }
+#
 AWS_LOCATION = 'static'
-# STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
-STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+AWS_STATIC_LOCATION = 'static'
+AWS_QUERYSTRING_AUTH = True
+AWS_S3_ADDRESING_STYLE = 'path'
+AWS_DAFAULT_REGION = 'sa-east-1'
+AWS_HEADERS = {'Access-Control-Allow-Origin': '*'}
 AWS_PUBLIC_MEDIA_LOCATION = 'media/public'
 DEFAULT_FILE_STORAGE = 'solicita.storage_backends.PublicMediaStorage'
 STATICFILES_STORAGE = 'solicita.storage_backends.StaticStorage'
+STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 AWS_PRIVATE_MEDIA_LOCATION = 'media/private'
 PRIVATE_FILE_STORAGE = 'solicita.storage_backends.PrivateMediaStorage'
-AWS_STATIC_LOCATION = 'static'
 
-# AWS_DEFAULT_ACL = 'public-read'
-AWS_QUERYSTRING_AUTH = True
-AWS_S3_ADDRESING_STYLE = 'path'
-AWS_DAULFT_REGION = 'sa-east-1'
 
-AWS_HEADERS = {'Access-Control-Allow-Origin': '*'}
 if DEBUG:
     def show_toolbar(request):
         return True
