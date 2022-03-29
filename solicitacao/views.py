@@ -91,19 +91,14 @@ class SolicitacaoDOCX(LoginRequiredMixin, View):
         #     str(settings.MEDIA_ROOT) + str('report.docx'), "r")
         # print(docx_path)
         default_doc: PublicMediaStorage = media_storage.open('default.docx')
-        print(default_doc.__dict__)
         document: Document = Document(docx=default_doc)
         default_doc.close()
         docx: HtmlToDocx = HtmlToDocx()
         docx.closed = False
         docx.add_html_to_document(html, document)
         document.save('report.docx')
-        # doc_buffer = BytesIO()
-        # doc_ok = document.save(doc_buffer)
-        # doc_buffer.write(bytes(docx.rawdata, 'utf-8'))
-        # doc_buffer.seek(0)
-        # print(doc_buffer)
-        media_storage.save('report.docx', ContentFile(document))
+        print(document.__dict__)
+        media_storage.save('report.docx', document)
         # with open('report.docx', "rb") as doc_ok:
         # with open(ContentFile(doc_buffer.getvalue()), "rb") as doc:
         response = HttpResponse(media_storage.location,
