@@ -92,7 +92,7 @@ class SolicitacaoDOCX(LoginRequiredMixin, View):
         # print(docx_path)
         default_doc: PublicMediaStorage = media_storage.open('default.docx')
         print(default_doc.__dict__)
-        document: Document = Document(docx=default_doc.location)
+        document: Document = Document(docx=default_doc)
         default_doc.close()
         docx: HtmlToDocx = HtmlToDocx()
         docx.closed = docx.close
