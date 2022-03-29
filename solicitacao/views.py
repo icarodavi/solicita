@@ -103,11 +103,11 @@ class SolicitacaoDOCX(LoginRequiredMixin, View):
         # doc_buffer.write(bytes(docx.rawdata, 'utf-8'))
         # doc_buffer.seek(0)
         # print(doc_buffer)
-        with open('report.docx', "rb") as doc_ok:
-            media_storage.save('report.docx', doc_ok)
+        media_storage.save('report.docx', document)
+        # with open('report.docx', "rb") as doc_ok:
         # with open(ContentFile(doc_buffer.getvalue()), "rb") as doc:
-            response = HttpResponse(media_storage.location,
-                                    content_type='application/docx')
+        response = HttpResponse(media_storage.location,
+                                content_type='application/docx')
         response['Content-Disposition'] = 'attachment; filename="report.docx"'
         # return DownloadResponse(self.request, str(settings.MEDIA_ROOT), 'report.docx')
         # docx_path.close()
