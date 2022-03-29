@@ -11,31 +11,27 @@
     <link rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome Icons -->
-    {% comment %}
-    <link rel="stylesheet" href="{% static 'plugins/fontawesome-free/css/all.min.css' %}"> {% endcomment %}
-    <!-- Theme style -->
-    {% comment %}
-    <link rel="stylesheet" href="{% static 'dist/css/adminlte.min.css' %}"> {% endcomment %}
+    
 
     {% include 'partials/_head.html' %}
   </head>
 
   <body class="hold-transition layout-top-nav">
-    {% comment %} <div class="wrapper"> {% endcomment %}
+    
 
       {% include 'partials/_nav_left.html' %}
 
       {% include 'partials/_nav_right.html' %}
 
       <!-- Content Wrapper. Contains page content -->
-      {% comment %} <div class="content-wrapper"> {% endcomment %}
+      
         {% block conteudo %}{% endblock conteudo %}
-        {% comment %} {% include 'partials/_inicial.html' %} {% endcomment %}
+        
 
         {% include 'partials/_aside.html' %}
 
         {% include 'partials/_footer.html' %}
-        {% comment %} </div> {% endcomment %}
+    
       <!-- ./wrapper -->
       </div>
   </body>
