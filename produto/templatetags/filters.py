@@ -23,3 +23,8 @@ def cart_total(carrinho):
 @register.filter
 def s3url_static(val):
     return create_presigned_url(config('AWS_STORAGE_BUCKET_NAME'), 'static/'+val)
+
+
+@register.filter
+def s3url_media(val):
+    return create_presigned_url(config('AWS_STORAGE_BUCKET_NAME'), 'media/public/'+val)
