@@ -52,9 +52,14 @@ class PublicMediaStorage(S3Boto3Storage):
     # custom_domain = '{}.s3.amazonaws.com'.format(config('AWS_STORAGE_BUCKET_NAME'))
     # custom_domain = '{}.s3.amazonaws.com'.format(config('AWS_STORAGE_BUCKET_NAME'))
 
+    def url(self, name, parameters=None, expire=None, http_method=None):
+        return create_presigned_url(config('AWS_STORAGE_BUCKET_NAME'), 'media/public/'+name)
+
 
 class PrivateMediaStorage(S3Boto3Storage):
     location = settings.AWS_PRIVATE_MEDIA_LOCATION
     default_acl = 'private'
     file_overwrite = True
     custom_domain = False
+    def url(self, name, parameters=None, expire=None, http_method=None):
+        return create_presigned_url(config('AWS_STORAGE_BUCKET_NAME'), 'media/private/'+name)
