@@ -1,4 +1,3 @@
-from msilib.schema import Error
 import tempfile
 import requests
 import shutil
