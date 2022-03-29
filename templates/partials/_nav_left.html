@@ -4,7 +4,7 @@
 <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
   <div class="container">
     <a href="{% url 'solicitacao:index' %}" class="navbar-brand">
-      <img src="{{'icon/apple-touch-icon.png'|s3url_static}}" alt="Solicitações v 1.0"
+      <img src="{% static 'icon/apple-touch-icon.png' %}" alt="Solicitações v 1.0"
         class="brand-image img-circle elevation-0" style="opacity: .8; width: 30px;">
       <!-- LOGO -->
       {% comment %} <i class="fas fa-file"></i> {% endcomment %}

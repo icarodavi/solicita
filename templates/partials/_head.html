@@ -1,33 +1,33 @@
 {% load static %}
 {% load filters %}
-<link rel="apple-touch-icon" sizes="180x180" href="{{'icon/apple-touch-icon.png'|s3url_static }}">
-<link rel="icon" type="image/png" sizes="32x32" href="{{'icon/favicon-32x32.png'|s3url_static }}">
-<link rel="icon" type="image/png" sizes="16x16" href="{{'icon/favicon-16x16.png'|s3url_static }}">
-<link rel="manifest" href="{{'icon/site.webmanifest'|s3url_static }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{% static 'icon/apple-touch-icon.png' %}">
+<link rel="icon" type="image/png" sizes="32x32" href="{% static 'icon/favicon-32x32.png' %}">
+<link rel="icon" type="image/png" sizes="16x16" href="{% static 'icon/favicon-16x16.png' %}">
+<link rel="manifest" href="{% static 'icon/site.webmanifest' %}">
 <!-- Google Font: Source Sans Pro -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
 <!-- Font Awesome -->
-{% comment %} <link rel="stylesheet" href="{{ 'plugins/fontawesome-free/css/all.min.css'|s3url_static }}"> {% endcomment %}
+{% comment %} <link rel="stylesheet" href="{% static 'plugins/fontawesome-free/css/all.min.css' %}"> {% endcomment %}
 <script src="https://kit.fontawesome.com/c3b1aaf2c0.js" crossorigin="anonymous"></script>
 <!-- Ionicons -->
 <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 <!-- Tempusdominus Bootstrap 4 -->
-<link rel="stylesheet" href="{{ 'plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css'|s3url_static }}">
+<link rel="stylesheet" href="{% static 'plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css' %}">
 <!-- iCheck -->
-<link rel="stylesheet" href="{{ 'plugins/icheck-bootstrap/icheck-bootstrap.min.css'|s3url_static }}">
+<link rel="stylesheet" href="{% static 'plugins/icheck-bootstrap/icheck-bootstrap.min.css' %}">
 <!-- JQVMap -->
-<link rel="stylesheet" href="{{ 'plugins/jqvmap/jqvmap.min.css'|s3url_static }}">
+<link rel="stylesheet" href="{% static 'plugins/jqvmap/jqvmap.min.css' %}">
 <!-- Theme style -->
-    <link rel="stylesheet" href="{{'dist/css/adminlte.min.css'|s3url_static }}">
+    <link rel="stylesheet" href="{% static 'dist/css/adminlte.min.css' %}">
 <!-- overlayScrollbars -->
-<link rel="stylesheet" href="{{ 'plugins/overlayScrollbars/css/OverlayScrollbars.min.css'|s3url_static }}">
+<link rel="stylesheet" href="{% static 'plugins/overlayScrollbars/css/OverlayScrollbars.min.css' %}">
 <!-- Daterange picker -->
-<link rel="stylesheet" href="{{ 'plugins/daterangepicker/daterangepicker.css'|s3url_static }}">
+<link rel="stylesheet" href="{% static 'plugins/daterangepicker/daterangepicker.css' %}">
 <!-- summernote -->
-<link rel="stylesheet" href="{{ 'plugins/summernote/summernote-bs4.min.css'|s3url_static }}">
+<link rel="stylesheet" href="{% static 'plugins/summernote/summernote-bs4.min.css' %}">
 
 
 <!-- DataTables -->
-<link rel="stylesheet" href="{{ 'plugins/datatables-bs4/css/dataTables.bootstrap4.min.css'|s3url_static }}">
-<link rel="stylesheet" href="{{ 'plugins/datatables-responsive/css/responsive.bootstrap4.min.css'|s3url_static }}">
-<link rel="stylesheet" href="{{ 'plugins/datatables-buttons/css/buttons.bootstrap4.min.css'|s3url_static }}">
+<link rel="stylesheet" href="{% static 'plugins/datatables-bs4/css/dataTables.bootstrap4.min.css' %}">
+<link rel="stylesheet" href="{% static 'plugins/datatables-responsive/css/responsive.bootstrap4.min.css' %}">
+<link rel="stylesheet" href="{% static 'plugins/datatables-buttons/css/buttons.bootstrap4.min.css' %}">
