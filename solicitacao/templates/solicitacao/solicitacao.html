@@ -63,8 +63,9 @@
         <!-- /.content-wrapper -->
       </div>
       </div>
-      {{solicitacao.secretaria.get_logotipo}}
-      {{solicitacao.secretaria.endereco}}
+      {% comment %} {{solicitacao.secretaria.get_logotipo}}
+      {{solicitacao.secretaria.endereco}} {% endcomment %}
+      {{solicitacao.secretaria.prefeitura.get_logo}}
       {% comment %} {{solicitacao.solicitacaoitem_set.all}} 
       {% for item in solicitacao.solicitacaoitem_set.all %}
         {{item.solicitacao}} <br>

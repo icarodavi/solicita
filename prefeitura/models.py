@@ -1,6 +1,9 @@
+from msilib.schema import Error
 import tempfile
 import requests
 import shutil
+import os
+from pprint import pprint
 from django.db import models
 from decouple import config
 from utils.resize import resize_image
@@ -29,11 +32,22 @@ class Prefeitura(models.Model):
 
     def get_logo(self):
         tempdir = tempfile.mkdtemp()
+        logo = ''
+        # tmpfile = tempfile.TemporaryFile()
         url = create_presigned_url(
             config('AWS_STORAGE_BUCKET_NAME'), 'media/public/'+self.logotipo.name)
         file = requests.get(url, stream=True)
-        with open(tempdir+self.logotipo.name, "wb") as f:
-            file.raw.decode_content = True
-            shutil.copyfileobj(file.raw, f)
-            logo = f
+        if file.status_code == 200:
+            filename, filext = os.path.splitext(self.logotipo.name)
+            # pprint(dir(file.raw.data))
+            # pprint(vars(file.raw.data))
+            # pprint(file.raw)
+            with open(os.path.join(tempdir, 'logotipo'+filext), "wb") as f:
+                # with open(tmpfile, "wb") as f:
+                # file.raw.decode_content = True
+                # shutil.copyfileobj(file.content, f)
+                # shutil.copyfile(file, f)
+                # shutil.copyfileobj()
+                f.write(file.content)
+                logo = f
         return logo

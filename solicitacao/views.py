@@ -62,9 +62,9 @@ class SolicitacaoPDF(LoginRequiredMixin, View):
         # find the template and render it.
         template = get_template(template_path)
         html = template.render(context)
-        pprint(solicitacao.secretaria.prefeitura.logotipo.open())
-        pprint(dir(solicitacao.secretaria.prefeitura.logotipo))
-        pprint(vars(solicitacao.secretaria.prefeitura.logotipo))
+        # pprint(solicitacao.secretaria.prefeitura.logotipo.open())
+        # pprint(dir(solicitacao.secretaria.prefeitura.logotipo))
+        # pprint(vars(solicitacao.secretaria.prefeitura.logotipo))
         # create a pdf
         pisa_status = pisa.CreatePDF(
             html, dest=response)
