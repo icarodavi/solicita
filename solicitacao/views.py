@@ -78,53 +78,20 @@ class SolicitacaoDOCX(LoginRequiredMixin, View):
 
     def get(self, *args, **kwargs):
         template_path = self.template_name
-        solicitacao = Solicitacao.objects.filter(pk=kwargs.get('pk')).first()
+        solicitacao = Solicitacao.objects.filter(pk=kwargs.get('pk'))
+        solicitacao = solicitacao.select_related('secretaria')
         context = {'solicitacao': solicitacao}
-        media_storage: PublicMediaStorage = PublicMediaStorage()
-        # Cria um objeto do tipo RESPONSE DJANGO e especifica o content_type como pdf
-        # Busca o template e o renderiza
         template = get_template(template_path)
         html = template.render(context)
-        # Cria o arquivo DOCX
-        # docx_path = storage.open(
-        #     str(settings.MEDIA_ROOT) + str('report.docx'), "r")
-        # print(docx_path)
+        media_storage: PublicMediaStorage = PublicMediaStorage()
         default_doc: PublicMediaStorage = media_storage.open('default.docx')
         document: Document = Document(docx=default_doc)
         docx: HtmlToDocx = HtmlToDocx()
-        docx.closed = False
         docx.add_html_to_document(html, document)
-        # document.save('report.docx')
-        # pprint(dir(docx))
-        # pprint(vars(docx))
-        # media_storage.save('report.docx', document)
         tempdir = tempfile.mkdtemp()
         document.save(os.path.join(tempdir, 'report.docx'))
-        # self.upload_file_2(os.path.join(
-        # tempdir, 'reportx.docx'), 'solicitacao')
         with open(os.path.join(tempdir, 'report.docx'), "rb") as doc_ok:
-            # with open(ContentFile(doc_buffer.getvalue()), "rb") as doc:
             response: HttpResponse = HttpResponse(doc_ok,
                                                   content_type='application/docx')
             response['Content-Disposition'] = 'attachment; filename="report.docx"'
-        # return DownloadResponse(self.request, str(settings.MEDIA_ROOT), 'report.docx')
-        # docx_path.close()
         return response
-
-    def upload_file_2(file_name, bucket, *args, **kwargs):
-
-        # If S3 object_name was not specified, use file_name
-        # if object_name is None:
-        #     object_name = os.path.basename(file_name)
-
-        # Upload the file
-        s3_client: boto3.client = boto3.client('s3')
-
-        try:
-            s3_client.upload_file(
-                'report.docx', bucket, file_name)
-        except ClientError as e:
-            logging.error(e)
-            return False
-
-        return True

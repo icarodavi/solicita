@@ -185,7 +185,7 @@ AWS_S3_OBJECT_PARAMETERS = {
 }
 
 AWS_DEFAULT_ACL = 'public-read'
-AWS_QUERYSTRING_AUTH = False
+AWS_QUERYSTRING_AUTH = True
 
 AWS_HEADERS = {'Access-Control-Allow-Origin': '*'}
 if DEBUG:
