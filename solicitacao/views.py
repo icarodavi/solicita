@@ -95,7 +95,7 @@ class SolicitacaoDOCX(LoginRequiredMixin, View):
         document: Document = Document(docx=default_doc)
         default_doc.close()
         docx: HtmlToDocx = HtmlToDocx()
-        docx.closed = docx.close
+        docx.closed = False
         docx.add_html_to_document(html, document)
         document.save('report.docx')
         # doc_buffer = BytesIO()
