@@ -1,6 +1,7 @@
 import os
 from io import BytesIO
 from xhtml2pdf import pisa
+import boto3
 
 from django.conf import settings
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -76,6 +77,11 @@ class SolicitacaoDOCX(LoginRequiredMixin, View):
         solicitacao = Solicitacao.objects.filter(pk=kwargs.get('pk')).first()
         context = {'solicitacao': solicitacao}
         media_storage = PublicMediaStorage()
+        # s3: boto3 = boto3.resource('s3',
+        #                            aws_access_key_id=settings.AWS_ACCESS_KEY_ID,
+        #                            aws_secret_key=settings.AWS_SECRET_ACCESS_KEY
+        #                            )
+        # boto = s3.Bucket('solicitacao')
         # Cria um objeto do tipo RESPONSE DJANGO e especifica o content_type como pdf
         # Busca o template e o renderiza
         template = get_template(template_path)
@@ -85,6 +91,7 @@ class SolicitacaoDOCX(LoginRequiredMixin, View):
         #     str(settings.MEDIA_ROOT) + str('report.docx'), "r")
         # print(docx_path)
         default_doc: PublicMediaStorage = media_storage.open('default.docx')
+        print(default_doc.__dict__)
         document: Document = Document(docx=default_doc.location)
         default_doc.close()
         docx: HtmlToDocx = HtmlToDocx()
