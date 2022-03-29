@@ -41,7 +41,8 @@
 </head>
 <body>
     <div id="header_content" style="text-align:center">
-        <img src="{{solicitacao.secretaria.get_logotipo.name|s3url_media}}" style="width:80px;">
+        {% comment %} <img src="{{solicitacao.secretaria.prefeitura.logotipo.name|s3url_media}}" style="width:80px;"> {% endcomment %}
+        {% comment %} <img src="{{solicitacao.secretaria.get_logotipo.name|s3url_media}}" style="width:80px;"> {% endcomment %}
         <p>{{solicitacao.secretaria.get_nome}}</p>
         <p>{{solicitacao.secretaria.endereco}}</p>
     </div>

@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load filters %}
 {% load crispy_forms_tags %}
 {% block titulo %}| Solicitação ID nº {% endblock titulo %}
 {% block conteudo %}
@@ -66,6 +67,9 @@
       {% comment %} {{solicitacao.secretaria.get_logotipo}}
       {{solicitacao.secretaria.endereco}} {% endcomment %}
       {{solicitacao.secretaria.prefeitura.get_logo}}
+      <p>pois pé</p>
+      <img src="{{solicitacao.secretaria.prefeitura.logotipo.name|s3url_media}}" />
+      
       {% comment %} {{solicitacao.solicitacaoitem_set.all}} 
       {% for item in solicitacao.solicitacaoitem_set.all %}
         {{item.solicitacao}} <br>

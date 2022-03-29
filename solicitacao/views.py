@@ -8,6 +8,8 @@ from django.template.loader import get_template
 from django.views.generic import DetailView, View
 from django.views.generic.list import ListView
 from docx import Document
+from docx.shared import Inches, Pt
+from docx.enum.text import WD_ALIGN_PARAGRAPH
 from htmldocx import HtmlToDocx
 from xhtml2pdf import pisa
 from solicita.storage_backends import PublicMediaStorage
@@ -75,7 +77,7 @@ class SolicitacaoDOCX(LoginRequiredMixin, View):
     def get(self, *args, **kwargs):
         template_path = self.template_name
         solicitacao = Solicitacao.objects.filter(pk=kwargs.get('pk'))
-        solicitacao = solicitacao.select_related('secretaria')
+        solicitacao = solicitacao.select_related('secretaria').first()
         context = {'solicitacao': solicitacao}
         template = get_template(template_path)
         html = template.render(context)
@@ -84,6 +86,26 @@ class SolicitacaoDOCX(LoginRequiredMixin, View):
         document: Document = Document(docx=default_doc)
         docx: HtmlToDocx = HtmlToDocx()
         docx.add_html_to_document(html, document)
+        # pprint(dir(solicitacao.first().secretaria.prefeitura.get_logo))
+        # pprint(vars(solicitacao.first().secretaria.prefeitura.get_logo))
+        section = document.sections[0]
+        header = section.header
+        # paragraph = header.paragraphs[0]
+        # paragraph.add_picture(
+        #     solicitacao.first().secretaria.prefeitura.get_logo)
+        # paragraph.text = '\t{}'.format(solicitacao.secretaria.prefeitura)
+        # document.add_picture(solicitacao.secretaria.prefeitura.get_logo())
+        header_table = header.add_table(1, 2, Inches(6))
+        header_table_cells = header_table.rows[0].cells
+        header_table_0 = header_table_cells[0].add_paragraph()
+        kh = header_table_0.add_run()
+        kh.add_picture(
+            solicitacao.secretaria.prefeitura.get_logo(), width=Inches(1))
+        header_table_1 = header_table_cells[1].add_paragraph(
+            solicitacao.secretaria.prefeitura.get_prefeitura()+'\n'+solicitacao.secretaria.nome+'\n'+solicitacao.secretaria.endereco)
+        header_table_1.alignment = WD_ALIGN_PARAGRAPH.RIGHT
+        # p2 = header.paragraphs[1]
+        # p2.text = solicitacao.secretaria.nome
         tempdir = tempfile.mkdtemp()
         document.save(os.path.join(tempdir, 'report.docx'))
         with open(os.path.join(tempdir, 'report.docx'), "rb") as doc_ok:

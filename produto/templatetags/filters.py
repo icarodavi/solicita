@@ -27,4 +27,6 @@ def s3url_static(val):
 
 @register.filter
 def s3url_media(val):
-    return create_presigned_url(config('AWS_STORAGE_BUCKET_NAME'), 'media/public/'+val)
+    url = create_presigned_url(
+        config('AWS_STORAGE_BUCKET_NAME'), 'media/public/'+val)
+    return url
