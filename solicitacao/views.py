@@ -97,7 +97,7 @@ class SolicitacaoDOCX(LoginRequiredMixin, View):
         docx.closed = False
         docx.add_html_to_document(html, document)
         document.save('report.docx')
-        print(document.__dict__)
+        print(document)
         media_storage.save('report.docx', document)
         # with open('report.docx', "rb") as doc_ok:
         # with open(ContentFile(doc_buffer.getvalue()), "rb") as doc:
