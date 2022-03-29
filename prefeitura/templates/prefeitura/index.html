@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load filters %}
 {% load static %}
 {% load crispy_forms_tags %}
 {% block titulo %}| Listagem de Prefeituras{% endblock titulo %}
@@ -45,7 +46,7 @@
                       <td>{{prefeitura.id}}</td>
                       <td>{{prefeitura.get_prefeitura}}</td>
                       <td>{{prefeitura.site}}</td>
-                      <td>{% if prefeitura.logotipo %}<img src="{{prefeitura.logotipo.url}}" class="img-fluid"
+                      <td>{% if prefeitura.logotipo %}<img src="{{prefeitura.logotipo.name|s3url_media}}" class="img-fluid"
                           style="width:50px;" />{% else %}Prefeitura sem logotipo{% endif %}</td>
                       <td>
                         <ul class="navbar-nav navbar-no-expand ml-2">

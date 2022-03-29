@@ -53,7 +53,8 @@ class SolicitacaoPDF(LoginRequiredMixin, View):
 
     def get(self, *args, **kwargs):
         template_path = self.template_name
-        solicitacao = Solicitacao.objects.filter(pk=kwargs.get('pk')).first()
+        solicitacao = Solicitacao.objects.filter(pk=kwargs.get('pk'))
+        solicitacao = solicitacao.select_related('secretaria').first()
         context = {'solicitacao': solicitacao}
         # Create a Django response object, and specify content_type as pdf
         response = HttpResponse(content_type='application/pdf')
@@ -61,7 +62,9 @@ class SolicitacaoPDF(LoginRequiredMixin, View):
         # find the template and render it.
         template = get_template(template_path)
         html = template.render(context)
-
+        pprint(solicitacao.secretaria.prefeitura.logotipo.open())
+        pprint(dir(solicitacao.secretaria.prefeitura.logotipo))
+        pprint(vars(solicitacao.secretaria.prefeitura.logotipo))
         # create a pdf
         pisa_status = pisa.CreatePDF(
             html, dest=response)

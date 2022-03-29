@@ -1,3 +1,4 @@
+{% load filters %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,18 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RenderPDF</title>
-    <style>
-        @page {
-            size: a4 portrait;
-            @frame header_frame {           /* Static Frame */
-                -pdf-frame-content: header_content;
-                left:50pt; width: 512pt; top: 10pt; height: 100pt;
-            }
-            @frame content_frame {          /* Content Frame */
-                left: 50pt; width: 512pt; top: 90pt; height: 632pt;
-            }
-        }
-    </style>
     {% load static %}
 <link rel="apple-touch-icon" sizes="180x180" href="{%static 'icon/apple-touch-icon.png' %}">
 <link rel="icon" type="image/png" sizes="32x32" href="{%static 'icon/favicon-32x32.png' %}">
@@ -52,7 +41,7 @@
 </head>
 <body>
     <div id="header_content" style="text-align:center">
-        <img src="{{solicitacao.secretaria.get_logotipo.url}}" style="width:80px;">
+        <img src="{{solicitacao.secretaria.get_logotipo.name|s3url_media}}" style="width:80px;">
         <p>{{solicitacao.secretaria.get_nome}}</p>
         <p>{{solicitacao.secretaria.endereco}}</p>
     </div>
@@ -60,10 +49,10 @@
     <table id="tabela" class="table table-bordered table-striped">
         <thead>
             <tr>
-                <td>01</td>
-                <td>02</td>
-                <td>03</td>
-                <td>04</td>
+                <td>Solicitação</td>
+                <td>Imagem</td>
+                <td>Produto</td>
+                <td>Ref. Produto</td>
             </tr>
         </thead>
         <tbody>
