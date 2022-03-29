@@ -1,23 +1,16 @@
-import logging
 import os
-from fileinput import filename
-from pprint import pprint
 import tempfile
+from pprint import pprint
 
-import boto3
-from botocore.exceptions import ClientError
-from django.conf import settings
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.core.files.base import ContentFile
-from django.core.files.storage import default_storage as storage
 from django.http.response import HttpResponse
 from django.template.loader import get_template
 from django.views.generic import DetailView, View
 from django.views.generic.list import ListView
 from docx import Document
 from htmldocx import HtmlToDocx
-from solicita.storage_backends import PublicMediaStorage
 from xhtml2pdf import pisa
+from solicita.storage_backends import PublicMediaStorage
 
 from .models import Solicitacao
 

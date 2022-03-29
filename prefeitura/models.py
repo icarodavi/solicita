@@ -1,12 +1,14 @@
-import tempfile
-import requests
-import shutil
 import os
+import shutil
+import tempfile
 from pprint import pprint
-from django.db import models
+
+import requests
 from decouple import config
+from django.db import models
 from utils.resize import resize_image
 from utils.s3urls import create_presigned_url
+
 # Create your models here.
 
 
@@ -49,4 +51,7 @@ class Prefeitura(models.Model):
                 # shutil.copyfileobj()
                 f.write(file.content)
                 logo = f
-        return logo
+        # pprint(dir(logo))
+        # pprint(vars(logo))
+        # print(logo.name)
+        return logo.name
