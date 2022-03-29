@@ -188,7 +188,11 @@ STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 AWS_PRIVATE_MEDIA_LOCATION = 'media/private'
 PRIVATE_FILE_STORAGE = 'solicita.storage_backends.PrivateMediaStorage'
 
-
+INTERNAL_IPS = [
+    # ...
+    "127.0.0.1", "*"
+    # ...
+]
 if DEBUG:
     def show_toolbar(request):
         return True
