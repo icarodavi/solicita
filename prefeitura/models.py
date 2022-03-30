@@ -28,8 +28,8 @@ class Prefeitura(models.Model):
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
         max_img_size = 800
-        if self.logotipo:
-            resize_image(self.logotipo, max_img_size)
+        # if self.logotipo:
+        #     resize_image(self.logotipo, max_img_size)
 
     def get_logo(self):
         tempdir = tempfile.mkdtemp()

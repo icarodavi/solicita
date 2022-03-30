@@ -1,37 +1,31 @@
 import os
-from io import BytesIO
+import tempfile
+from pprint import pprint
+from typing import Any
+from utils.s3save import up_file
+
 from PIL import Image
-from django.conf import settings
-from django.core.files.base import ContentFile
-from django.core.files.storage import default_storage as storage
+
+# from solicita.storage_backends import PublicMediaStorage
 
 
-def resize_image(image_name, new_width=800):
-    # image_path = os.path.join(settings.MEDIA_ROOT, str(image_name))
-    image_read = storage.open(image_name, "r")
-    # print(image_name._file.image.__dict__)
-    image = Image.open(image_read)
-    width, height = image.size
+def resize_image(image_name, new_width=800) -> Any:
+    image_path = os.path.join(tempfile.mkdtemp(), str(image_name))
+    with Image.open(image_name) as im:
+        im.save(image_path)
+    img = Image.open(image_path)
+    width, height = img.size
     new_height = round((new_width * height) / width)
     if width <= new_width:
-        img_buffer = BytesIO()
-
-        image.save(
-            img_buffer,
-            format=image.format,
-            optimize=True,
-            quality=50
-        )
-        image.close()
-        return image
-    img_buffer = BytesIO()
-    new_image = image.resize((new_width, new_height), Image.LANCZOS)
+        img.close()
+        return img.filename
+    new_image = img.resize((new_width, new_height), Image.LANCZOS)
     new_image.save(
-        img_buffer,
-        format=image.format,
+        image_path,
+        format=img.format,
         optimize=True,
         quality=50
     )
-    print(ContentFile(img_buffer.getvalue()))
-    image.close()
-    return new_image
+    img.close()
+    up_file(image_path)
+    return image_path
