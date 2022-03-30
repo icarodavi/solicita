@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 from pathlib import Path
+import debug_toolbar
 from django.contrib.messages import constants
 from decouple import config
 import django_heroku
@@ -52,8 +53,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -134,10 +135,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 # STATIC_URL = 'static/'
-STATICFILES_DIRS = [
-    BASE_DIR / 'templates' / 'static'
-]
-STATIC_ROOT = BASE_DIR / 'static'
+# STATICFILES_DIRS = [
+#     BASE_DIR / 'templates' / 'static'
+# ]
+# STATIC_ROOT = BASE_DIR / 'static'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media/'
 
@@ -178,7 +179,7 @@ AWS_S3_OBJECT_PARAMETERS = {
 AWS_LOCATION = 'static'
 AWS_STATIC_LOCATION = 'static'
 AWS_QUERYSTRING_AUTH = True
-AWS_S3_ADDRESING_STYLE = 'path'
+# AWS_S3_ADDRESING_STYLE = 'path'
 AWS_DAFAULT_REGION = 'sa-east-1'
 AWS_HEADERS = {'Access-Control-Allow-Origin': '*'}
 AWS_PUBLIC_MEDIA_LOCATION = 'media/public'
@@ -197,6 +198,6 @@ if DEBUG:
     def show_toolbar(request):
         return True
     DEBUG_TOOLBAR_CONFIG = {
-        "SHOW_TOOLBAR_CALLBACK": show_toolbar,
+        "SHOW_TOOLBAR_CALLBACK": show_toolbar
     }
 #

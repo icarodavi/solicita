@@ -1,5 +1,5 @@
 from datetime import datetime, timedelta
-from urllib.parse import urlencode
+from urllib.parse import parse_qsl, urlencode, urlsplit
 
 import boto3
 from botocore.config import Config
@@ -65,8 +65,25 @@ class StaticStorage(S3Boto3Storage):
                                                ExpiresIn=expire, HttpMethod=http_method)
         if settings.AWS_QUERYSTRING_AUTH:
             return url
-        return self._strip_signing_parameters(url)
-        # return create_presigned_url('solicitacao', 'static/'+name)
+        # return self._strip_signing_parameters(url)
+        return create_presigned_url('solicitacao', 'static/'+name)
+
+    def _strip_signing_parameters(self, url):
+
+        split_url = urlsplit(url)
+        qs = parse_qsl(split_url.query, keep_blank_values=True)
+        blacklist = {
+            'x-amz-algorithm', 'x-amz-credential', 'x-amz-date',
+            'x-amz-expires', 'x-amz-signedheaders', 'x-amz-signature',
+            'x-amz-security-token', 'awsaccesskeyid', 'expires', 'signature',
+        }
+        filtered_qs = ((key, val)
+                       for key, val in qs if key.lower() not in blacklist)
+        # Note: Parameters that did not have a value in the original query string will have
+        # an '=' sign appended to it, e.g ?foo&bar becomes ?foo=&bar=
+        joined_qs = ('='.join(keyval) for keyval in filtered_qs)
+        split_url = split_url._replace(query='&'.join(joined_qs))
+        return split_url.geturl()
 
 
 class PublicMediaStorage(S3Boto3Storage):
