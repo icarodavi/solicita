@@ -8,7 +8,6 @@ from django.views.generic.list import ListView
 
 from .forms import PrefeituraForm
 from .models import Prefeitura
-from utils.resize import resize_image
 
 # Create your views here.
 
@@ -25,6 +24,7 @@ class PrefeituraCreate(LoginRequiredMixin, View):
     template_name = 'prefeitura/form.html'
     fields = '__all__'
     success_url = 'prefeitura:index'
+    # form_class = PrefeituraForm
 
     def get(self, *args, **kwargs):
         form = PrefeituraForm()
@@ -34,9 +34,6 @@ class PrefeituraCreate(LoginRequiredMixin, View):
     def post(self, *args, **kwargs):
         form = PrefeituraForm(data=self.request.POST, files=self.request.FILES)
         if form.is_valid():
-            self.request.FILES['logotipo'] = resize_image(
-                self.request.FILES.get('logotipo'), 800)
-
             form.save()
             return redirect('prefeitura:index')
         else:
@@ -48,22 +45,24 @@ class PrefeituraEdit(LoginRequiredMixin, UpdateView):
     template_name = 'prefeitura/edit.html'
     fields = '__all__'
     success_url = reverse_lazy('prefeitura:index')
+    # form_class = PrefeituraForm
 
 
-def post(self, *args, **kwargs):
-    # super().post(self.request, *args, **kwargs)
-    form = PrefeituraForm(data=self.request.POST, files=self.request.FILES)
-    nome = form.cleaned_data.get('nome')
-    site = form.cleaned_data.get('site')
-    logotipo = form.cleaned_data.get('logotipo')
-    prefeitura = get_object_or_404(Prefeitura, pk=kwargs.get('pk'))
-    if form.is_valid():
-        self.request.FILES['logotipo'] = resize_image(
-            self.request.FILES.get('logotipo'), 800)
-        form.save()
-        return redirect('prefeitura:index')
-    else:
-        return render(self.request, 'prefeitura/form.html', {'form': form})
+# def post(self, *args, **kwargs):
+#     # super().post(self.request, *args, **kwargs)
+#     form = PrefeituraForm(data=self.request.POST, files=self.request.FILES)
+#     nome = form.cleaned_data.get('nome')
+#     site = form.cleaned_data.get('site')
+#     logotipo = form.cleaned_data.get('logotipo')
+#     prefeitura = get_object_or_404(Prefeitura, pk=kwargs.get('pk'))
+#     if form.is_valid():
+
+#         self.request.FILES['logotipo'] = resize_image(
+#             self.request.FILES.get('logotipo'), 800)
+#         form.save()
+#         return redirect('prefeitura:index')
+#     else:
+#         return render(self.request, 'prefeitura/form.html', {'form': form})
     # def get(self, *args, **kwargs):
     #     pk = int(kwargs.get('pk'))
     #     prefeitura = Prefeitura.objects.filter(pk=pk)

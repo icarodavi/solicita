@@ -1,12 +1,15 @@
 import os
-import shutil
 import tempfile
+from io import BytesIO
+from pathlib import Path
 from pprint import pprint
 
 import requests
 from decouple import config
+from django.core.files import File
 from django.db import models
-from utils.resize import resize_image
+from PIL import Image
+from utils.resize import resize_uploaded_image
 from utils.s3urls import create_presigned_url
 
 # Create your models here.
@@ -26,32 +29,49 @@ class Prefeitura(models.Model):
         return f'Prefeitura de {self.nome}'
 
     def save(self, *args, **kwargs):
+        self.logotipo = resize_uploaded_image(self.logotipo, 800)
+        # print(self.logotipo._file)
         super().save(*args, **kwargs)
-        max_img_size = 800
-        # if self.logotipo:
-        #     resize_image(self.logotipo, max_img_size)
 
     def get_logo(self):
         tempdir = tempfile.mkdtemp()
         logo = ''
-        # tmpfile = tempfile.TemporaryFile()
         url = create_presigned_url(
             config('AWS_STORAGE_BUCKET_NAME'), 'media/public/'+self.logotipo.name)
         file = requests.get(url, stream=True)
         if file.status_code == 200:
             filename, filext = os.path.splitext(self.logotipo.name)
-            # pprint(dir(file.raw.data))
-            # pprint(vars(file.raw.data))
-            # pprint(file.raw)
             with open(os.path.join(tempdir, 'logotipo'+filext), "wb") as f:
-                # with open(tmpfile, "wb") as f:
-                # file.raw.decode_content = True
-                # shutil.copyfileobj(file.content, f)
-                # shutil.copyfile(file, f)
-                # shutil.copyfileobj()
                 f.write(file.content)
                 logo = f
-        # pprint(dir(logo))
-        # pprint(vars(logo))
-        # print(logo.name)
         return logo.name
+
+    @staticmethod
+    def resize_image(image_name: models.ImageField, new_width, *args, **kwargs):
+        img = Image.open(image_name)
+        width, height = img.size
+        new_height = round((new_width * height) / width)
+        size = (new_width, new_height)
+        # img_filename = Path(image_name.file.name).name
+        if width > new_width:
+            pass
+        img.resize(size, Image.LANCZOS)
+        filename, filext = os.path.splitext(image_name._file.name)
+        buffer = BytesIO()
+        # image_path = os.path.join(tempfile.mkdtemp(), str(image_name))
+        file_object = File(buffer)
+        img.save(file_object, format=img.format)
+        img.close()
+        print('------------')
+        pprint(dir(file_object))
+        image_name._file = Image.open(file_object)
+        # img._committed = False
+        # img.name = img_filename
+        # img.file = image_name.file
+        # x = Image.open(file_object)
+
+        # image_name
+        pprint(vars(image_name.field))
+        # img.close()
+        # image_name.save(img_filename, file_object)
+        return image_name
