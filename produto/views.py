@@ -1,4 +1,5 @@
 import json
+import ast
 from pprint import pprint
 from faker import Faker
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -87,15 +88,19 @@ class Buscador(View):
 
 class Blank(View):
     def get(self, *args, **kwargs):
-        produtos = json.loads(self.request.POST.get('objProdutos'))
-        return render(self.request, 'produto/blank.html', produtos)
+        produtos = {'produtos': json.loads(
+            self.request.POST.get('objProdutos'))}
+        for i in produtos:
+            print(i)
+        return render(self.request, 'produto/blank.html', context=produtos)
 
     def post(self, *args, **kwargs):
-        pprint(self.request.POST)
-        # produtos = self.request.POST
-        # produtos = self.request.POST.get('objProdutos')
-        produtos = list(json.loads(self.request.POST.get('objProdutos')))
-        return render(self.request, 'produto/blank.html', produtos)
+        print(ast.literal_eval(self.request.POST.get('objProdutos')))
+        produtos = {'produtos': json.loads(
+            self.request.POST.get('objProdutos'))}
+        for i in produtos:
+            print(i)
+        return render(self.request, 'produto/blank.html', context=produtos)
 
 
 def generate_data(request):

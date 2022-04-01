@@ -96,7 +96,6 @@
         selection: (event) => {
           const selection = event.detail.selection.value;
           verify_produto(selection);
-          //console.log(objProdutos.value); 
         },
       },
     },
@@ -112,19 +111,10 @@
     if (!v) {
       ob.push(item);
       resultado.innerHTML += `<li id="li-${item.id}" class="list-group-item d-flex p-2 bd-highlight justify-content-between">${item.nome}<a href="#" class="btn btn-danger li-produto" onclick=removerProduto('li-${item.id}',${item.id})><i class="fas fa-trash-can"></i></a>`;
-      objProdutos.value = add_produto(item);
+      objProdutos.value = JSON.stringify(ob);
+      console.log(objProdutos.value);
     }
   }
-    ob_temp = '';
-  function add_produto(item) {
-    ob_temp = '';
-    for(let i = 0; i < ob.length; i++){
-      ob_temp += `${JSON.stringify(ob[i])},`;
-    }
-    objProdutos.value = ob_temp;
-    //console.log(objProdutos.value)
-  }
-
   function removerProduto(item, id) {
     for(let i = 0; i < ob.length; i++) {
       if (ob[i].id == id) {
