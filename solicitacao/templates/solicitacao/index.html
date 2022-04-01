@@ -60,8 +60,8 @@
                             <li><a href="{% url 'solicitacao:pdf' solicitacao.id %}" class="dropdown-item"><i class="fa-solid fa-file-pdf"></i> PDF</a></li>
                             <li><a href="{% url 'solicitacao:doc' solicitacao.id %}" class="dropdown-item"><i class="fa-solid fa-file-word"></i> Word</a></li>
                           </ul>
-                          <li class="nav-item ml-2"><a href="{{solicitacao.id}}" class="btn btn-primary"><i class="fas fa-pen-to-square"></i></a></li>
-                          <li class="nav-item ml-2"><a href="{{solicitacao.id}}" class="btn btn-danger"><i class="fas fa-trash-can"></i></a></li>
+                          <li class="nav-item ml-2"><a href="{% url 'solicitacao:edit' solicitacao.id %}" class="btn btn-primary"><i class="fas fa-pen-to-square"></i></a></li>
+                          <li class="nav-item ml-2"><a href="{% url 'solicitacao:del' solicitacao.id %}" class="btn btn-danger"><i class="fas fa-trash-can"></i></a></li>
                       </ul>
                     </div>
                     </td>

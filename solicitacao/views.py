@@ -2,19 +2,23 @@ import os
 import tempfile
 from pprint import pprint
 
+from django.shortcuts import redirect, render
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http.response import HttpResponse
 from django.template.loader import get_template
-from django.views.generic import DetailView, View
+from django.urls import reverse_lazy
+from django.views.generic import (CreateView, DeleteView, DetailView,
+                                  UpdateView, View)
 from django.views.generic.list import ListView
 from docx import Document
-from docx.shared import Inches, Pt
 from docx.enum.text import WD_ALIGN_PARAGRAPH
+from docx.shared import Inches, Pt
 from htmldocx import HtmlToDocx
-from xhtml2pdf import pisa
 from solicita.storage_backends import PublicMediaStorage
+from xhtml2pdf import pisa
 
 from .models import Solicitacao
+from .forms import SolicitacaoForm
 
 
 class SolicitacaoIndex(LoginRequiredMixin, ListView):
@@ -113,3 +117,37 @@ class SolicitacaoDOCX(LoginRequiredMixin, View):
                                                   content_type='application/docx')
             response['Content-Disposition'] = 'attachment; filename="report.docx"'
         return response
+
+
+class SolicitacaoCreateView(LoginRequiredMixin, View):
+    model = Solicitacao
+    template_name = 'solicitacao/form.html'
+    fields = '__all__'
+    success_url = 'solicitacao:index'
+
+    def get(self, *args, **kwargs):
+        form = SolicitacaoForm()
+        return render(self.request, 'solicitacao/form.html', {'form': form})
+
+    def post(self, *args, **kwargs):
+        form = SolicitacaoForm(data=self.request.POST,
+                               files=self.request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('solicitacao:index')
+        else:
+            return render(self.request, 'solicitacao/form.html', {'form': form})
+
+
+class SolicitacaoEdit(LoginRequiredMixin, UpdateView):
+    model = Solicitacao
+    template_name = 'solicitacao/edit.html'
+    # fields = '__all__'
+    form_class = SolicitacaoForm
+    success_url = reverse_lazy('solicitacao:index')
+
+
+class SolicitacaoDeleteView(LoginRequiredMixin, DeleteView):
+    model = Solicitacao
+    template_name = "produto/delete.html"
+    success_url = reverse_lazy('produto:index')
