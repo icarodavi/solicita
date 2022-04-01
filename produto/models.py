@@ -20,5 +20,5 @@ class Produto(models.Model):
             slug = slugify(self.nome)
             self.slug = slug
         super().save(*args, **kwargs)
-        if self.imagem:
-            resize_image(self.imagem, max_img_size)
+        # if self.imagem:
+        #     resize_image(self.imagem, max_img_size)

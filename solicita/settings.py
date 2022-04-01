@@ -201,3 +201,4 @@ if DEBUG:
         "SHOW_TOOLBAR_CALLBACK": show_toolbar
     }
 #
+APPEND_SLASH = False

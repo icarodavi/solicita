@@ -35,26 +35,31 @@
   <script src="{% static 'plugins/datatables-buttons/js/buttons.print.min.js' %}"></script>
   <script src="{% static 'plugins/datatables-buttons/js/buttons.colVis.min.js' %}"></script>
   <script>
-      $(function () {
-        $("#tabela").DataTable({
-          "responsive": true, 
-          "lengthChange": false, 
-          "autoWidth": true, 
-          "paging":false,
-          "searching":false, 
-          "info":false,
-          "responsive":true,
-          "ordering":true
-          //"buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-        }).container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-        $('#example2').DataTable({
-          "paging": false,
-          "lengthChange": false,
-          "searching": false,
-          "ordering": true,
-          "info": false,
-          "autoWidth": true,
-          "responsive": true,
-        });
+    $(function () {
+      $("#tabela").DataTable({
+        "responsive": true, 
+        "lengthChange": false, 
+        "autoWidth": true, 
+        "paging":false,
+        "searching":false, 
+        "info":false,
+        "responsive":true,
+        "ordering":true
+        //"buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+      }).container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+      $('#example2').DataTable({
+        "paging": false,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": false,
+        "autoWidth": true,
+        "responsive": true,
       });
+    });
+    //$(document).ready(function (){
+    //  let ob = {}
+    //  $('#objProdutos').value.append(ob);
+    //  console.log($('#objProdutos').value);
+    //});
     </script>

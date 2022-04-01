@@ -1,4 +1,6 @@
+import json
 from pprint import pprint
+from faker import Faker
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import redirect, render
 from django.http import JsonResponse
@@ -76,3 +78,34 @@ class ProdutoSearch(LoginRequiredMixin, View):
             'status': 200,
             'data': payload
         })
+
+
+class Buscador(View):
+    def get(self, *args, **kwargs):
+        return render(self.request, 'produto/busca.html')
+
+
+class Blank(View):
+    def get(self, *args, **kwargs):
+        produtos = json.loads(self.request.POST.get('objProdutos'))
+        return render(self.request, 'produto/blank.html', produtos)
+
+    def post(self, *args, **kwargs):
+        pprint(self.request.POST)
+        # produtos = self.request.POST
+        # produtos = self.request.POST.get('objProdutos')
+        produtos = list(json.loads(self.request.POST.get('objProdutos')))
+        return render(self.request, 'produto/blank.html', produtos)
+
+
+def generate_data(request):
+    faker: Faker = Faker('pt_BR')
+    for i in range(0, 10):
+        Produto.objects.create(
+            nome=faker.company(),
+            descricao_curta=faker.paragraphs(nb=1),
+            descricao_longa=faker.paragraphs(nb=5),
+        )
+    return JsonResponse({
+        'status': 200
+    })

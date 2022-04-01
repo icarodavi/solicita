@@ -9,6 +9,7 @@ from django.views.generic.list import ListView
 from .forms import PrefeituraForm
 from .models import Prefeitura
 
+from utils.resize import resize_image
 # Create your views here.
 
 
@@ -22,9 +23,9 @@ class PrefeituraListView(LoginRequiredMixin, ListView):
 class PrefeituraCreate(LoginRequiredMixin, View):
     model = Prefeitura
     template_name = 'prefeitura/form.html'
-    fields = '__all__'
+    # fields = '__all__'
     success_url = 'prefeitura:index'
-    # form_class = PrefeituraForm
+    form_class = PrefeituraForm
 
     def get(self, *args, **kwargs):
         form = PrefeituraForm()
@@ -34,7 +35,15 @@ class PrefeituraCreate(LoginRequiredMixin, View):
     def post(self, *args, **kwargs):
         form = PrefeituraForm(data=self.request.POST, files=self.request.FILES)
         if form.is_valid():
-            form.save()
+            form.save(commit=False)
+            x = resize_image(form.files.get('logotipo'), 800)
+            if x:
+                form.files.logotipo = x
+                form.save()
+            else:
+                form.save()
+            # self.logotipo.save(
+            #     name=Path(self.logotipo.file.name).name, content=x)
             return redirect('prefeitura:index')
         else:
             return render(self.request, 'prefeitura/form.html', {'form': form})
@@ -43,9 +52,9 @@ class PrefeituraCreate(LoginRequiredMixin, View):
 class PrefeituraEdit(LoginRequiredMixin, UpdateView):
     model = Prefeitura
     template_name = 'prefeitura/edit.html'
-    fields = '__all__'
+    # fields = '__all__'
     success_url = reverse_lazy('prefeitura:index')
-    # form_class = PrefeituraForm
+    form_class = PrefeituraForm
 
 
 # def post(self, *args, **kwargs):

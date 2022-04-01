@@ -9,7 +9,7 @@ from decouple import config
 from django.core.files import File
 from django.db import models
 from PIL import Image
-from utils.resize import resize_uploaded_image
+from utils.resize import resize_image
 from utils.s3urls import create_presigned_url
 
 # Create your models here.
@@ -29,9 +29,9 @@ class Prefeitura(models.Model):
         return f'Prefeitura de {self.nome}'
 
     def save(self, *args, **kwargs):
-        self.logotipo = resize_uploaded_image(self.logotipo, 800)
-        # print(self.logotipo._file)
+
         super().save(*args, **kwargs)
+        print(self.logotipo._file)
 
     def get_logo(self):
         tempdir = tempfile.mkdtemp()
