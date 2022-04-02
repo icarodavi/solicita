@@ -1,709 +1,709 @@
 [
-    {
-        "model": "prefeitura.prefeitura",
-        "pk": 1,
-        "fields": {
-            "nome": "Varzea Alegre",
-            "site": "www.varzeaalegre.ce.gov.br",
-            "logotipo": "prefeitura/2022/03/b88f04130f.jpg",
-            "ativo": true
-        }
-    },
-    {
-        "model": "prefeitura.prefeitura",
-        "pk": 2,
-        "fields": {
-            "nome": "Mauriti",
-            "site": "www.mauriti.ce.gov.br",
-            "logotipo": "prefeitura/2022/03/circuit_paths_chips_black_pin_26298_1280x720.jpg",
-            "ativo": true
-        }
-    },
-    {
-        "model": "prefeitura.prefeitura",
-        "pk": 3,
-        "fields": {
-            "nome": "Barro",
-            "site": "http://www.barro.ce.gov.br",
-            "logotipo": "prefeitura/2022/03/linux_linux_mint_black_gnu_103855_1280x720.jpg",
-            "ativo": true
-        }
-    },
-    {
-        "model": "prefeitura.prefeitura",
-        "pk": 47,
-        "fields": {
-            "nome": "11111111110987",
-            "site": "07868795",
-            "logotipo": "prefeitura/2022/03/processor_cpu_upgrade_installation_chip_robot_5633_1280x720.jpg",
-            "ativo": true
-        }
-    },
-    {
-        "model": "secretaria.secretaria",
-        "pk": 1,
-        "fields": {
-            "nome": "Secretaria de EducaþÒo",
-            "prefeitura": 1,
-            "endereco": "Endereþo",
-            "secretario": "Secretßrio",
-            "ativo": true
-        }
-    },
-    {
-        "model": "secretaria.secretaria",
-        "pk": 2,
-        "fields": {
-            "nome": "Secretaria de Infraestrutura",
-            "prefeitura": 3,
-            "endereco": "Rua X",
-            "secretario": "Secretario XX",
-            "ativo": true
-        }
-    },
-    {
-        "model": "secretaria.secretaria",
-        "pk": 3,
-        "fields": {
-            "nome": "Secretaria de Sa·de",
-            "prefeitura": 2,
-            "endereco": "Rua XX",
-            "secretario": "OOOOOO",
-            "ativo": true
-        }
-    },
-    {
-        "model": "secretaria.secretaria",
-        "pk": 4,
-        "fields": {
-            "nome": "Secretaria de Meio Ambiente",
-            "prefeitura": 1,
-            "endereco": "123456",
-            "secretario": "123456",
-            "ativo": true
-        }
-    },
-    {
-        "model": "solicitacao.solicitacaoitem",
-        "pk": 2,
-        "fields": {
-            "solicitacao": 2,
-            "produto": "Caneta Preta",
-            "produto_id": 1,
-            "quantidade": 1,
-            "imagem": null
-        }
-    },
-    {
-        "model": "solicitacao.solicitacaoitem",
-        "pk": 3,
-        "fields": {
-            "solicitacao": 2,
-            "produto": "Cimento",
-            "produto_id": 2,
-            "quantidade": 10,
-            "imagem": null
-        }
-    },
-    {
-        "model": "solicitacao.solicitacaoitem",
-        "pk": 4,
-        "fields": {
-            "solicitacao": 2,
-            "produto": "Teste COVID",
-            "produto_id": 3,
-            "quantidade": 1000,
-            "imagem": null
-        }
-    },
-    {
-        "model": "solicitacao.solicitacaoitem",
-        "pk": 5,
-        "fields": {
-            "solicitacao": 4,
-            "produto": "Insulina",
-            "produto_id": 4,
-            "quantidade": 1000,
-            "imagem": null
-        }
-    },
-    {
-        "model": "solicitacao.solicitacaoitem",
-        "pk": 6,
-        "fields": {
-            "solicitacao": 5,
-            "produto": "Muda de arvore",
-            "produto_id": 5,
-            "quantidade": 100,
-            "imagem": null
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 1,
-        "fields": {
-            "nome": "Caneta Preta",
-            "descricao_curta": "Uma caneta da cor preta",
-            "descricao_longa": "Uma caneta da cor preta com ponta 7.0",
-            "imagem": "produto_imagens/2022/03/176161z_3.webp",
-            "slug": "caneta-preta"
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 3,
-        "fields": {
-            "nome": "da Mata",
-            "descricao_curta": "['Officia temporibus repellat repellendus animi. Eaque nam suscipit ipsum officiis nulla libero. Blanditiis quis porro blanditiis autem nostrum cupiditate.']",
-            "descricao_longa": "['Perferendis voluptatum quam placeat et doloremque. Veniam nobis alias sapiente beatae consequatur. Repellendus et dolores ipsam est.', 'Sequi dolor quis quas fuga quis cupiditate. Enim vel illum eius doloremque eum similique.', 'In similique incidunt consequuntur odio. Sunt animi dolorum dignissimos architecto voluptatem quisquam.', 'Error odio aut dignissimos.', 'Fuga ad illo nulla blanditiis facere expedita officiis. Inventore excepturi vero.']",
-            "imagem": "",
-            "slug": "da-mata"
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 4,
-        "fields": {
-            "nome": "Novaes",
-            "descricao_curta": "['Nisi molestias non corporis voluptates. Quasi esse ratione assumenda a accusamus. Deserunt quo temporibus eligendi laudantium quo quod corrupti.']",
-            "descricao_longa": "['Quaerat reprehenderit officiis. Occaecati ducimus minus magni illo exercitationem perspiciatis.', 'Cumque neque consectetur ex voluptates delectus. Consectetur odit qui dolor.', 'Nisi earum officiis debitis repellendus neque quis. Officiis recusandae magni totam.', 'Delectus cupiditate illum aspernatur exercitationem fugit. Deserunt atque magnam tenetur quaerat. Est dignissimos saepe ducimus.', 'Hic quibusdam enim culpa quis culpa pariatur. Quae doloribus modi quia incidunt ab. Architecto expedita impedit voluptates distinctio.']",
-            "imagem": "",
-            "slug": "novaes"
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 5,
-        "fields": {
-            "nome": "Pinto Oliveira S.A.",
-            "descricao_curta": "['Exercitationem facilis perspiciatis hic inventore. Tempora nobis deleniti quidem ullam sed.']",
-            "descricao_longa": "['Modi hic accusamus ratione incidunt voluptate magnam repudiandae. Necessitatibus consequatur in vitae ad ipsam.', 'Nostrum cupiditate corporis autem. Ipsa nesciunt suscipit accusantium. Laboriosam eos quaerat ratione ad sequi.', 'Suscipit aperiam vel nisi sequi. Tenetur explicabo iure in. Voluptatum facere beatae.', 'Omnis hic ipsum quidem hic. A velit eos labore ratione.', 'Repudiandae iste modi facere tenetur maiores. Recusandae iusto veritatis quis cumque fuga. Dolorem aspernatur ea.']",
-            "imagem": "",
-            "slug": "pinto-oliveira-sa"
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 6,
-        "fields": {
-            "nome": "Peixoto",
-            "descricao_curta": "['Magnam dignissimos amet unde cum. Suscipit rerum delectus non adipisci eius dolor. Ab repellendus quis libero facere distinctio ad nobis.']",
-            "descricao_longa": "['Provident laudantium ad itaque. Exercitationem a quia ipsam blanditiis corrupti. Voluptatum molestiae laboriosam.', 'Non molestiae autem nisi voluptates repellat iste. Officia quos fuga autem. Velit recusandae voluptas qui.', 'Id tempore odit eos eum vero. Eius placeat debitis enim dolores est labore.', 'Atque voluptas similique perspiciatis sunt molestias earum. Nostrum rerum rerum nam dolores.', 'Temporibus mollitia sint maiores. Modi praesentium voluptates odit labore possimus quaerat. Fugit id recusandae necessitatibus perferendis nulla doloribus.']",
-            "imagem": "",
-            "slug": "peixoto"
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 7,
-        "fields": {
-            "nome": "Azevedo",
-            "descricao_curta": "['Accusantium dignissimos ea sint nulla quisquam. Vel ad esse dolorem corporis corporis.']",
-            "descricao_longa": "['Quasi perspiciatis rerum illum nesciunt iste. Ea enim veniam culpa. Excepturi excepturi minus quisquam amet distinctio ab.', 'Tenetur tempora doloremque sed ipsam molestias. Sapiente incidunt nulla quibusdam. Eum praesentium quos ab incidunt.', 'Dicta in delectus officiis. Ab incidunt tenetur quis. Officiis tempora hic quibusdam corrupti ducimus magnam.', 'Animi ratione cum amet sed. Nulla aspernatur ab pariatur impedit laborum suscipit.', 'Quam vero qui ullam. Similique expedita molestias totam maxime aut. Tempore perspiciatis laudantium cumque assumenda vero.']",
-            "imagem": "",
-            "slug": "azevedo"
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 8,
-        "fields": {
-            "nome": "da Cunha - EI",
-            "descricao_curta": "['Harum blanditiis dignissimos. Distinctio pariatur architecto praesentium nostrum dolorum aliquid. Molestias dolorum modi eos temporibus iure amet.']",
-            "descricao_longa": "['Odio sequi harum consequatur. Praesentium vel voluptatem iusto laboriosam numquam voluptas. Ipsa totam molestias magnam eligendi dicta.', 'Perferendis maiores deleniti numquam exercitationem dolor inventore. At consequatur iure quod ad ratione ad. Cum perspiciatis quia explicabo dolorum natus.', 'Aliquid rem pariatur omnis eum animi. Eligendi ipsam libero excepturi nulla inventore itaque.', 'Enim fugiat ipsum necessitatibus occaecati. Enim harum inventore voluptatum id deleniti. Non laudantium animi culpa laborum earum praesentium.', 'Veritatis aut explicabo animi. Blanditiis nihil sed porro iusto.']",
-            "imagem": "",
-            "slug": "da-cunha-ei"
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 9,
-        "fields": {
-            "nome": "Oliveira Cunha - EI",
-            "descricao_curta": "['Similique voluptatibus consequatur vero. Ipsum eum aut dolores iste facilis fugiat atque.']",
-            "descricao_longa": "['Doloribus beatae aspernatur. Quo ad facere et nam.', 'Deleniti fugiat aliquid iste. Sapiente explicabo perspiciatis ducimus.', 'Voluptatum vel ipsa laboriosam aperiam illo molestiae porro. Dolor sequi vel.', 'Vero necessitatibus dolor numquam odio. Aliquid sint architecto quibusdam cupiditate dignissimos iusto.', 'Ipsum consectetur voluptatem. Illum assumenda ut asperiores earum. Illum atque ullam.']",
-            "imagem": "",
-            "slug": "oliveira-cunha-ei"
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 10,
-        "fields": {
-            "nome": "da Rocha",
-            "descricao_curta": "['Doloribus recusandae veritatis doloribus soluta. Tempore sit pariatur id earum. Exercitationem repellendus cum tenetur quisquam exercitationem. Vero sunt tenetur amet suscipit.']",
-            "descricao_longa": "['Cumque ad perspiciatis. Nam maxime animi alias. Ullam eius itaque corrupti ullam sit.', 'Reiciendis recusandae vel dolor. Impedit tenetur quo est.', 'Praesentium accusamus quo neque at. Ipsa quisquam suscipit voluptatibus totam. Provident id minima omnis ut.', 'Beatae sequi delectus doloremque exercitationem ratione veniam. Facilis voluptatum saepe ab modi.', 'Aliquid similique libero vero omnis facere voluptatem. Nobis veniam nesciunt cum modi et quos. Explicabo iste blanditiis necessitatibus molestiae ex cupiditate.']",
-            "imagem": "",
-            "slug": "da-rocha"
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 11,
-        "fields": {
-            "nome": "Jesus",
-            "descricao_curta": "['Ipsum velit dolores perferendis culpa ullam. Atque sunt accusantium at porro.']",
-            "descricao_longa": "['Nisi sint quis sit sint et. Eos ab porro temporibus sint accusantium. Enim aspernatur ad eveniet.', 'Doloribus nemo quaerat. Libero eius quidem maiores beatae ea iusto. Deserunt esse qui quis nihil ex.', 'Exercitationem neque accusantium explicabo.', 'Odio ea eaque beatae ea ipsam. Dolor repellat praesentium sapiente eligendi magnam voluptatum repellat. Nulla quidem reprehenderit modi quam rem vel.', 'Quam voluptatibus pariatur qui deleniti laboriosam. Maiores laboriosam praesentium quidem a atque eius.']",
-            "imagem": "",
-            "slug": "jesus"
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 12,
-        "fields": {
-            "nome": "Moura Peixoto S.A.",
-            "descricao_curta": "['Praesentium adipisci mollitia officia facere. Facere perferendis beatae ipsa voluptate qui praesentium. Adipisci illo accusamus illo voluptatum cupiditate.']",
-            "descricao_longa": "['Sunt in enim eligendi. Ipsam reprehenderit provident eum.', 'Optio necessitatibus cupiditate. Repudiandae minima aperiam ex ea saepe.', 'Maxime porro eaque vitae. Nemo maiores quia illo. Temporibus nulla est debitis. Hic officiis consequuntur quaerat illo.', 'Quia explicabo repellendus numquam. Placeat laudantium tempora modi. Deserunt consequuntur cumque distinctio accusantium aperiam.', 'Sunt recusandae facere atque.']",
-            "imagem": "",
-            "slug": "moura-peixoto-sa"
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 13,
-        "fields": {
-            "nome": "Pereira",
-            "descricao_curta": "['Omnis minima voluptas debitis. Blanditiis dolorem fugit. Modi illo quaerat totam sapiente quas.']",
-            "descricao_longa": "['Fugiat dolore unde autem. Expedita odio quaerat dolorem earum suscipit. Officia magnam ullam modi laudantium.', 'Ea aliquam sed corrupti veritatis. Ratione perferendis esse laudantium.', 'Blanditiis neque accusamus officiis aut laudantium magnam. Iusto maxime totam quaerat qui. Et placeat quasi quidem earum illo incidunt.', 'Dolores corporis incidunt. Voluptas itaque assumenda officia. Itaque possimus quo ipsum aliquam.', 'Molestiae architecto nisi illo nisi officiis. Voluptatibus sit temporibus veniam.']",
-            "imagem": "",
-            "slug": "pereira"
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 14,
-        "fields": {
-            "nome": "Moura",
-            "descricao_curta": "['Dicta exercitationem ea laboriosam magnam. Sapiente eum ab ab repellat placeat minima.']",
-            "descricao_longa": "['Similique vitae porro dicta. Ipsa vel enim quibusdam. Quis natus repudiandae reiciendis vero optio.', 'Eum facilis facilis nihil fuga. Magni quis temporibus expedita.', 'Sapiente delectus totam facilis perferendis. Distinctio sunt dolore eveniet dolore. Aliquam nostrum distinctio alias repellat.', 'Illum laborum id ad at at perferendis. Adipisci nam iure assumenda. In maxime sapiente pariatur. Ex porro officia excepturi totam.', 'Velit earum totam ducimus. Libero eveniet molestias id.']",
-            "imagem": "",
-            "slug": "moura"
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 15,
-        "fields": {
-            "nome": "Ribeiro",
-            "descricao_curta": "['Aperiam excepturi odit quisquam minima numquam officia nesciunt. Accusantium quod odit officia labore illo. Minima quisquam sapiente nemo illo occaecati. Consequatur dicta consequatur corrupti fugiat qui ullam in.']",
-            "descricao_longa": "['Eos quae fugiat dolorem modi esse. Esse officiis magni. Quia veniam exercitationem animi iusto.', 'Et blanditiis aspernatur ut. Occaecati deserunt provident impedit eligendi dicta aut veritatis.', 'Soluta at ea vel totam vero. Beatae quasi est nesciunt expedita. Explicabo magni magni tempora magnam.', 'Fuga architecto odio a a vitae impedit unde.', 'Explicabo quod natus repudiandae. Fugit illo doloribus necessitatibus.']",
-            "imagem": "",
-            "slug": "ribeiro"
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 16,
-        "fields": {
-            "nome": "Martins e Filhos",
-            "descricao_curta": "['Hic quos earum excepturi voluptas recusandae. Accusantium minus magni. Aliquam voluptatibus laborum adipisci tenetur. Rerum facere optio delectus explicabo sit.']",
-            "descricao_longa": "['Aperiam consectetur id unde modi. Nemo non at laboriosam nam modi.', 'Ratione harum doloremque tenetur mollitia maxime vel. Autem adipisci vitae perspiciatis vel. Eveniet possimus quidem praesentium tenetur.', 'Ipsam incidunt enim blanditiis. Eius rerum enim illo. Doloremque deleniti rem numquam ipsam dolor minus. Praesentium ratione explicabo maiores.', 'Amet aperiam accusantium quae repellat.', 'Eligendi tempora exercitationem blanditiis nulla ullam. Occaecati libero molestias reiciendis officia quae deserunt. Explicabo nam veniam quo.']",
-            "imagem": "",
-            "slug": "martins-e-filhos"
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 17,
-        "fields": {
-            "nome": "Costa",
-            "descricao_curta": "['Dolorem porro maxime laudantium quisquam porro possimus. Deserunt fuga nisi qui enim perspiciatis architecto eum.']",
-            "descricao_longa": "['Dolor laborum minus nisi commodi esse. Maiores optio culpa iure praesentium quidem.', 'Sunt numquam similique aliquam porro facilis minus. Fugiat voluptates quasi aspernatur quas veniam. Quas deleniti occaecati culpa.', 'Quisquam fuga accusamus beatae ea. Commodi eaque consequatur necessitatibus doloribus.', 'Dignissimos sunt ut rem alias eaque. Optio quasi possimus voluptatem saepe commodi. Ducimus ipsum provident ducimus porro.', 'Autem error soluta quod. Reiciendis eos corrupti perspiciatis suscipit.']",
-            "imagem": "",
-            "slug": "costa"
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 18,
-        "fields": {
-            "nome": "Nunes - ME",
-            "descricao_curta": "['Ipsam commodi pariatur. Quis itaque porro in eum deserunt est. Veniam eum vero soluta.']",
-            "descricao_longa": "['Voluptates odio quae esse mollitia ad voluptatum. Corrupti repudiandae nulla eligendi provident inventore. Quasi nobis fuga alias.', 'Porro eligendi eaque dolores. Expedita dicta maxime fuga aliquam. Non sed possimus occaecati asperiores quaerat eaque.', 'Dolor quae iusto quos perspiciatis possimus ut exercitationem. Vitae assumenda corporis ut nesciunt.', 'Iusto ab saepe atque numquam unde quod. Delectus facere suscipit ipsum. Odit aliquam quaerat pariatur culpa aliquam. Numquam tempore a sint quo quo necessitatibus nostrum.', 'Placeat nemo eaque unde omnis inventore. Officiis velit quis esse velit commodi. Reprehenderit dolorem molestias qui laudantium ipsum rerum inventore.']",
-            "imagem": "",
-            "slug": "nunes-me"
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 19,
-        "fields": {
-            "nome": "Moreira Moreira - EI",
-            "descricao_curta": "['Incidunt nobis tempora nostrum distinctio cumque nulla. Illum repellendus vero. Pariatur optio architecto quis. Tempora architecto vel.']",
-            "descricao_longa": "['Unde quo facere temporibus sed. Incidunt quasi officiis commodi dolore assumenda.', 'Rerum vitae iusto nemo facilis necessitatibus deleniti eum. Libero consequatur nostrum beatae nam. Laborum quibusdam id quis fugiat provident beatae. Quas doloribus ratione pariatur.', 'Molestiae dolore non beatae ipsam.', 'Deserunt tempore quasi ducimus id. Impedit molestiae fugiat expedita. Inventore quas itaque minima praesentium.', 'Tenetur eaque illo modi. Delectus praesentium in fugit unde voluptates. Optio voluptates temporibus autem officiis eligendi.']",
-            "imagem": "",
-            "slug": "moreira-moreira-ei"
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 20,
-        "fields": {
-            "nome": "da Costa da Luz - ME",
-            "descricao_curta": "['Quo illo reiciendis nostrum a similique sapiente. Quam optio magnam dolores distinctio alias. Totam voluptatem aut repellendus illo ipsam provident.']",
-            "descricao_longa": "['Quis accusamus optio labore fugit veritatis ullam. Odio optio blanditiis animi autem magnam eaque cupiditate. Saepe officia aspernatur sequi mollitia doloribus nesciunt.', 'Dicta id voluptatum repellendus quibusdam sint veritatis. Consequatur possimus dolorum harum ut voluptatum eaque enim. Incidunt similique ratione laborum praesentium magnam itaque.', 'Commodi velit fugit natus. Magnam libero reprehenderit assumenda provident.', 'Laborum impedit deleniti dicta perspiciatis excepturi. Corporis amet unde ipsa quam architecto.', 'Facilis repellat magni id veniam eos. Autem sequi modi voluptas. Molestiae unde at eius.']",
-            "imagem": "",
-            "slug": "da-costa-da-luz-me"
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 21,
-        "fields": {
-            "nome": "Cavalcanti e Filhos",
-            "descricao_curta": "['Amet minima est excepturi vitae porro. Praesentium modi minus facere. Architecto nihil magni.']",
-            "descricao_longa": "['Sint reiciendis commodi ut porro. Architecto nemo perferendis. Earum odit illo reiciendis voluptatum eveniet amet.', 'Labore iusto est aliquam perspiciatis. Optio minus accusamus odio dolorem quis.', 'Distinctio animi et. Assumenda ex quasi et tenetur. Ratione harum natus explicabo doloremque natus.', 'Veritatis voluptas fugit quod fuga occaecati labore quo. Magni excepturi est repudiandae eligendi. Quia non rerum velit cupiditate modi.', 'Tempore culpa sunt atque. Atque dolores illo optio nostrum. Voluptatibus dicta nesciunt illo.']",
-            "imagem": "",
-            "slug": "cavalcanti-e-filhos"
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 22,
-        "fields": {
-            "nome": "Silva",
-            "descricao_curta": "['Eos labore reiciendis magnam quas. Soluta voluptatibus quos maiores distinctio.']",
-            "descricao_longa": "['A adipisci vitae vitae. Minima quo ipsam iure. Facere facilis neque eligendi quam numquam minima.', 'Exercitationem fugiat quas aliquid. Quis a asperiores earum.', 'Hic corporis temporibus repellendus unde. Laborum nesciunt eos assumenda deleniti corporis. Deleniti placeat reiciendis deserunt. Facilis debitis commodi molestias possimus sint.', 'Mollitia nesciunt officia vero nulla deleniti. Eaque ab aliquam blanditiis beatae in voluptas.', 'Unde soluta sapiente tempora sapiente repellat.']",
-            "imagem": "",
-            "slug": "silva"
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 23,
-        "fields": {
-            "nome": "Caldeira",
-            "descricao_curta": "['Incidunt amet soluta illum magnam veniam cupiditate excepturi. Maiores ipsum excepturi qui sapiente.']",
-            "descricao_longa": "['Reiciendis repudiandae culpa illo rem ipsa inventore maiores. Dolorum eius nobis perferendis voluptate quasi. Nesciunt illum sunt maiores doloremque.', 'Illum eligendi repellendus corporis. Deserunt odio veniam eum facilis tempore possimus. Aliquam aperiam facere quam iste eveniet.', 'Non nulla optio quod. Nulla explicabo voluptates nihil nam aut quos. Dignissimos voluptatum sint quisquam placeat.', 'Quos similique quisquam nemo suscipit nisi pariatur. Iste repellendus eaque quaerat.', 'Commodi cupiditate nisi doloribus explicabo laborum. Fugit quaerat tenetur occaecati. Ducimus magnam doloribus eius.']",
-            "imagem": "",
-            "slug": "caldeira"
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 24,
-        "fields": {
-            "nome": "Nascimento Ltda.",
-            "descricao_curta": "['Temporibus dolorem voluptate voluptas enim. Blanditiis necessitatibus eum neque tempora. Asperiores corrupti dolores reprehenderit culpa.']",
-            "descricao_longa": "['Architecto dolorum porro minus nam voluptatum eaque. Veniam doloremque consequatur dolores pariatur tempore doloribus.', 'Ut molestiae cum vel doloremque voluptatibus. Sunt error quae totam maiores nesciunt qui. Minima quasi cupiditate fuga. Tempore facilis debitis repudiandae vitae sequi nesciunt.', 'Nam dolor asperiores nesciunt a molestiae nihil.', 'Neque labore provident cum nam fuga ipsam. Consectetur sequi doloremque tenetur.', 'Voluptates excepturi et velit quos error perferendis cupiditate. Culpa maxime culpa odit delectus dolorem reprehenderit.']",
-            "imagem": "",
-            "slug": "nascimento-ltda"
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 25,
-        "fields": {
-            "nome": "da Cunha Melo e Filhos",
-            "descricao_curta": "['Odio quibusdam soluta fuga eum id hic. Labore cumque aspernatur totam.']",
-            "descricao_longa": "['Debitis amet dignissimos pariatur harum. Cupiditate occaecati quas quos incidunt accusamus temporibus. Totam quasi enim ad similique.', 'Nisi est aliquam ipsum. Consequatur est sunt optio. Nulla deserunt sed nam.', 'Necessitatibus assumenda explicabo tempora nemo doloribus libero. Asperiores labore rem. Debitis voluptates in.', 'Numquam neque beatae. Officia ipsa culpa ut saepe et similique. Eligendi sint modi aliquam incidunt.', 'Cupiditate numquam asperiores similique a ipsa accusantium. Blanditiis soluta perspiciatis hic. Recusandae nesciunt accusantium laborum aperiam tempore.']",
-            "imagem": "",
-            "slug": "da-cunha-melo-e-filhos"
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 26,
-        "fields": {
-            "nome": "Vieira",
-            "descricao_curta": "['Qui qui iste deleniti. Optio odit corporis nemo distinctio. Aliquam quas aut inventore modi similique voluptatibus nemo.']",
-            "descricao_longa": "['Eligendi ipsum maiores corrupti ullam minima iusto. Ipsa aliquid est consequuntur temporibus modi. Repudiandae maiores iure voluptatem.', 'Nihil delectus modi sunt.', 'Assumenda fugiat veniam quidem. Voluptates occaecati facere esse harum dolore.', 'Sit dolorum sequi nobis voluptate. Quis quasi atque quia.', 'Doloribus reprehenderit odit fugit nostrum corporis. Quasi rerum fugit doloremque explicabo.']",
-            "imagem": "",
-            "slug": "vieira"
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 27,
-        "fields": {
-            "nome": "Freitas",
-            "descricao_curta": "['Provident quos quia voluptatem odio. Quos corporis blanditiis eligendi non.']",
-            "descricao_longa": "['Nulla facilis iusto. Porro tempore error pariatur maiores dolorum dolorum. Nihil consequatur consequuntur distinctio recusandae. Distinctio nisi libero ut praesentium culpa maiores.', 'Natus mollitia optio quia tenetur accusantium suscipit perspiciatis. Fuga quidem itaque officia officiis.', 'Sapiente accusamus blanditiis nemo soluta rem sed. Autem minima ipsam nemo aut. Non est quas omnis doloremque suscipit.', 'Aperiam nostrum laborum error iste eveniet molestiae magnam. Iusto mollitia veritatis odit itaque aut illum officiis. Distinctio minus quo libero culpa.', 'Repudiandae alias doloribus dolorum fugit corrupti quos. Quia saepe voluptate neque doloremque blanditiis ipsum.']",
-            "imagem": "",
-            "slug": "freitas"
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 28,
-        "fields": {
-            "nome": "Fogaþa Freitas e Filhos",
-            "descricao_curta": "['Quisquam mollitia tempore minima officiis quis alias. Autem quam officia eius.']",
-            "descricao_longa": "['Alias soluta ipsam. Cum labore reiciendis dolore ipsa id.', 'A consequuntur quibusdam asperiores. Vitae facilis est iste quos.', 'Sed fugit eius alias ad beatae laborum a.', 'Soluta excepturi sint iste nam odio fugit. Fugit asperiores minus dolorem fuga vitae debitis.', 'Officia quidem et consequatur consequuntur debitis. Perferendis modi repudiandae debitis. Ipsam repellendus veniam nesciunt aspernatur. Quisquam aperiam hic omnis blanditiis necessitatibus explicabo accusantium.']",
-            "imagem": "",
-            "slug": "fogaca-freitas-e-filhos"
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 29,
-        "fields": {
-            "nome": "Nunes",
-            "descricao_curta": "['Deleniti dolorem eveniet quibusdam velit molestias eos facere. Culpa eos laudantium. Dolore nesciunt vel.']",
-            "descricao_longa": "['Nihil assumenda cumque. Ipsum ex nihil explicabo sapiente tenetur sit doloremque. Et aperiam maxime accusantium exercitationem.', 'Nemo perspiciatis ratione totam ullam voluptas quibusdam repudiandae. Velit doloremque molestias similique id animi. In optio qui amet molestiae similique corporis nobis. Dolore hic ullam tenetur libero molestiae ipsum.', 'Doloremque quia eveniet beatae. Reprehenderit dolores quod veritatis a placeat. Exercitationem iusto odio neque. Aut dicta recusandae perspiciatis soluta ab nemo.', 'Non dolorem maiores cumque ipsam at autem placeat. Quam enim ratione veritatis aspernatur eligendi eum.', 'Cumque praesentium saepe mollitia fugit officia. In nihil eveniet quis. Ex provident illo cumque optio consequatur doloremque. Voluptates reprehenderit soluta.']",
-            "imagem": "",
-            "slug": "nunes"
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 30,
-        "fields": {
-            "nome": "Cunha Sales e Filhos",
-            "descricao_curta": "['Nemo maiores rem asperiores non explicabo inventore. Quam accusamus accusamus atque.']",
-            "descricao_longa": "['Inventore eius iste odit similique corporis minima excepturi. Facilis totam perspiciatis quos.', 'Adipisci vitae placeat totam eaque quis. In officiis eligendi occaecati sunt voluptates dignissimos.', 'Vitae ullam temporibus officia deleniti possimus ullam.', 'Neque sint libero incidunt laudantium eligendi minima. Assumenda fugiat facilis officiis consequuntur a. Consequuntur autem placeat consectetur tenetur nobis et.', 'A itaque libero magnam reiciendis distinctio repudiandae. Nulla provident nobis deleniti.']",
-            "imagem": "",
-            "slug": "cunha-sales-e-filhos"
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 31,
-        "fields": {
-            "nome": "das Neves Cardoso e Filhos",
-            "descricao_curta": "['Nostrum dolores culpa perspiciatis provident nemo. Optio excepturi similique error reiciendis.']",
-            "descricao_longa": "['Odio totam impedit inventore rerum doloremque tempora ea. Adipisci odio praesentium illum. Tempore unde laboriosam aliquam.', 'Error itaque quis repudiandae architecto hic dicta. Voluptatibus cum alias fugiat dolor laborum. Beatae id similique pariatur eum tempore quia.', 'Ex facilis est adipisci sint eos. Distinctio in harum mollitia quas. Deleniti facilis rem sunt.', 'Distinctio dolores dolorum at saepe. Placeat aut distinctio dolores labore qui. Accusamus possimus aliquid.', 'Alias ducimus quaerat et possimus similique. Nemo sit totam numquam ipsum placeat deserunt. Ullam aliquid est suscipit.']",
-            "imagem": "",
-            "slug": "das-neves-cardoso-e-filhos"
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 32,
-        "fields": {
-            "nome": "Silveira S.A.",
-            "descricao_curta": "['Doloremque quam eveniet autem quam. Delectus numquam ipsam maxime culpa dolores. Quo molestias atque occaecati deserunt. Saepe consequuntur molestias autem voluptates.']",
-            "descricao_longa": "['Animi ut ut ullam minus sapiente recusandae. Perspiciatis deserunt nesciunt in eius accusamus.', 'Voluptatem earum porro at soluta. Repellendus reiciendis debitis placeat. Doloribus aperiam consectetur consequuntur. Aut illo quaerat nemo.', 'Aliquam harum explicabo deserunt. Eos ex officiis quas.', 'Doloremque officia laborum. Dolores ut eveniet. Possimus numquam dolor consequatur quibusdam totam et itaque.', 'Inventore recusandae ut voluptas ea incidunt. Possimus ex dolores accusamus atque quam nobis.']",
-            "imagem": "",
-            "slug": "silveira-sa"
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 33,
-        "fields": {
-            "nome": "Ramos S/A",
-            "descricao_curta": "['Pariatur iure fugiat recusandae voluptates aut. Eos non cupiditate quis itaque.']",
-            "descricao_longa": "['Impedit molestias earum quibusdam debitis dolorum.', 'Deleniti fuga a sunt facere. Amet totam provident consequuntur voluptatum.', 'Delectus facilis enim quasi explicabo fuga. Exercitationem repellendus iure nam voluptatem veritatis. Reiciendis expedita architecto tempore aperiam laborum. Laboriosam pariatur aspernatur dolor maxime adipisci et.', 'Sequi ab corporis exercitationem quibusdam. Harum temporibus maxime magni exercitationem totam. Provident in non quis.', 'Explicabo maxime dicta quos deleniti. Recusandae nulla quas eligendi.']",
-            "imagem": "",
-            "slug": "ramos-sa"
-        }
-    },
-    {
-        "model": "produto.produto",
-        "pk": 34,
-        "fields": {
-            "nome": "Lima",
-            "descricao_curta": "['Libero similique perferendis sit quod. Officiis eum ea doloribus similique rem. Quibusdam quia officia deleniti vero.']",
-            "descricao_longa": "['Incidunt esse itaque iusto fuga labore repellendus. Ipsam sint esse necessitatibus aliquid. Facilis fugiat repellendus suscipit maxime non.', 'Eius totam ad reprehenderit. Exercitationem ratione voluptatibus neque unde.', 'Ratione dignissimos accusantium voluptas id accusamus. Rerum ut officiis. Non voluptatibus fugiat ex eius dolorum.', 'Iusto itaque explicabo suscipit quasi vitae iure. Vitae asperiores ab neque quia. Quo illum eaque eum.', 'Saepe debitis reprehenderit dolor iusto non. Nisi voluptatibus deserunt saepe.']",
-            "imagem": "",
-            "slug": "lima"
-        }
-    },
-    {
-        "model": "auth.user",
-        "pk": 1,
-        "fields": {
-            "password": "pbkdf2_sha256$320000$wFE8db63c1aAggo7eq0mfH$nEus5d+aH6kPhf/qmlcZgw99tZUIrQwNYheQxXY6pE4=",
-            "last_login": "2022-04-02T15:08:08.659Z",
-            "is_superuser": true,
-            "username": "icaro",
-            "first_name": "Icaro",
-            "last_name": "Monteiro",
-            "email": "icarodavi@gmail.com",
-            "is_staff": true,
-            "is_active": true,
-            "date_joined": "2022-03-19T20:05:46Z",
-            "groups": [],
-            "user_permissions": []
-        }
-    },
-    {
-        "model": "sessions.session",
-        "pk": "23aqelu5buw9z50wl5n1rdxp6lfzzlu8",
-        "fields": {
-            "session_data": ".eJxVjMEOwiAQBf-FsyFAgQWP3v0GssAiVQNJaU_Gf9cmPej1zcx7sYDbWsM2aAlzZmcm2el3i5ge1HaQ79hunafe1mWOfFf4QQe_9kzPy-H-HVQc9VuXiSw5MEUKbb3xhAKkdiJr6R0mHY1XIKIrkwZHqAQokJiiUHZSqBV7fwDANjaw:1nXEBJ:_AZIFsddQT8Dau5_vqiT6rVzTTmyI3XB8FbmQtMCJxs",
-            "expire_date": "2022-04-07T03:30:37.762Z"
-        }
-    },
-    {
-        "model": "sessions.session",
-        "pk": "2w1f4wnq1j8j513cby9ti91v6mkw7j7u",
-        "fields": {
-            "session_data": ".eJxVjMEOwiAQBf-FsyFAgQWP3v0GssAiVQNJaU_Gf9cmPej1zcx7sYDbWsM2aAlzZmcm2el3i5ge1HaQ79hunafe1mWOfFf4QQe_9kzPy-H-HVQc9VuXiSw5MEUKbb3xhAKkdiJr6R0mHY1XIKIrkwZHqAQokJiiUHZSqBV7fwDANjaw:1nafMG:DRm6ZUysU2JNA3QTGM74Liqg1e7I5Fo5y5b5MeRdQP0",
-            "expire_date": "2022-04-16T15:08:08.665Z"
-        }
-    },
-    {
-        "model": "sessions.session",
-        "pk": "5uflpi7iampcqxwin8fjxvbmrsfhbaoa",
-        "fields": {
-            "session_data": ".eJxVjMEOwiAQBf-FsyFAgQWP3v0GssAiVQNJaU_Gf9cmPej1zcx7sYDbWsM2aAlzZmcm2el3i5ge1HaQ79hunafe1mWOfFf4QQe_9kzPy-H-HVQc9VuXiSw5MEUKbb3xhAKkdiJr6R0mHY1XIKIrkwZHqAQokJiiUHZSqBV7fwDANjaw:1nZMD7:9GvICBW_58UG8N9W9CmsnkGbTXZoJQqTYdWyEFuUiuQ",
-            "expire_date": "2022-04-13T00:29:17.759Z"
-        }
-    },
-    {
-        "model": "sessions.session",
-        "pk": "82f3ywgdnk2pw28xczenemixih4y0egu",
-        "fields": {
-            "session_data": ".eJxVjMEOwiAQBf-FsyFAgQWP3v0GssAiVQNJaU_Gf9cmPej1zcx7sYDbWsM2aAlzZmcm2el3i5ge1HaQ79hunafe1mWOfFf4QQe_9kzPy-H-HVQc9VuXiSw5MEUKbb3xhAKkdiJr6R0mHY1XIKIrkwZHqAQokJiiUHZSqBV7fwDANjaw:1nX4Dq:9_AA_1u1Zb2Hk8zNt-qk9JdG-ziqs6pGP87an_qu8p4",
-            "expire_date": "2022-04-06T16:52:34.313Z"
-        }
-    },
-    {
-        "model": "sessions.session",
-        "pk": "ifbya21gj7p2r7emtp5wydx2s3bn3zze",
-        "fields": {
-            "session_data": ".eJxVjMEOwiAQBf-FsyFAgQWP3v0GssAiVQNJaU_Gf9cmPej1zcx7sYDbWsM2aAlzZmcm2el3i5ge1HaQ79hunafe1mWOfFf4QQe_9kzPy-H-HVQc9VuXiSw5MEUKbb3xhAKkdiJr6R0mHY1XIKIrkwZHqAQokJiiUHZSqBV7fwDANjaw:1nXn2a:YHCwUqCKGpaOvtO-ZOo4UiPabm0fE6fAerXibgOzTmk",
-            "expire_date": "2022-04-08T16:43:56.524Z"
-        }
-    },
-    {
-        "model": "sessions.session",
-        "pk": "n78kwiyuf183dpewcui59ce5jiwnxpj1",
-        "fields": {
-            "session_data": ".eJxVjMEOwiAQBf-FsyFAgQWP3v0GssAiVQNJaU_Gf9cmPej1zcx7sYDbWsM2aAlzZmcm2el3i5ge1HaQ79hunafe1mWOfFf4QQe_9kzPy-H-HVQc9VuXiSw5MEUKbb3xhAKkdiJr6R0mHY1XIKIrkwZHqAQokJiiUHZSqBV7fwDANjaw:1nXBxz:RQOxT2-iXGBWwj8RR5TamnoxbO6c1Gc5lfQaIGR6DCk",
-            "expire_date": "2022-04-07T01:08:43.091Z"
-        }
-    },
-    {
-        "model": "sessions.session",
-        "pk": "qxdvlp53a7a1flp2j0bcdwt0j3wn5sua",
-        "fields": {
-            "session_data": ".eJxVjMEOwiAQBf-FsyFAgQWP3v0GssAiVQNJaU_Gf9cmPej1zcx7sYDbWsM2aAlzZmcm2el3i5ge1HaQ79hunafe1mWOfFf4QQe_9kzPy-H-HVQc9VuXiSw5MEUKbb3xhAKkdiJr6R0mHY1XIKIrkwZHqAQokJiiUHZSqBV7fwDANjaw:1nXBzK:VEotUR-Kfspj1D0vLQq27squGkijJsNG1pIYntdMpEM",
-            "expire_date": "2022-04-07T01:10:06.221Z"
-        }
-    },
-    {
-        "model": "sessions.session",
-        "pk": "xbwznaaaxdr0iav8vqfdwvlwuucrvx47",
-        "fields": {
-            "session_data": ".eJxVjMEOwiAQBf-FsyFAgQWP3v0GssAiVQNJaU_Gf9cmPej1zcx7sYDbWsM2aAlzZmcm2el3i5ge1HaQ79hunafe1mWOfFf4QQe_9kzPy-H-HVQc9VuXiSw5MEUKbb3xhAKkdiJr6R0mHY1XIKIrkwZHqAQokJiiUHZSqBV7fwDANjaw:1naf0p:4s2WrL99vdwngYRgPIAUwHe-GpK3f3DUtgQBiw2-zdg",
-            "expire_date": "2022-04-16T14:45:59.107Z"
-        }
-    },
-    {
-        "model": "perfil.perfil",
-        "pk": 1,
-        "fields": {
-            "usuario": [
-                "icaro"
-            ],
-            "data_nascimento": "1986-10-01",
-            "cpf": "01292729309",
-            "endereco": "Rua SÒo Francisco",
-            "numero": "728",
-            "complemento": "Casa",
-            "bairro": "Centro",
-            "cep": "63010215",
-            "cidade": "Juazeiro do Norte",
-            "estado": "CE",
-            "ativo": true
-        }
-    },
-    {
-        "model": "solicitacao.solicitacao",
-        "pk": 2,
-        "fields": {
-            "usuario": [
-                "icaro"
-            ],
-            "objeto": "AquisiþÒo de caneta preta para a Secretaria de EducaþÒo do MunicÝpio de Vßrzea Alegre",
-            "secretaria": 1,
-            "data": "2022-02-04",
-            "status": "P"
-        }
-    },
-    {
-        "model": "solicitacao.solicitacao",
-        "pk": 3,
-        "fields": {
-            "usuario": [
-                "icaro"
-            ],
-            "objeto": "Reforma a ampliaþÒo da Secretaria de Infraestrutura",
-            "secretaria": 2,
-            "data": "2022-02-04",
-            "status": "P"
-        }
-    },
-    {
-        "model": "solicitacao.solicitacao",
-        "pk": 4,
-        "fields": {
-            "usuario": [
-                "icaro"
-            ],
-            "objeto": null,
-            "secretaria": 3,
-            "data": "2022-03-23",
-            "status": "P"
-        }
-    },
-    {
-        "model": "solicitacao.solicitacao",
-        "pk": 5,
-        "fields": {
-            "usuario": [
-                "icaro"
-            ],
-            "objeto": null,
-            "secretaria": 4,
-            "data": "2022-03-23",
-            "status": "P"
-        }
-    },
-    {
-        "model": "solicitacao.solicitacao",
-        "pk": 6,
-        "fields": {
-            "usuario": [
-                "icaro"
-            ],
-            "objeto": "AquisiþÒo de material de construþÒo para reforma da secretaria de infraestrutura ",
-            "secretaria": 2,
-            "data": "2022-04-02",
-            "status": "P"
-        }
-    },
-    {
-        "model": "solicitacao.solicitacao",
-        "pk": 7,
-        "fields": {
-            "usuario": [
-                "icaro"
-            ],
-            "objeto": "AquisiþÒo de material de construþÒo para reforma da secretaria de infraestrutura ",
-            "secretaria": 2,
-            "data": "2022-04-02",
-            "status": "P"
-        }
-    },
-    {
-        "model": "solicitacao.solicitacao",
-        "pk": 8,
-        "fields": {
-            "usuario": [
-                "icaro"
-            ],
-            "objeto": "AquisiþÒo de material de construþÒo para reforma da secretaria de infraestrutura ",
-            "secretaria": 2,
-            "data": "2022-04-02",
-            "status": "P"
-        }
-    },
-    {
-        "model": "solicitacao.solicitacao",
-        "pk": 9,
-        "fields": {
-            "usuario": [
-                "icaro"
-            ],
-            "objeto": "AquisiþÒo de material de construþÒo para reforma da secretaria de infraestrutura ",
-            "secretaria": 2,
-            "data": "2022-04-02",
-            "status": "P"
-        }
+{
+    "model": "prefeitura.prefeitura",
+    "pk": 1,
+    "fields": {
+        "nome": "Varzea Alegre",
+        "site": "www.varzeaalegre.ce.gov.br",
+        "logotipo": "prefeitura/2022/03/b88f04130f.jpg",
+        "ativo": true
     }
+},
+{
+    "model": "prefeitura.prefeitura",
+    "pk": 2,
+    "fields": {
+        "nome": "Mauriti",
+        "site": "www.mauriti.ce.gov.br",
+        "logotipo": "prefeitura/2022/03/circuit_paths_chips_black_pin_26298_1280x720.jpg",
+        "ativo": true
+    }
+},
+{
+    "model": "prefeitura.prefeitura",
+    "pk": 3,
+    "fields": {
+        "nome": "Barro",
+        "site": "http://www.barro.ce.gov.br",
+        "logotipo": "prefeitura/2022/03/linux_linux_mint_black_gnu_103855_1280x720.jpg",
+        "ativo": true
+    }
+},
+{
+    "model": "prefeitura.prefeitura",
+    "pk": 47,
+    "fields": {
+        "nome": "11111111110987",
+        "site": "07868795",
+        "logotipo": "prefeitura/2022/03/processor_cpu_upgrade_installation_chip_robot_5633_1280x720.jpg",
+        "ativo": true
+    }
+},
+{
+    "model": "secretaria.secretaria",
+    "pk": 1,
+    "fields": {
+        "nome": "Secretaria de EducaþÒo",
+        "prefeitura": 1,
+        "endereco": "Endereþo",
+        "secretario": "Secretßrio",
+        "ativo": true
+    }
+},
+{
+    "model": "secretaria.secretaria",
+    "pk": 2,
+    "fields": {
+        "nome": "Secretaria de Infraestrutura",
+        "prefeitura": 3,
+        "endereco": "Rua X",
+        "secretario": "Secretario XX",
+        "ativo": true
+    }
+},
+{
+    "model": "secretaria.secretaria",
+    "pk": 3,
+    "fields": {
+        "nome": "Secretaria de Sa·de",
+        "prefeitura": 2,
+        "endereco": "Rua XX",
+        "secretario": "OOOOOO",
+        "ativo": true
+    }
+},
+{
+    "model": "secretaria.secretaria",
+    "pk": 4,
+    "fields": {
+        "nome": "Secretaria de Meio Ambiente",
+        "prefeitura": 1,
+        "endereco": "123456",
+        "secretario": "123456",
+        "ativo": true
+    }
+},
+{
+    "model": "solicitacao.solicitacaoitem",
+    "pk": 2,
+    "fields": {
+        "solicitacao": 2,
+        "produto": "Caneta Preta",
+        "produto_id": 1,
+        "quantidade": 1,
+        "imagem": null
+    }
+},
+{
+    "model": "solicitacao.solicitacaoitem",
+    "pk": 3,
+    "fields": {
+        "solicitacao": 2,
+        "produto": "Cimento",
+        "produto_id": 2,
+        "quantidade": 10,
+        "imagem": null
+    }
+},
+{
+    "model": "solicitacao.solicitacaoitem",
+    "pk": 4,
+    "fields": {
+        "solicitacao": 2,
+        "produto": "Teste COVID",
+        "produto_id": 3,
+        "quantidade": 1000,
+        "imagem": null
+    }
+},
+{
+    "model": "solicitacao.solicitacaoitem",
+    "pk": 5,
+    "fields": {
+        "solicitacao": 4,
+        "produto": "Insulina",
+        "produto_id": 4,
+        "quantidade": 1000,
+        "imagem": null
+    }
+},
+{
+    "model": "solicitacao.solicitacaoitem",
+    "pk": 6,
+    "fields": {
+        "solicitacao": 5,
+        "produto": "Muda de arvore",
+        "produto_id": 5,
+        "quantidade": 100,
+        "imagem": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 1,
+    "fields": {
+        "nome": "Caneta Preta",
+        "descricao_curta": "Uma caneta da cor preta",
+        "descricao_longa": "Uma caneta da cor preta com ponta 7.0",
+        "imagem": "produto_imagens/2022/03/176161z_3.webp",
+        "slug": "caneta-preta"
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 3,
+    "fields": {
+        "nome": "da Mata",
+        "descricao_curta": "['Officia temporibus repellat repellendus animi. Eaque nam suscipit ipsum officiis nulla libero. Blanditiis quis porro blanditiis autem nostrum cupiditate.']",
+        "descricao_longa": "['Perferendis voluptatum quam placeat et doloremque. Veniam nobis alias sapiente beatae consequatur. Repellendus et dolores ipsam est.', 'Sequi dolor quis quas fuga quis cupiditate. Enim vel illum eius doloremque eum similique.', 'In similique incidunt consequuntur odio. Sunt animi dolorum dignissimos architecto voluptatem quisquam.', 'Error odio aut dignissimos.', 'Fuga ad illo nulla blanditiis facere expedita officiis. Inventore excepturi vero.']",
+        "imagem": "",
+        "slug": "da-mata"
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 4,
+    "fields": {
+        "nome": "Novaes",
+        "descricao_curta": "['Nisi molestias non corporis voluptates. Quasi esse ratione assumenda a accusamus. Deserunt quo temporibus eligendi laudantium quo quod corrupti.']",
+        "descricao_longa": "['Quaerat reprehenderit officiis. Occaecati ducimus minus magni illo exercitationem perspiciatis.', 'Cumque neque consectetur ex voluptates delectus. Consectetur odit qui dolor.', 'Nisi earum officiis debitis repellendus neque quis. Officiis recusandae magni totam.', 'Delectus cupiditate illum aspernatur exercitationem fugit. Deserunt atque magnam tenetur quaerat. Est dignissimos saepe ducimus.', 'Hic quibusdam enim culpa quis culpa pariatur. Quae doloribus modi quia incidunt ab. Architecto expedita impedit voluptates distinctio.']",
+        "imagem": "",
+        "slug": "novaes"
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 5,
+    "fields": {
+        "nome": "Pinto Oliveira S.A.",
+        "descricao_curta": "['Exercitationem facilis perspiciatis hic inventore. Tempora nobis deleniti quidem ullam sed.']",
+        "descricao_longa": "['Modi hic accusamus ratione incidunt voluptate magnam repudiandae. Necessitatibus consequatur in vitae ad ipsam.', 'Nostrum cupiditate corporis autem. Ipsa nesciunt suscipit accusantium. Laboriosam eos quaerat ratione ad sequi.', 'Suscipit aperiam vel nisi sequi. Tenetur explicabo iure in. Voluptatum facere beatae.', 'Omnis hic ipsum quidem hic. A velit eos labore ratione.', 'Repudiandae iste modi facere tenetur maiores. Recusandae iusto veritatis quis cumque fuga. Dolorem aspernatur ea.']",
+        "imagem": "",
+        "slug": "pinto-oliveira-sa"
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 6,
+    "fields": {
+        "nome": "Peixoto",
+        "descricao_curta": "['Magnam dignissimos amet unde cum. Suscipit rerum delectus non adipisci eius dolor. Ab repellendus quis libero facere distinctio ad nobis.']",
+        "descricao_longa": "['Provident laudantium ad itaque. Exercitationem a quia ipsam blanditiis corrupti. Voluptatum molestiae laboriosam.', 'Non molestiae autem nisi voluptates repellat iste. Officia quos fuga autem. Velit recusandae voluptas qui.', 'Id tempore odit eos eum vero. Eius placeat debitis enim dolores est labore.', 'Atque voluptas similique perspiciatis sunt molestias earum. Nostrum rerum rerum nam dolores.', 'Temporibus mollitia sint maiores. Modi praesentium voluptates odit labore possimus quaerat. Fugit id recusandae necessitatibus perferendis nulla doloribus.']",
+        "imagem": "",
+        "slug": "peixoto"
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 7,
+    "fields": {
+        "nome": "Azevedo",
+        "descricao_curta": "['Accusantium dignissimos ea sint nulla quisquam. Vel ad esse dolorem corporis corporis.']",
+        "descricao_longa": "['Quasi perspiciatis rerum illum nesciunt iste. Ea enim veniam culpa. Excepturi excepturi minus quisquam amet distinctio ab.', 'Tenetur tempora doloremque sed ipsam molestias. Sapiente incidunt nulla quibusdam. Eum praesentium quos ab incidunt.', 'Dicta in delectus officiis. Ab incidunt tenetur quis. Officiis tempora hic quibusdam corrupti ducimus magnam.', 'Animi ratione cum amet sed. Nulla aspernatur ab pariatur impedit laborum suscipit.', 'Quam vero qui ullam. Similique expedita molestias totam maxime aut. Tempore perspiciatis laudantium cumque assumenda vero.']",
+        "imagem": "",
+        "slug": "azevedo"
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 8,
+    "fields": {
+        "nome": "da Cunha - EI",
+        "descricao_curta": "['Harum blanditiis dignissimos. Distinctio pariatur architecto praesentium nostrum dolorum aliquid. Molestias dolorum modi eos temporibus iure amet.']",
+        "descricao_longa": "['Odio sequi harum consequatur. Praesentium vel voluptatem iusto laboriosam numquam voluptas. Ipsa totam molestias magnam eligendi dicta.', 'Perferendis maiores deleniti numquam exercitationem dolor inventore. At consequatur iure quod ad ratione ad. Cum perspiciatis quia explicabo dolorum natus.', 'Aliquid rem pariatur omnis eum animi. Eligendi ipsam libero excepturi nulla inventore itaque.', 'Enim fugiat ipsum necessitatibus occaecati. Enim harum inventore voluptatum id deleniti. Non laudantium animi culpa laborum earum praesentium.', 'Veritatis aut explicabo animi. Blanditiis nihil sed porro iusto.']",
+        "imagem": "",
+        "slug": "da-cunha-ei"
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 9,
+    "fields": {
+        "nome": "Oliveira Cunha - EI",
+        "descricao_curta": "['Similique voluptatibus consequatur vero. Ipsum eum aut dolores iste facilis fugiat atque.']",
+        "descricao_longa": "['Doloribus beatae aspernatur. Quo ad facere et nam.', 'Deleniti fugiat aliquid iste. Sapiente explicabo perspiciatis ducimus.', 'Voluptatum vel ipsa laboriosam aperiam illo molestiae porro. Dolor sequi vel.', 'Vero necessitatibus dolor numquam odio. Aliquid sint architecto quibusdam cupiditate dignissimos iusto.', 'Ipsum consectetur voluptatem. Illum assumenda ut asperiores earum. Illum atque ullam.']",
+        "imagem": "",
+        "slug": "oliveira-cunha-ei"
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 10,
+    "fields": {
+        "nome": "da Rocha",
+        "descricao_curta": "['Doloribus recusandae veritatis doloribus soluta. Tempore sit pariatur id earum. Exercitationem repellendus cum tenetur quisquam exercitationem. Vero sunt tenetur amet suscipit.']",
+        "descricao_longa": "['Cumque ad perspiciatis. Nam maxime animi alias. Ullam eius itaque corrupti ullam sit.', 'Reiciendis recusandae vel dolor. Impedit tenetur quo est.', 'Praesentium accusamus quo neque at. Ipsa quisquam suscipit voluptatibus totam. Provident id minima omnis ut.', 'Beatae sequi delectus doloremque exercitationem ratione veniam. Facilis voluptatum saepe ab modi.', 'Aliquid similique libero vero omnis facere voluptatem. Nobis veniam nesciunt cum modi et quos. Explicabo iste blanditiis necessitatibus molestiae ex cupiditate.']",
+        "imagem": "",
+        "slug": "da-rocha"
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 11,
+    "fields": {
+        "nome": "Jesus",
+        "descricao_curta": "['Ipsum velit dolores perferendis culpa ullam. Atque sunt accusantium at porro.']",
+        "descricao_longa": "['Nisi sint quis sit sint et. Eos ab porro temporibus sint accusantium. Enim aspernatur ad eveniet.', 'Doloribus nemo quaerat. Libero eius quidem maiores beatae ea iusto. Deserunt esse qui quis nihil ex.', 'Exercitationem neque accusantium explicabo.', 'Odio ea eaque beatae ea ipsam. Dolor repellat praesentium sapiente eligendi magnam voluptatum repellat. Nulla quidem reprehenderit modi quam rem vel.', 'Quam voluptatibus pariatur qui deleniti laboriosam. Maiores laboriosam praesentium quidem a atque eius.']",
+        "imagem": "",
+        "slug": "jesus"
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 12,
+    "fields": {
+        "nome": "Moura Peixoto S.A.",
+        "descricao_curta": "['Praesentium adipisci mollitia officia facere. Facere perferendis beatae ipsa voluptate qui praesentium. Adipisci illo accusamus illo voluptatum cupiditate.']",
+        "descricao_longa": "['Sunt in enim eligendi. Ipsam reprehenderit provident eum.', 'Optio necessitatibus cupiditate. Repudiandae minima aperiam ex ea saepe.', 'Maxime porro eaque vitae. Nemo maiores quia illo. Temporibus nulla est debitis. Hic officiis consequuntur quaerat illo.', 'Quia explicabo repellendus numquam. Placeat laudantium tempora modi. Deserunt consequuntur cumque distinctio accusantium aperiam.', 'Sunt recusandae facere atque.']",
+        "imagem": "",
+        "slug": "moura-peixoto-sa"
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 13,
+    "fields": {
+        "nome": "Pereira",
+        "descricao_curta": "['Omnis minima voluptas debitis. Blanditiis dolorem fugit. Modi illo quaerat totam sapiente quas.']",
+        "descricao_longa": "['Fugiat dolore unde autem. Expedita odio quaerat dolorem earum suscipit. Officia magnam ullam modi laudantium.', 'Ea aliquam sed corrupti veritatis. Ratione perferendis esse laudantium.', 'Blanditiis neque accusamus officiis aut laudantium magnam. Iusto maxime totam quaerat qui. Et placeat quasi quidem earum illo incidunt.', 'Dolores corporis incidunt. Voluptas itaque assumenda officia. Itaque possimus quo ipsum aliquam.', 'Molestiae architecto nisi illo nisi officiis. Voluptatibus sit temporibus veniam.']",
+        "imagem": "",
+        "slug": "pereira"
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 14,
+    "fields": {
+        "nome": "Moura",
+        "descricao_curta": "['Dicta exercitationem ea laboriosam magnam. Sapiente eum ab ab repellat placeat minima.']",
+        "descricao_longa": "['Similique vitae porro dicta. Ipsa vel enim quibusdam. Quis natus repudiandae reiciendis vero optio.', 'Eum facilis facilis nihil fuga. Magni quis temporibus expedita.', 'Sapiente delectus totam facilis perferendis. Distinctio sunt dolore eveniet dolore. Aliquam nostrum distinctio alias repellat.', 'Illum laborum id ad at at perferendis. Adipisci nam iure assumenda. In maxime sapiente pariatur. Ex porro officia excepturi totam.', 'Velit earum totam ducimus. Libero eveniet molestias id.']",
+        "imagem": "",
+        "slug": "moura"
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 15,
+    "fields": {
+        "nome": "Ribeiro",
+        "descricao_curta": "['Aperiam excepturi odit quisquam minima numquam officia nesciunt. Accusantium quod odit officia labore illo. Minima quisquam sapiente nemo illo occaecati. Consequatur dicta consequatur corrupti fugiat qui ullam in.']",
+        "descricao_longa": "['Eos quae fugiat dolorem modi esse. Esse officiis magni. Quia veniam exercitationem animi iusto.', 'Et blanditiis aspernatur ut. Occaecati deserunt provident impedit eligendi dicta aut veritatis.', 'Soluta at ea vel totam vero. Beatae quasi est nesciunt expedita. Explicabo magni magni tempora magnam.', 'Fuga architecto odio a a vitae impedit unde.', 'Explicabo quod natus repudiandae. Fugit illo doloribus necessitatibus.']",
+        "imagem": "",
+        "slug": "ribeiro"
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 16,
+    "fields": {
+        "nome": "Martins e Filhos",
+        "descricao_curta": "['Hic quos earum excepturi voluptas recusandae. Accusantium minus magni. Aliquam voluptatibus laborum adipisci tenetur. Rerum facere optio delectus explicabo sit.']",
+        "descricao_longa": "['Aperiam consectetur id unde modi. Nemo non at laboriosam nam modi.', 'Ratione harum doloremque tenetur mollitia maxime vel. Autem adipisci vitae perspiciatis vel. Eveniet possimus quidem praesentium tenetur.', 'Ipsam incidunt enim blanditiis. Eius rerum enim illo. Doloremque deleniti rem numquam ipsam dolor minus. Praesentium ratione explicabo maiores.', 'Amet aperiam accusantium quae repellat.', 'Eligendi tempora exercitationem blanditiis nulla ullam. Occaecati libero molestias reiciendis officia quae deserunt. Explicabo nam veniam quo.']",
+        "imagem": "",
+        "slug": "martins-e-filhos"
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 17,
+    "fields": {
+        "nome": "Costa",
+        "descricao_curta": "['Dolorem porro maxime laudantium quisquam porro possimus. Deserunt fuga nisi qui enim perspiciatis architecto eum.']",
+        "descricao_longa": "['Dolor laborum minus nisi commodi esse. Maiores optio culpa iure praesentium quidem.', 'Sunt numquam similique aliquam porro facilis minus. Fugiat voluptates quasi aspernatur quas veniam. Quas deleniti occaecati culpa.', 'Quisquam fuga accusamus beatae ea. Commodi eaque consequatur necessitatibus doloribus.', 'Dignissimos sunt ut rem alias eaque. Optio quasi possimus voluptatem saepe commodi. Ducimus ipsum provident ducimus porro.', 'Autem error soluta quod. Reiciendis eos corrupti perspiciatis suscipit.']",
+        "imagem": "",
+        "slug": "costa"
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 18,
+    "fields": {
+        "nome": "Nunes - ME",
+        "descricao_curta": "['Ipsam commodi pariatur. Quis itaque porro in eum deserunt est. Veniam eum vero soluta.']",
+        "descricao_longa": "['Voluptates odio quae esse mollitia ad voluptatum. Corrupti repudiandae nulla eligendi provident inventore. Quasi nobis fuga alias.', 'Porro eligendi eaque dolores. Expedita dicta maxime fuga aliquam. Non sed possimus occaecati asperiores quaerat eaque.', 'Dolor quae iusto quos perspiciatis possimus ut exercitationem. Vitae assumenda corporis ut nesciunt.', 'Iusto ab saepe atque numquam unde quod. Delectus facere suscipit ipsum. Odit aliquam quaerat pariatur culpa aliquam. Numquam tempore a sint quo quo necessitatibus nostrum.', 'Placeat nemo eaque unde omnis inventore. Officiis velit quis esse velit commodi. Reprehenderit dolorem molestias qui laudantium ipsum rerum inventore.']",
+        "imagem": "",
+        "slug": "nunes-me"
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 19,
+    "fields": {
+        "nome": "Moreira Moreira - EI",
+        "descricao_curta": "['Incidunt nobis tempora nostrum distinctio cumque nulla. Illum repellendus vero. Pariatur optio architecto quis. Tempora architecto vel.']",
+        "descricao_longa": "['Unde quo facere temporibus sed. Incidunt quasi officiis commodi dolore assumenda.', 'Rerum vitae iusto nemo facilis necessitatibus deleniti eum. Libero consequatur nostrum beatae nam. Laborum quibusdam id quis fugiat provident beatae. Quas doloribus ratione pariatur.', 'Molestiae dolore non beatae ipsam.', 'Deserunt tempore quasi ducimus id. Impedit molestiae fugiat expedita. Inventore quas itaque minima praesentium.', 'Tenetur eaque illo modi. Delectus praesentium in fugit unde voluptates. Optio voluptates temporibus autem officiis eligendi.']",
+        "imagem": "",
+        "slug": "moreira-moreira-ei"
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 20,
+    "fields": {
+        "nome": "da Costa da Luz - ME",
+        "descricao_curta": "['Quo illo reiciendis nostrum a similique sapiente. Quam optio magnam dolores distinctio alias. Totam voluptatem aut repellendus illo ipsam provident.']",
+        "descricao_longa": "['Quis accusamus optio labore fugit veritatis ullam. Odio optio blanditiis animi autem magnam eaque cupiditate. Saepe officia aspernatur sequi mollitia doloribus nesciunt.', 'Dicta id voluptatum repellendus quibusdam sint veritatis. Consequatur possimus dolorum harum ut voluptatum eaque enim. Incidunt similique ratione laborum praesentium magnam itaque.', 'Commodi velit fugit natus. Magnam libero reprehenderit assumenda provident.', 'Laborum impedit deleniti dicta perspiciatis excepturi. Corporis amet unde ipsa quam architecto.', 'Facilis repellat magni id veniam eos. Autem sequi modi voluptas. Molestiae unde at eius.']",
+        "imagem": "",
+        "slug": "da-costa-da-luz-me"
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 21,
+    "fields": {
+        "nome": "Cavalcanti e Filhos",
+        "descricao_curta": "['Amet minima est excepturi vitae porro. Praesentium modi minus facere. Architecto nihil magni.']",
+        "descricao_longa": "['Sint reiciendis commodi ut porro. Architecto nemo perferendis. Earum odit illo reiciendis voluptatum eveniet amet.', 'Labore iusto est aliquam perspiciatis. Optio minus accusamus odio dolorem quis.', 'Distinctio animi et. Assumenda ex quasi et tenetur. Ratione harum natus explicabo doloremque natus.', 'Veritatis voluptas fugit quod fuga occaecati labore quo. Magni excepturi est repudiandae eligendi. Quia non rerum velit cupiditate modi.', 'Tempore culpa sunt atque. Atque dolores illo optio nostrum. Voluptatibus dicta nesciunt illo.']",
+        "imagem": "",
+        "slug": "cavalcanti-e-filhos"
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 22,
+    "fields": {
+        "nome": "Silva",
+        "descricao_curta": "['Eos labore reiciendis magnam quas. Soluta voluptatibus quos maiores distinctio.']",
+        "descricao_longa": "['A adipisci vitae vitae. Minima quo ipsam iure. Facere facilis neque eligendi quam numquam minima.', 'Exercitationem fugiat quas aliquid. Quis a asperiores earum.', 'Hic corporis temporibus repellendus unde. Laborum nesciunt eos assumenda deleniti corporis. Deleniti placeat reiciendis deserunt. Facilis debitis commodi molestias possimus sint.', 'Mollitia nesciunt officia vero nulla deleniti. Eaque ab aliquam blanditiis beatae in voluptas.', 'Unde soluta sapiente tempora sapiente repellat.']",
+        "imagem": "",
+        "slug": "silva"
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 23,
+    "fields": {
+        "nome": "Caldeira",
+        "descricao_curta": "['Incidunt amet soluta illum magnam veniam cupiditate excepturi. Maiores ipsum excepturi qui sapiente.']",
+        "descricao_longa": "['Reiciendis repudiandae culpa illo rem ipsa inventore maiores. Dolorum eius nobis perferendis voluptate quasi. Nesciunt illum sunt maiores doloremque.', 'Illum eligendi repellendus corporis. Deserunt odio veniam eum facilis tempore possimus. Aliquam aperiam facere quam iste eveniet.', 'Non nulla optio quod. Nulla explicabo voluptates nihil nam aut quos. Dignissimos voluptatum sint quisquam placeat.', 'Quos similique quisquam nemo suscipit nisi pariatur. Iste repellendus eaque quaerat.', 'Commodi cupiditate nisi doloribus explicabo laborum. Fugit quaerat tenetur occaecati. Ducimus magnam doloribus eius.']",
+        "imagem": "",
+        "slug": "caldeira"
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 24,
+    "fields": {
+        "nome": "Nascimento Ltda.",
+        "descricao_curta": "['Temporibus dolorem voluptate voluptas enim. Blanditiis necessitatibus eum neque tempora. Asperiores corrupti dolores reprehenderit culpa.']",
+        "descricao_longa": "['Architecto dolorum porro minus nam voluptatum eaque. Veniam doloremque consequatur dolores pariatur tempore doloribus.', 'Ut molestiae cum vel doloremque voluptatibus. Sunt error quae totam maiores nesciunt qui. Minima quasi cupiditate fuga. Tempore facilis debitis repudiandae vitae sequi nesciunt.', 'Nam dolor asperiores nesciunt a molestiae nihil.', 'Neque labore provident cum nam fuga ipsam. Consectetur sequi doloremque tenetur.', 'Voluptates excepturi et velit quos error perferendis cupiditate. Culpa maxime culpa odit delectus dolorem reprehenderit.']",
+        "imagem": "",
+        "slug": "nascimento-ltda"
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 25,
+    "fields": {
+        "nome": "da Cunha Melo e Filhos",
+        "descricao_curta": "['Odio quibusdam soluta fuga eum id hic. Labore cumque aspernatur totam.']",
+        "descricao_longa": "['Debitis amet dignissimos pariatur harum. Cupiditate occaecati quas quos incidunt accusamus temporibus. Totam quasi enim ad similique.', 'Nisi est aliquam ipsum. Consequatur est sunt optio. Nulla deserunt sed nam.', 'Necessitatibus assumenda explicabo tempora nemo doloribus libero. Asperiores labore rem. Debitis voluptates in.', 'Numquam neque beatae. Officia ipsa culpa ut saepe et similique. Eligendi sint modi aliquam incidunt.', 'Cupiditate numquam asperiores similique a ipsa accusantium. Blanditiis soluta perspiciatis hic. Recusandae nesciunt accusantium laborum aperiam tempore.']",
+        "imagem": "",
+        "slug": "da-cunha-melo-e-filhos"
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 26,
+    "fields": {
+        "nome": "Vieira",
+        "descricao_curta": "['Qui qui iste deleniti. Optio odit corporis nemo distinctio. Aliquam quas aut inventore modi similique voluptatibus nemo.']",
+        "descricao_longa": "['Eligendi ipsum maiores corrupti ullam minima iusto. Ipsa aliquid est consequuntur temporibus modi. Repudiandae maiores iure voluptatem.', 'Nihil delectus modi sunt.', 'Assumenda fugiat veniam quidem. Voluptates occaecati facere esse harum dolore.', 'Sit dolorum sequi nobis voluptate. Quis quasi atque quia.', 'Doloribus reprehenderit odit fugit nostrum corporis. Quasi rerum fugit doloremque explicabo.']",
+        "imagem": "",
+        "slug": "vieira"
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 27,
+    "fields": {
+        "nome": "Freitas",
+        "descricao_curta": "['Provident quos quia voluptatem odio. Quos corporis blanditiis eligendi non.']",
+        "descricao_longa": "['Nulla facilis iusto. Porro tempore error pariatur maiores dolorum dolorum. Nihil consequatur consequuntur distinctio recusandae. Distinctio nisi libero ut praesentium culpa maiores.', 'Natus mollitia optio quia tenetur accusantium suscipit perspiciatis. Fuga quidem itaque officia officiis.', 'Sapiente accusamus blanditiis nemo soluta rem sed. Autem minima ipsam nemo aut. Non est quas omnis doloremque suscipit.', 'Aperiam nostrum laborum error iste eveniet molestiae magnam. Iusto mollitia veritatis odit itaque aut illum officiis. Distinctio minus quo libero culpa.', 'Repudiandae alias doloribus dolorum fugit corrupti quos. Quia saepe voluptate neque doloremque blanditiis ipsum.']",
+        "imagem": "",
+        "slug": "freitas"
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 28,
+    "fields": {
+        "nome": "Fogaþa Freitas e Filhos",
+        "descricao_curta": "['Quisquam mollitia tempore minima officiis quis alias. Autem quam officia eius.']",
+        "descricao_longa": "['Alias soluta ipsam. Cum labore reiciendis dolore ipsa id.', 'A consequuntur quibusdam asperiores. Vitae facilis est iste quos.', 'Sed fugit eius alias ad beatae laborum a.', 'Soluta excepturi sint iste nam odio fugit. Fugit asperiores minus dolorem fuga vitae debitis.', 'Officia quidem et consequatur consequuntur debitis. Perferendis modi repudiandae debitis. Ipsam repellendus veniam nesciunt aspernatur. Quisquam aperiam hic omnis blanditiis necessitatibus explicabo accusantium.']",
+        "imagem": "",
+        "slug": "fogaca-freitas-e-filhos"
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 29,
+    "fields": {
+        "nome": "Nunes",
+        "descricao_curta": "['Deleniti dolorem eveniet quibusdam velit molestias eos facere. Culpa eos laudantium. Dolore nesciunt vel.']",
+        "descricao_longa": "['Nihil assumenda cumque. Ipsum ex nihil explicabo sapiente tenetur sit doloremque. Et aperiam maxime accusantium exercitationem.', 'Nemo perspiciatis ratione totam ullam voluptas quibusdam repudiandae. Velit doloremque molestias similique id animi. In optio qui amet molestiae similique corporis nobis. Dolore hic ullam tenetur libero molestiae ipsum.', 'Doloremque quia eveniet beatae. Reprehenderit dolores quod veritatis a placeat. Exercitationem iusto odio neque. Aut dicta recusandae perspiciatis soluta ab nemo.', 'Non dolorem maiores cumque ipsam at autem placeat. Quam enim ratione veritatis aspernatur eligendi eum.', 'Cumque praesentium saepe mollitia fugit officia. In nihil eveniet quis. Ex provident illo cumque optio consequatur doloremque. Voluptates reprehenderit soluta.']",
+        "imagem": "",
+        "slug": "nunes"
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 30,
+    "fields": {
+        "nome": "Cunha Sales e Filhos",
+        "descricao_curta": "['Nemo maiores rem asperiores non explicabo inventore. Quam accusamus accusamus atque.']",
+        "descricao_longa": "['Inventore eius iste odit similique corporis minima excepturi. Facilis totam perspiciatis quos.', 'Adipisci vitae placeat totam eaque quis. In officiis eligendi occaecati sunt voluptates dignissimos.', 'Vitae ullam temporibus officia deleniti possimus ullam.', 'Neque sint libero incidunt laudantium eligendi minima. Assumenda fugiat facilis officiis consequuntur a. Consequuntur autem placeat consectetur tenetur nobis et.', 'A itaque libero magnam reiciendis distinctio repudiandae. Nulla provident nobis deleniti.']",
+        "imagem": "",
+        "slug": "cunha-sales-e-filhos"
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 31,
+    "fields": {
+        "nome": "das Neves Cardoso e Filhos",
+        "descricao_curta": "['Nostrum dolores culpa perspiciatis provident nemo. Optio excepturi similique error reiciendis.']",
+        "descricao_longa": "['Odio totam impedit inventore rerum doloremque tempora ea. Adipisci odio praesentium illum. Tempore unde laboriosam aliquam.', 'Error itaque quis repudiandae architecto hic dicta. Voluptatibus cum alias fugiat dolor laborum. Beatae id similique pariatur eum tempore quia.', 'Ex facilis est adipisci sint eos. Distinctio in harum mollitia quas. Deleniti facilis rem sunt.', 'Distinctio dolores dolorum at saepe. Placeat aut distinctio dolores labore qui. Accusamus possimus aliquid.', 'Alias ducimus quaerat et possimus similique. Nemo sit totam numquam ipsum placeat deserunt. Ullam aliquid est suscipit.']",
+        "imagem": "",
+        "slug": "das-neves-cardoso-e-filhos"
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 32,
+    "fields": {
+        "nome": "Silveira S.A.",
+        "descricao_curta": "['Doloremque quam eveniet autem quam. Delectus numquam ipsam maxime culpa dolores. Quo molestias atque occaecati deserunt. Saepe consequuntur molestias autem voluptates.']",
+        "descricao_longa": "['Animi ut ut ullam minus sapiente recusandae. Perspiciatis deserunt nesciunt in eius accusamus.', 'Voluptatem earum porro at soluta. Repellendus reiciendis debitis placeat. Doloribus aperiam consectetur consequuntur. Aut illo quaerat nemo.', 'Aliquam harum explicabo deserunt. Eos ex officiis quas.', 'Doloremque officia laborum. Dolores ut eveniet. Possimus numquam dolor consequatur quibusdam totam et itaque.', 'Inventore recusandae ut voluptas ea incidunt. Possimus ex dolores accusamus atque quam nobis.']",
+        "imagem": "",
+        "slug": "silveira-sa"
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 33,
+    "fields": {
+        "nome": "Ramos S/A",
+        "descricao_curta": "['Pariatur iure fugiat recusandae voluptates aut. Eos non cupiditate quis itaque.']",
+        "descricao_longa": "['Impedit molestias earum quibusdam debitis dolorum.', 'Deleniti fuga a sunt facere. Amet totam provident consequuntur voluptatum.', 'Delectus facilis enim quasi explicabo fuga. Exercitationem repellendus iure nam voluptatem veritatis. Reiciendis expedita architecto tempore aperiam laborum. Laboriosam pariatur aspernatur dolor maxime adipisci et.', 'Sequi ab corporis exercitationem quibusdam. Harum temporibus maxime magni exercitationem totam. Provident in non quis.', 'Explicabo maxime dicta quos deleniti. Recusandae nulla quas eligendi.']",
+        "imagem": "",
+        "slug": "ramos-sa"
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 34,
+    "fields": {
+        "nome": "Lima",
+        "descricao_curta": "['Libero similique perferendis sit quod. Officiis eum ea doloribus similique rem. Quibusdam quia officia deleniti vero.']",
+        "descricao_longa": "['Incidunt esse itaque iusto fuga labore repellendus. Ipsam sint esse necessitatibus aliquid. Facilis fugiat repellendus suscipit maxime non.', 'Eius totam ad reprehenderit. Exercitationem ratione voluptatibus neque unde.', 'Ratione dignissimos accusantium voluptas id accusamus. Rerum ut officiis. Non voluptatibus fugiat ex eius dolorum.', 'Iusto itaque explicabo suscipit quasi vitae iure. Vitae asperiores ab neque quia. Quo illum eaque eum.', 'Saepe debitis reprehenderit dolor iusto non. Nisi voluptatibus deserunt saepe.']",
+        "imagem": "",
+        "slug": "lima"
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$wFE8db63c1aAggo7eq0mfH$nEus5d+aH6kPhf/qmlcZgw99tZUIrQwNYheQxXY6pE4=",
+        "last_login": "2022-04-02T15:08:08.659Z",
+        "is_superuser": true,
+        "username": "icaro",
+        "first_name": "Icaro",
+        "last_name": "Monteiro",
+        "email": "icarodavi@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2022-03-19T20:05:46Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "23aqelu5buw9z50wl5n1rdxp6lfzzlu8",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQBf-FsyFAgQWP3v0GssAiVQNJaU_Gf9cmPej1zcx7sYDbWsM2aAlzZmcm2el3i5ge1HaQ79hunafe1mWOfFf4QQe_9kzPy-H-HVQc9VuXiSw5MEUKbb3xhAKkdiJr6R0mHY1XIKIrkwZHqAQokJiiUHZSqBV7fwDANjaw:1nXEBJ:_AZIFsddQT8Dau5_vqiT6rVzTTmyI3XB8FbmQtMCJxs",
+        "expire_date": "2022-04-07T03:30:37.762Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "2w1f4wnq1j8j513cby9ti91v6mkw7j7u",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQBf-FsyFAgQWP3v0GssAiVQNJaU_Gf9cmPej1zcx7sYDbWsM2aAlzZmcm2el3i5ge1HaQ79hunafe1mWOfFf4QQe_9kzPy-H-HVQc9VuXiSw5MEUKbb3xhAKkdiJr6R0mHY1XIKIrkwZHqAQokJiiUHZSqBV7fwDANjaw:1nafMG:DRm6ZUysU2JNA3QTGM74Liqg1e7I5Fo5y5b5MeRdQP0",
+        "expire_date": "2022-04-16T15:08:08.665Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "5uflpi7iampcqxwin8fjxvbmrsfhbaoa",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQBf-FsyFAgQWP3v0GssAiVQNJaU_Gf9cmPej1zcx7sYDbWsM2aAlzZmcm2el3i5ge1HaQ79hunafe1mWOfFf4QQe_9kzPy-H-HVQc9VuXiSw5MEUKbb3xhAKkdiJr6R0mHY1XIKIrkwZHqAQokJiiUHZSqBV7fwDANjaw:1nZMD7:9GvICBW_58UG8N9W9CmsnkGbTXZoJQqTYdWyEFuUiuQ",
+        "expire_date": "2022-04-13T00:29:17.759Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "82f3ywgdnk2pw28xczenemixih4y0egu",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQBf-FsyFAgQWP3v0GssAiVQNJaU_Gf9cmPej1zcx7sYDbWsM2aAlzZmcm2el3i5ge1HaQ79hunafe1mWOfFf4QQe_9kzPy-H-HVQc9VuXiSw5MEUKbb3xhAKkdiJr6R0mHY1XIKIrkwZHqAQokJiiUHZSqBV7fwDANjaw:1nX4Dq:9_AA_1u1Zb2Hk8zNt-qk9JdG-ziqs6pGP87an_qu8p4",
+        "expire_date": "2022-04-06T16:52:34.313Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ifbya21gj7p2r7emtp5wydx2s3bn3zze",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQBf-FsyFAgQWP3v0GssAiVQNJaU_Gf9cmPej1zcx7sYDbWsM2aAlzZmcm2el3i5ge1HaQ79hunafe1mWOfFf4QQe_9kzPy-H-HVQc9VuXiSw5MEUKbb3xhAKkdiJr6R0mHY1XIKIrkwZHqAQokJiiUHZSqBV7fwDANjaw:1nXn2a:YHCwUqCKGpaOvtO-ZOo4UiPabm0fE6fAerXibgOzTmk",
+        "expire_date": "2022-04-08T16:43:56.524Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "n78kwiyuf183dpewcui59ce5jiwnxpj1",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQBf-FsyFAgQWP3v0GssAiVQNJaU_Gf9cmPej1zcx7sYDbWsM2aAlzZmcm2el3i5ge1HaQ79hunafe1mWOfFf4QQe_9kzPy-H-HVQc9VuXiSw5MEUKbb3xhAKkdiJr6R0mHY1XIKIrkwZHqAQokJiiUHZSqBV7fwDANjaw:1nXBxz:RQOxT2-iXGBWwj8RR5TamnoxbO6c1Gc5lfQaIGR6DCk",
+        "expire_date": "2022-04-07T01:08:43.091Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "qxdvlp53a7a1flp2j0bcdwt0j3wn5sua",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQBf-FsyFAgQWP3v0GssAiVQNJaU_Gf9cmPej1zcx7sYDbWsM2aAlzZmcm2el3i5ge1HaQ79hunafe1mWOfFf4QQe_9kzPy-H-HVQc9VuXiSw5MEUKbb3xhAKkdiJr6R0mHY1XIKIrkwZHqAQokJiiUHZSqBV7fwDANjaw:1nXBzK:VEotUR-Kfspj1D0vLQq27squGkijJsNG1pIYntdMpEM",
+        "expire_date": "2022-04-07T01:10:06.221Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "xbwznaaaxdr0iav8vqfdwvlwuucrvx47",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQBf-FsyFAgQWP3v0GssAiVQNJaU_Gf9cmPej1zcx7sYDbWsM2aAlzZmcm2el3i5ge1HaQ79hunafe1mWOfFf4QQe_9kzPy-H-HVQc9VuXiSw5MEUKbb3xhAKkdiJr6R0mHY1XIKIrkwZHqAQokJiiUHZSqBV7fwDANjaw:1naf0p:4s2WrL99vdwngYRgPIAUwHe-GpK3f3DUtgQBiw2-zdg",
+        "expire_date": "2022-04-16T14:45:59.107Z"
+    }
+},
+{
+    "model": "perfil.perfil",
+    "pk": 1,
+    "fields": {
+        "usuario": [
+            "icaro"
+        ],
+        "data_nascimento": "1986-10-01",
+        "cpf": "01292729309",
+        "endereco": "Rua SÒo Francisco",
+        "numero": "728",
+        "complemento": "Casa",
+        "bairro": "Centro",
+        "cep": "63010215",
+        "cidade": "Juazeiro do Norte",
+        "estado": "CE",
+        "ativo": true
+    }
+},
+{
+    "model": "solicitacao.solicitacao",
+    "pk": 2,
+    "fields": {
+        "usuario": [
+            "icaro"
+        ],
+        "objeto": "AquisiþÒo de caneta preta para a Secretaria de EducaþÒo do MunicÝpio de Vßrzea Alegre",
+        "secretaria": 1,
+        "data": "2022-02-04",
+        "status": "P"
+    }
+},
+{
+    "model": "solicitacao.solicitacao",
+    "pk": 3,
+    "fields": {
+        "usuario": [
+            "icaro"
+        ],
+        "objeto": "Reforma a ampliaþÒo da Secretaria de Infraestrutura",
+        "secretaria": 2,
+        "data": "2022-02-04",
+        "status": "P"
+    }
+},
+{
+    "model": "solicitacao.solicitacao",
+    "pk": 4,
+    "fields": {
+        "usuario": [
+            "icaro"
+        ],
+        "objeto": null,
+        "secretaria": 3,
+        "data": "2022-03-23",
+        "status": "P"
+    }
+},
+{
+    "model": "solicitacao.solicitacao",
+    "pk": 5,
+    "fields": {
+        "usuario": [
+            "icaro"
+        ],
+        "objeto": null,
+        "secretaria": 4,
+        "data": "2022-03-23",
+        "status": "P"
+    }
+},
+{
+    "model": "solicitacao.solicitacao",
+    "pk": 6,
+    "fields": {
+        "usuario": [
+            "icaro"
+        ],
+        "objeto": "AquisiþÒo de material de construþÒo para reforma da secretaria de infraestrutura ",
+        "secretaria": 2,
+        "data": "2022-04-02",
+        "status": "P"
+    }
+},
+{
+    "model": "solicitacao.solicitacao",
+    "pk": 7,
+    "fields": {
+        "usuario": [
+            "icaro"
+        ],
+        "objeto": "AquisiþÒo de material de construþÒo para reforma da secretaria de infraestrutura ",
+        "secretaria": 2,
+        "data": "2022-04-02",
+        "status": "P"
+    }
+},
+{
+    "model": "solicitacao.solicitacao",
+    "pk": 8,
+    "fields": {
+        "usuario": [
+            "icaro"
+        ],
+        "objeto": "AquisiþÒo de material de construþÒo para reforma da secretaria de infraestrutura ",
+        "secretaria": 2,
+        "data": "2022-04-02",
+        "status": "P"
+    }
+},
+{
+    "model": "solicitacao.solicitacao",
+    "pk": 9,
+    "fields": {
+        "usuario": [
+            "icaro"
+        ],
+        "objeto": "AquisiþÒo de material de construþÒo para reforma da secretaria de infraestrutura ",
+        "secretaria": 2,
+        "data": "2022-04-02",
+        "status": "P"
+    }
+}
 ]
