@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'debug_toolbar',
     'crispy_forms',
-    'storages'
+    'storages',
+    'tempus_dominus'
 ]
 
 MIDDLEWARE = [
@@ -202,3 +203,8 @@ if DEBUG:
     }
 #
 #APPEND_SLASH = False
+TEMPUS_DOMINUS_LOCALIZE = True
+TEMPUS_DOMINUS_ASSETS = True
+TEMPUS_DOMINUS_DATE_FORMAT = 'DD/MM/YYYY'
+TEMPUS_DOMINUS_DATETIME_FORMAT = 'DD/MM/YYYY HH:mm:ss'
+TEMPUS_DOMINUS_TIME_FORMAT = 'HH:mm:ss'
