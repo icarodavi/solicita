@@ -84,54 +84,6 @@
     }
 },
 {
-    "model": "solicitacao.solicitacao",
-    "pk": 2,
-    "fields": {
-        "usuario": 1,
-        "objeto": "AquisiþÒo de caneta preta para a Secretaria de EducaþÒo do MunicÝpio de Vßrzea Alegre",
-        "secretaria": 1,
-        "qtd_total": 1,
-        "data": "2022-03-23",
-        "status": "P"
-    }
-},
-{
-    "model": "solicitacao.solicitacao",
-    "pk": 3,
-    "fields": {
-        "usuario": 1,
-        "objeto": null,
-        "secretaria": 2,
-        "qtd_total": 10,
-        "data": "2022-03-23",
-        "status": "P"
-    }
-},
-{
-    "model": "solicitacao.solicitacao",
-    "pk": 4,
-    "fields": {
-        "usuario": 1,
-        "objeto": null,
-        "secretaria": 3,
-        "qtd_total": 2000,
-        "data": "2022-03-23",
-        "status": "P"
-    }
-},
-{
-    "model": "solicitacao.solicitacao",
-    "pk": 5,
-    "fields": {
-        "usuario": 1,
-        "objeto": null,
-        "secretaria": 4,
-        "qtd_total": 100,
-        "data": "2022-03-23",
-        "status": "P"
-    }
-},
-{
     "model": "solicitacao.solicitacaoitem",
     "pk": 2,
     "fields": {
@@ -554,7 +506,7 @@
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$320000$wFE8db63c1aAggo7eq0mfH$nEus5d+aH6kPhf/qmlcZgw99tZUIrQwNYheQxXY6pE4=",
-        "last_login": "2022-03-30T00:29:17.710Z",
+        "last_login": "2022-04-02T15:08:08.659Z",
         "is_superuser": true,
         "username": "icaro",
         "first_name": "Icaro",
@@ -573,6 +525,14 @@
     "fields": {
         "session_data": ".eJxVjMEOwiAQBf-FsyFAgQWP3v0GssAiVQNJaU_Gf9cmPej1zcx7sYDbWsM2aAlzZmcm2el3i5ge1HaQ79hunafe1mWOfFf4QQe_9kzPy-H-HVQc9VuXiSw5MEUKbb3xhAKkdiJr6R0mHY1XIKIrkwZHqAQokJiiUHZSqBV7fwDANjaw:1nXEBJ:_AZIFsddQT8Dau5_vqiT6rVzTTmyI3XB8FbmQtMCJxs",
         "expire_date": "2022-04-07T03:30:37.762Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "2w1f4wnq1j8j513cby9ti91v6mkw7j7u",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQBf-FsyFAgQWP3v0GssAiVQNJaU_Gf9cmPej1zcx7sYDbWsM2aAlzZmcm2el3i5ge1HaQ79hunafe1mWOfFf4QQe_9kzPy-H-HVQc9VuXiSw5MEUKbb3xhAKkdiJr6R0mHY1XIKIrkwZHqAQokJiiUHZSqBV7fwDANjaw:1nafMG:DRm6ZUysU2JNA3QTGM74Liqg1e7I5Fo5y5b5MeRdQP0",
+        "expire_date": "2022-04-16T15:08:08.665Z"
     }
 },
 {
@@ -616,6 +576,14 @@
     }
 },
 {
+    "model": "sessions.session",
+    "pk": "xbwznaaaxdr0iav8vqfdwvlwuucrvx47",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQBf-FsyFAgQWP3v0GssAiVQNJaU_Gf9cmPej1zcx7sYDbWsM2aAlzZmcm2el3i5ge1HaQ79hunafe1mWOfFf4QQe_9kzPy-H-HVQc9VuXiSw5MEUKbb3xhAKkdiJr6R0mHY1XIKIrkwZHqAQokJiiUHZSqBV7fwDANjaw:1naf0p:4s2WrL99vdwngYRgPIAUwHe-GpK3f3DUtgQBiw2-zdg",
+        "expire_date": "2022-04-16T14:45:59.107Z"
+    }
+},
+{
     "model": "perfil.perfil",
     "pk": 1,
     "fields": {
@@ -632,6 +600,110 @@
         "cidade": "Juazeiro do Norte",
         "estado": "CE",
         "ativo": true
+    }
+},
+{
+    "model": "solicitacao.solicitacao",
+    "pk": 2,
+    "fields": {
+        "usuario": [
+            "icaro"
+        ],
+        "objeto": "AquisiþÒo de caneta preta para a Secretaria de EducaþÒo do MunicÝpio de Vßrzea Alegre",
+        "secretaria": 1,
+        "data": "2022-02-04",
+        "status": "P"
+    }
+},
+{
+    "model": "solicitacao.solicitacao",
+    "pk": 3,
+    "fields": {
+        "usuario": [
+            "icaro"
+        ],
+        "objeto": "Reforma a ampliaþÒo da Secretaria de Infraestrutura",
+        "secretaria": 2,
+        "data": "2022-02-04",
+        "status": "P"
+    }
+},
+{
+    "model": "solicitacao.solicitacao",
+    "pk": 4,
+    "fields": {
+        "usuario": [
+            "icaro"
+        ],
+        "objeto": null,
+        "secretaria": 3,
+        "data": "2022-03-23",
+        "status": "P"
+    }
+},
+{
+    "model": "solicitacao.solicitacao",
+    "pk": 5,
+    "fields": {
+        "usuario": [
+            "icaro"
+        ],
+        "objeto": null,
+        "secretaria": 4,
+        "data": "2022-03-23",
+        "status": "P"
+    }
+},
+{
+    "model": "solicitacao.solicitacao",
+    "pk": 6,
+    "fields": {
+        "usuario": [
+            "icaro"
+        ],
+        "objeto": "AquisiþÒo de material de construþÒo para reforma da secretaria de infraestrutura ",
+        "secretaria": 2,
+        "data": "2022-04-02",
+        "status": "P"
+    }
+},
+{
+    "model": "solicitacao.solicitacao",
+    "pk": 7,
+    "fields": {
+        "usuario": [
+            "icaro"
+        ],
+        "objeto": "AquisiþÒo de material de construþÒo para reforma da secretaria de infraestrutura ",
+        "secretaria": 2,
+        "data": "2022-04-02",
+        "status": "P"
+    }
+},
+{
+    "model": "solicitacao.solicitacao",
+    "pk": 8,
+    "fields": {
+        "usuario": [
+            "icaro"
+        ],
+        "objeto": "AquisiþÒo de material de construþÒo para reforma da secretaria de infraestrutura ",
+        "secretaria": 2,
+        "data": "2022-04-02",
+        "status": "P"
+    }
+},
+{
+    "model": "solicitacao.solicitacao",
+    "pk": 9,
+    "fields": {
+        "usuario": [
+            "icaro"
+        ],
+        "objeto": "AquisiþÒo de material de construþÒo para reforma da secretaria de infraestrutura ",
+        "secretaria": 2,
+        "data": "2022-04-02",
+        "status": "P"
     }
 }
 ]
