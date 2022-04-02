@@ -12,6 +12,7 @@ from django.views.generic.list import ListView
 
 from .forms import ProdutoForm
 from .models import Produto
+from solicitacao.models import Solicitacao
 
 
 class ProdutoList(LoginRequiredMixin, ListView):
@@ -83,7 +84,9 @@ class ProdutoSearch(LoginRequiredMixin, View):
 
 class Buscador(View):
     def get(self, *args, **kwargs):
-        return render(self.request, 'produto/busca.html')
+        solicitacao = Solicitacao.objects.filter(pk=kwargs.get('pk')).first()
+        contexto = {'solicitacao': solicitacao}
+        return render(self.request, 'produto/busca.html', context=contexto)
 
 
 class Blank(View):
@@ -95,9 +98,9 @@ class Blank(View):
         return render(self.request, 'produto/blank.html', context=produtos)
 
     def post(self, *args, **kwargs):
-        print(ast.literal_eval(self.request.POST.get('objProdutos')))
         produtos = {'produtos': json.loads(
             self.request.POST.get('objProdutos'))}
+        pprint(produtos)
         for i in produtos:
             print(i)
         return render(self.request, 'produto/blank.html', context=produtos)

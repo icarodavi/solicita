@@ -6,125 +6,180 @@
 <div class="wrapper">
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-      <!-- Content Header (Page header) -->
-      <section class="content-header">
-          <div class="container-fluid">
-              <div class="row mb-2">
-                  <div class="col-sm-6">
-                      <h1>Criar Solicitação</h1>
-                  </div>
-              </div>
-          </div><!-- /.container-fluid -->
-      </section>
-
-      <!-- Main content -->
-      <section class="content">
-          <div class="container-fluid">
-              <div class="row">
-                  <div class="col-12">
-                      <div class="card">
-                          <div class="card-header">
-                              <h3 class="card-title">Adicionar Solicitação</h3>
-                          </div>
-                          <!-- /.card-header -->
-                          <div class="card-body">
-                              <form method="post" action="/produto/blank">{% csrf_token %}
-                                <input type="hidden" name="objProdutos" id="objProdutos" value="">
-                                <div class="form-group w-100">
-                                    <label for="autoComplete">Produto:</label>
-                                    <input id="autoComplete" type="text" dir="ltr" spellcheck=false autocorrect="off" autocomplete="off" autocapitalize="off" class="form-control">
-                                    <small class="form-text text-muted">Escolha seu produto e clique para ser adicionado à solicitação</small>
-                                </div>
-                                <div class="form-group">
-                                  <ul id="result" multiple class="list-group list-group-horizontal-xxl">
-                                  </ul>
-                                </div>
-                                <input type="submit" value="Salvar" class="btn btn-success">
-                                  
-                              </form>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Criar Solicitação</h1>
           </div>
-      </section>
-<script>
-  const resultado = document.getElementById("result");
-  const objProdutos = document.getElementById('objProdutos');
-  var ob = [];
-  const autoCompleteJS = new autoComplete({
-    selector: "#autoComplete",
-    placeHolder: "Digite um produto...",
-    debouce: 300,
-    threshold: 3,
-    resultsList: {
-      maxResults: 10,
-    },
-    data: {
-      src: async (query) => {
-        try {
-          const source = await fetch(`/produto/search/?search=${query}`);
-          const data = await source.json();
-          return data.data;
-        } catch (error) {
-          return error;
-        }
-      },
-      keys: ["nome"],
-      cache: false,
-    },
-    resultsList: {
-      element: (list, data) => {
-        if (!data.results.length) {
-          // Create "No Results" message element
-          const message = document.createElement("div");
-          // Add class to the created element
-          message.setAttribute("class", "no_result");
-          // Add message text content
-          message.innerHTML = `<span>Sem resultados para "${data.query}"</span>`;
-          // Append message element to the results list
-          list.prepend(message);
-        }
-      },
-      noResults: true,
-    },
-    resultItem: {
-      highlight: true,
-    },
-    events: {
-      input: {
-        selection: (event) => {
-          const selection = event.detail.selection.value;
-          verify_produto(selection);
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Adicionar Solicitação</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <table class="table table-hover">
+                  <tbody>
+                    <tr>
+                      <th scope="col">Solicitação</th>
+                      <td scope="col">{{solicitacao}}</td>
+                    </tr>
+                    <tr>
+                      <th scope="col">Secretaria</th>
+                      <td scope="col">{{solicitacao.secretaria}}</td>
+                    </tr>
+                    <tr>
+                      <th scope="col">Data</th>
+                      <td scope="col">{{solicitacao.data}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <form method="post" action="/produto/blank">{% csrf_token %}
+                  <input type="hidden" name="objProdutos" id="objProdutos" value="">
+                  <div class="form-group w-100 ml-2 mt-2">
+                    <label for="autoComplete">Produto:</label>
+                    <input id="autoComplete" type="text" dir="ltr" spellcheck=false autocorrect="off" autocomplete="off"
+                      autocapitalize="off" class="form-control">
+                    <small class="form-text text-muted">Escolha seu produto e clique para ser adicionado à
+                      solicitação</small>
+                  </div>
+                  <div class="form-group">
+                    <ul id="result" multiple class="list-group list-group-horizontal-xxl">
+                    </ul>
+                  </div>
+                  <input type="submit" value="Salvar" class="btn btn-success">
+
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      const resultado = document.getElementById("result");
+      const objProdutos = document.getElementById('objProdutos');
+      var ob = [];
+      const autoCompleteJS = new autoComplete({
+        selector: "#autoComplete",
+        placeHolder: "Digite um produto...",
+        debouce: 300,
+        threshold: 3,
+        resultsList: {
+          maxResults: 10,
         },
-      },
-    },
-  });
+        data: {
+          src: async (query) => {
+            try {
+              const source = await fetch(`/produto/search/?search=${query}`);
+              const data = await source.json();
+              return data.data;
+            } catch (error) {
+              return error;
+            }
+          },
+          keys: ["nome"],
+          cache: false,
+        },
+        resultsList: {
+          element: (list, data) => {
+            if (!data.results.length) {
+              // Create "No Results" message element
+              const message = document.createElement("div");
+              // Add class to the created element
+              message.setAttribute("class", "no_result");
+              // Add message text content
+              message.innerHTML = `<span>Sem resultados para "${data.query}"</span>`;
+              // Append message element to the results list
+              list.prepend(message);
+            }
+          },
+          noResults: true,
+        },
+        resultItem: {
+          highlight: true,
+        },
+        events: {
+          input: {
+            selection: (event) => {
+              const selection = event.detail.selection.value;
+              verify_produto(selection);
+            },
+          },
+        },
+      });
 
-  function verify_produto(item) {
-    v = false;
-    for( let i = 0; i < ob.length; i++) {
-      if (item.id == ob[i].id) {
-        v = true
+      function verify_produto(item) {
+        verifica_item = false;
+        for (let i = 0; i < ob.length; i++) {
+          //if(ob[i].quantidade) {
+           // let element = document.getElementById('quantidade-'+i);
+           // element.value = ob[i].quantidade;
+         // }
+          if (item.id == ob[i].id) {
+            verifica_item = true
+          }
+        }
+        if (!verifica_item) {
+          ob.push(item);
+          resultado.innerHTML += `
+          <li id="li-${item.id}" class="list-group-item d-flex p-2 bd-highlight justify-content-between">${item.nome}
+            <div class="form-row form-inline">
+              Quantidade: 
+              <input name='quantidade-${item.id}' id='quantidade-${item.id}' type="number" class="form-text form-control mr-2 ml-2" 
+              onchange="modifica_quantidade(${item.id})" required>
+            <a href="#" class="btn btn-danger li-produto mr-1" onclick=removerProduto('li-${item.id}',${item.id})>
+              <i class="fas fa-trash-can"></i>
+            </a>
+          </div>`;
+          atualiza_obj();
+//          console.log(objProdutos.value);
+        }
+        for (let i = 0; i < ob.length; i++) {
+          if(ob[i].quantidade) {
+            id_qtd = "quantidade-"+ob[i].id;
+            element = document.getElementById(id_qtd);
+            element.value = ob[i].quantidade;
+            //console.log(element);
+          }
+        }
+        ;
       }
-    }
-    if (!v) {
-      ob.push(item);
-      resultado.innerHTML += `<li id="li-${item.id}" class="list-group-item d-flex p-2 bd-highlight justify-content-between">${item.nome}<a href="#" class="btn btn-danger li-produto" onclick=removerProduto('li-${item.id}',${item.id})><i class="fas fa-trash-can"></i></a>`;
-      objProdutos.value = JSON.stringify(ob);
-      console.log(objProdutos.value);
-    }
-  }
-  function removerProduto(item, id) {
-    for(let i = 0; i < ob.length; i++) {
-      if (ob[i].id == id) {
-         ob.splice(i, 1);
-        document.getElementById(item).remove();
-        objProdutos.value = JSON.stringify(ob[0]);
+      function atualiza_obj() {
+        objProdutos.value = JSON.stringify(ob);
       }
-    }
-    console.log(ob);
-  }
-  </script>
+      function removerProduto(item, id) {
+        for (let i = 0; i < ob.length; i++) {
+          if (ob[i].id == id) {
+            ob.splice(i, 1);
+            document.getElementById(item).remove();
+          }
+        }
+      }
 
-{% endblock conteudo %}
+      function modifica_quantidade(item) {
+        for (let i = 0; i < ob.length; i++) {
+          if (ob[i].id == item) {
+            id_qtd = "quantidade-"+item;
+            let obj = document.getElementById(id_qtd);
+            ob[i].quantidade = obj.value;
+            atualiza_obj();
+            console.log(ob);
+          }
+        }
+       atualiza_obj();
+      }
+    </script>
+
+    {% endblock conteudo %}

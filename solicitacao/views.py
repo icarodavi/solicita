@@ -1,12 +1,13 @@
 import os
 import tempfile
 from pprint import pprint
+from datetime import datetime
 
 from django.shortcuts import redirect, render
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http.response import HttpResponse
 from django.template.loader import get_template
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from django.views.generic import (CreateView, DeleteView, DetailView,
                                   UpdateView, View)
 from django.views.generic.list import ListView
@@ -18,6 +19,7 @@ from solicita.storage_backends import PublicMediaStorage
 from xhtml2pdf import pisa
 
 from .models import Solicitacao
+from secretaria.models import Secretaria
 from .forms import SolicitacaoForm
 
 
@@ -123,18 +125,49 @@ class SolicitacaoCreateView(LoginRequiredMixin, View):
     model = Solicitacao
     template_name = 'solicitacao/form.html'
     fields = '__all__'
-    success_url = 'solicitacao:index'
+    success_url = 'produto:busca'
 
     def get(self, *args, **kwargs):
         form = SolicitacaoForm()
         return render(self.request, 'solicitacao/form.html', {'form': form})
 
     def post(self, *args, **kwargs):
+        if self.request.user.is_authenticated:
+            user = self.request.user
+            data = self.request.POST
+
+            # print(user)
+            # self.request.POST['usuario'] = user
+            #   'data': ['02/04/2022'], 'status': ['P']}
+            dados = {
+                'csrfmiddlewaretoken': data['csrfmiddlewaretoken'],
+                'objeto': data['objeto'],
+                'secretaria': data['secretaria'],
+                'data': data['data'],
+                'status': data['status'],
+            }
+            # pprint(dir(user))
+            # pprint(vars(user))
         form = SolicitacaoForm(data=self.request.POST,
                                files=self.request.FILES)
+        # pprint(dir(form.clean()))
+        # pprint(vars(form.clean()))
+        secretaria = Secretaria.objects.filter(pk=data['secretaria']).first()
         if form.is_valid():
-            form.save()
-            return redirect('solicitacao:index')
+            solicitacao = Solicitacao(
+                usuario=user,
+                objeto=data['objeto'],
+                secretaria=secretaria,
+                data=datetime.strptime(data['data'], '%d/%m/%Y'),
+                status=data['status']
+            )
+            solicitacao.save()
+            # form.save(commit=False)
+            # form.user = user.User
+            # pprint(dir(form))
+            # pprint(vars(form))
+            # form.save()
+            return redirect(reverse('produto:busca', kwargs={'pk': solicitacao.pk}))
         else:
             return render(self.request, 'solicitacao/form.html', {'form': form})
 
