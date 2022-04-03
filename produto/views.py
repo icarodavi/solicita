@@ -1,4 +1,5 @@
 import json
+from pprint import pprint
 
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import JsonResponse
@@ -106,8 +107,13 @@ class Buscador(View):
         # print(px == list(p2.values()))
         if list(p2.values()) != px:
             list_obj = self.list_solicitacao_item(px)
-            print(list_obj)
-            p2.delete(list_obj)
+            # print(list_obj)
+            # p2.delete(list_obj)
+            pprint(list(p2.in_bulk(list_obj)))
+            # pprint(px.keys()['id'])
+            pprint(dir(px))
+            x = [v['id'] for v in px]
+            pprint(set(x).difference(list(p2.in_bulk(list_obj))))
             # SolicitacaoItem.objects.bulk_create(
             #     [SolicitacaoItem(
             #         solicitacao=solicitacao,
