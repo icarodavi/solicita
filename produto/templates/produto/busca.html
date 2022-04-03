@@ -4,7 +4,7 @@
 {% load crispy_forms_tags %}
 {% block titulo %}| Listagem de Prefeituras{% endblock titulo %}
 {% block conteudo %}
-{{items|json_script:'ji'}}
+
 <div class="wrapper">
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -83,11 +83,12 @@
         </div>
       </div>
     </section>
+    {{items|json_script:'json_data'}}
     <script>
       const resultado = document.getElementById("result");
       const objProdutos = document.getElementById('objProdutos');
-      var jspdata;
-      inicia();
+      var json_data;
+      ob = [];
       const autoCompleteJS = new autoComplete({
         selector: "#autoComplete",
         placeHolder: "Digite um produto...",
@@ -136,7 +137,34 @@
           },
         },
       });
-
+      inicia();
+      function inicia() {
+        json_data = document.getElementById('json_data').textContent;
+        //console.log(json_data);
+        if (json_data == "") {
+          console.log(json_data);
+          ob = [];
+          objProdutos.value = ob;
+          console.log('aqui ==')
+        } else {
+          json_data = JSON.parse(json_data);
+          json_data = JSON.parse(json_data);
+          objProdutos.value = JSON.stringify(json_data);
+          ob = json_data;
+          console.log(json_data);
+          // console.log(typeof json_data)
+        }
+        /*if(json_data != ""){
+          ob = json_data;
+           json_data = JSON.parse(json_data);
+           json_data = JSON.parse(json_data);
+           objProdutos.value = JSON.stringify(json_data);
+          console.log(json_data);
+        } else {
+          objProdutos.value = ob;
+        }*/
+        atualiza_obj();
+      }
       function verify_produto(item) {
         verifica_item = false;
         for (let i = 0; i < ob.length; i++) {
@@ -166,10 +194,16 @@
             element.value = ob[i].quantidade;
           }
         }
-        ;
       }
       function atualiza_obj() {
         objProdutos.value = JSON.stringify(ob);
+        for (let i = 0; i < ob.length; i++) {
+          if(ob[i].quantidade) {
+            id_qtd = "quantidade-"+ob[i].id;
+            element = document.getElementById(id_qtd);
+            element.value = ob[i].quantidade;
+          }
+        }
       }
       function removerProduto(item, id) {
         for (let i = 0; i < ob.length; i++) {
@@ -178,6 +212,7 @@
             document.getElementById(item).remove();
           }
         }
+        atualiza_obj();
       }
 
       function modifica_quantidade(item) {
@@ -191,18 +226,6 @@
           }
         }
        atualiza_obj();
-      }
-      function inicia() {
-        if(jspdata != undefined){
-          ob = jspdata;
-          jspdata = JSON.parse(document.getElementById('ji').textContent);
-          jspdata = JSON.parse(jspdata);
-          objProdutos.value = JSON.stringify(jspdata);}
-        else {
-          ob = [];
-          objProdutos.value = ob
-        }
-        atualiza_obj();
       }
     </script>
 {% endblock conteudo %}

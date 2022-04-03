@@ -1,7 +1,7 @@
-from django.db import models
 from django.contrib.auth.models import User
-from secretaria.models import Secretaria
+from django.db import models
 from django.utils.translation import gettext as _
+from secretaria.models import Secretaria
 
 
 class Solicitacao(models.Model):
@@ -37,13 +37,3 @@ class SolicitacaoItem(models.Model):
     class Meta:
         verbose_name = 'Item da Solicitação'
         verbose_name_plural = 'Itens da Solicitação'
-
-    def jsonCustom(self):
-        data = {
-            "id": self.id,
-            "nome": self.produto,
-            "produto_id": self.produto_id,
-            "quantidade": self.quantidade,
-            "imagem": self.imagem,
-        }
-        return data

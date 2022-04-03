@@ -1,19 +1,19 @@
-from itertools import product
 import json
-import ast
-from pprint import pprint
-from faker import Faker
+
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.shortcuts import redirect, render
 from django.http import JsonResponse
+from django.shortcuts import redirect, render
 from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic import DeleteView, UpdateView
 from django.views.generic.list import ListView
+from faker import Faker
+from solicitacao.models import Solicitacao, SolicitacaoItem
 
 from .forms import ProdutoForm
 from .models import Produto
-from solicitacao.models import Solicitacao, SolicitacaoItem
+
+# from pprint import pprint
 
 
 class ProdutoList(LoginRequiredMixin, ListView):
@@ -74,7 +74,7 @@ class ProdutoSearch(LoginRequiredMixin, View):
                     'descricao_curta': item.descricao_curta,
                     'descricao_longa': item.descricao_longa,
                     'imagem': item.imagem.name,
-                    'slug': item.slug,
+                    'unidade': item.unidade,
                 })
 
         return JsonResponse({
@@ -105,23 +105,30 @@ class Buscador(View):
             solicitacao=solicitacao)
         # print(px == list(p2.values()))
         if list(p2.values()) != px:
-            if (p2.count() >= 0):
-                p2.delete()
-            SolicitacaoItem.objects.bulk_create(
-                [SolicitacaoItem(
-                    solicitacao=solicitacao,
-                    produto=v['produto'],
-                    produto_id=v['id'],
-                    quantidade=v['quantidade'],
-                    imagem=v['imagem'],
-                ) for v in produtos['produtos']]
-            )
+            list_obj = self.list_solicitacao_item(px)
+            print(list_obj)
+            p2.delete(list_obj)
+            # SolicitacaoItem.objects.bulk_create(
+            #     [SolicitacaoItem(
+            #         solicitacao=solicitacao,
+            #         produto=v['produto'],
+            #         produto_id=v['id'],
+            #         quantidade=v['quantidade'],
+            #         imagem=v['imagem'],
+            #     ) for v in produtos['produtos']]
+            # )
         return render(self.request, 'produto/blank.html', context=produtos)
+
+    def list_solicitacao_item(self, list_obj, *args, **kwargs):
+        obj = []
+        for item in list_obj:
+            obj.append(item['id'])
+        return obj
 
 
 class Blank(View):
     def get(self, *args, **kwargs):
-        return render(self.request, 'produto/blank.html', context=produtos)
+        return render(self.request, 'produto/blank.html')
 
     def post(self, *args, **kwargs):
         produtos = {'produtos': json.loads(
