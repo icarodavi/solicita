@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load filters %}
 {% load crispy_forms_tags %}
 {% block titulo %}| Listagem de Prefeituras{% endblock titulo %}
 {% block conteudo %}
+{{items|json_script:'ji'}}
 <div class="wrapper">
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -46,7 +48,8 @@
                 </table>
 
                 <form method="post" action="{% url 'produto:busca' solicitacao.id %}">{% csrf_token %}
-                  <input type="hidden" name="objProdutos" id="objProdutos" value="">
+                  <input type="hidden" name="objProdutos" id="objProdutos" 
+                  value="">
                   <div class="form-group w-100 ml-2 mt-2">
                     <label for="autoComplete">Produto:</label>
                     <input id="autoComplete" type="text" dir="ltr" spellcheck=false autocorrect="off" autocomplete="off"
@@ -56,6 +59,19 @@
                   </div>
                   <div class="form-group">
                     <ul id="result" multiple class="list-group list-group-horizontal-xxl">
+                      {% for item in solicitacao.solicitacaoitem_set.all %}
+                      <li id="li-{{item.id}}" class="list-group-item d-flex p-2 bd-highlight justify-content-between">
+                        {{item}}
+                        <div class="form-row form-inline">
+                          Quantidade: 
+                          <input name="quantidade-{{item.id}}" id="quantidade-{{item.id}}" type="number" class="form-text form-control mr-2 ml-2" 
+                          onchange="modifica_quantidade({{item.id}})" required value="{{item.quantidade}}">
+                        <a href="#" class="btn btn-danger li-produto mr-1" onclick=removerProduto("li-{{item.id}}",{{item.id}})>
+                          <i class="fas fa-trash-can"></i>
+                        </a>
+                      </div>
+                    </li>
+                      {% endfor %}
                     </ul>
                   </div>
                   <input type="submit" value="Salvar" class="btn btn-success">
@@ -70,7 +86,8 @@
     <script>
       const resultado = document.getElementById("result");
       const objProdutos = document.getElementById('objProdutos');
-      var ob = [];
+      var jspdata;
+      inicia();
       const autoCompleteJS = new autoComplete({
         selector: "#autoComplete",
         placeHolder: "Digite um produto...",
@@ -89,7 +106,7 @@
               return error;
             }
           },
-          keys: ["nome"],
+          keys: ["produto"],
           cache: false,
         },
         resultsList: {
@@ -123,10 +140,6 @@
       function verify_produto(item) {
         verifica_item = false;
         for (let i = 0; i < ob.length; i++) {
-          //if(ob[i].quantidade) {
-           // let element = document.getElementById('quantidade-'+i);
-           // element.value = ob[i].quantidade;
-         // }
           if (item.id == ob[i].id) {
             verifica_item = true
           }
@@ -134,7 +147,7 @@
         if (!verifica_item) {
           ob.push(item);
           resultado.innerHTML += `
-          <li id="li-${item.id}" class="list-group-item d-flex p-2 bd-highlight justify-content-between">${item.nome}
+          <li id="li-${item.id}" class="list-group-item d-flex p-2 bd-highlight justify-content-between">${item.produto}
             <div class="form-row form-inline">
               Quantidade: 
               <input name='quantidade-${item.id}' id='quantidade-${item.id}' type="number" class="form-text form-control mr-2 ml-2" 
@@ -142,16 +155,15 @@
             <a href="#" class="btn btn-danger li-produto mr-1" onclick=removerProduto('li-${item.id}',${item.id})>
               <i class="fas fa-trash-can"></i>
             </a>
-          </div>`;
+          </div>
+        </li>`;
           atualiza_obj();
-//          console.log(objProdutos.value);
         }
         for (let i = 0; i < ob.length; i++) {
           if(ob[i].quantidade) {
             id_qtd = "quantidade-"+ob[i].id;
             element = document.getElementById(id_qtd);
             element.value = ob[i].quantidade;
-            //console.log(element);
           }
         }
         ;
@@ -180,6 +192,17 @@
         }
        atualiza_obj();
       }
+      function inicia() {
+        if(jspdata != undefined){
+          ob = jspdata;
+          jspdata = JSON.parse(document.getElementById('ji').textContent);
+          jspdata = JSON.parse(jspdata);
+          objProdutos.value = JSON.stringify(jspdata);}
+        else {
+          ob = [];
+          objProdutos.value = ob
+        }
+        atualiza_obj();
+      }
     </script>
-
-    {% endblock conteudo %}
+{% endblock conteudo %}

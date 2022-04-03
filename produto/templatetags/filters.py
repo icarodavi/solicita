@@ -30,3 +30,8 @@ def s3url_media(val):
     url = create_presigned_url(
         config('AWS_STORAGE_BUCKET_NAME'), 'media/public/'+val)
     return url
+
+
+@register.filter
+def json_web(val):
+    return utils.json_web(val)

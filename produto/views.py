@@ -1,3 +1,4 @@
+from itertools import product
 import json
 import ast
 from pprint import pprint
@@ -69,11 +70,11 @@ class ProdutoSearch(LoginRequiredMixin, View):
             for item in objs:
                 payload.append({
                     'id': item.id,
-                    'nome': item.nome,
+                    'produto': item.nome,
                     'descricao_curta': item.descricao_curta,
                     'descricao_longa': item.descricao_longa,
                     'imagem': item.imagem.name,
-                    'url': item.slug
+                    'slug': item.slug,
                 })
 
         return JsonResponse({
@@ -84,24 +85,37 @@ class ProdutoSearch(LoginRequiredMixin, View):
 
 class Buscador(View):
     def get(self, *args, **kwargs):
-        solicitacao = Solicitacao.objects.filter(pk=kwargs.get('pk')).first()
-        contexto = {'solicitacao': solicitacao}
+        solicitacao = Solicitacao.objects.filter(pk=kwargs.get(
+            'pk')).first()
+        items = SolicitacaoItem.objects.filter(
+            solicitacao=solicitacao).values()
+        if items:
+            contexto = {'solicitacao': solicitacao,
+                        'items': json.dumps(list(items))}
+        else:
+            contexto = {'solicitacao': solicitacao}
         return render(self.request, 'produto/busca.html', context=contexto)
 
     def post(self, *args, **kwargs):
-        produtos = {'produtos': json.loads(
-            self.request.POST.get('objProdutos'))}
+        px = json.loads(self.request.POST.get('objProdutos'))
+        produtos = {'produtos': px}
         solicitacao = Solicitacao.objects.filter(
             pk=kwargs.get('pk')).first()
-        SolicitacaoItem.objects.bulk_create(
-            [SolicitacaoItem(
-                solicitacao=solicitacao,
-                produto=v['nome'],
-                produto_id=v['id'],
-                quantidade=v['quantidade'],
-                imagem=v['imagem'],
-            ) for v in produtos['produtos']]
-        )
+        p2 = SolicitacaoItem.objects.filter(
+            solicitacao=solicitacao)
+        # print(px == list(p2.values()))
+        if list(p2.values()) != px:
+            if (p2.count() >= 0):
+                p2.delete()
+            SolicitacaoItem.objects.bulk_create(
+                [SolicitacaoItem(
+                    solicitacao=solicitacao,
+                    produto=v['produto'],
+                    produto_id=v['id'],
+                    quantidade=v['quantidade'],
+                    imagem=v['imagem'],
+                ) for v in produtos['produtos']]
+            )
         return render(self.request, 'produto/blank.html', context=produtos)
 
 
@@ -112,21 +126,6 @@ class Blank(View):
     def post(self, *args, **kwargs):
         produtos = {'produtos': json.loads(
             self.request.POST.get('objProdutos'))}
-        # solicitacao = Solicitacao.objects.filter(
-        #     pk=self.kwargs.get('pk')).first()
-        # SolicitacaoItem.objects.bulk_create(
-        #     [SolicitacaoItem(
-        #         solicitacao=solicitacao,
-        #         produto=v['nome'],
-        #         produto_id=v['id'],
-        #         quantidade=v['quantidade'],
-        #         imagem=v['imagem'],
-        #     ) for v in produtos['produtos']]
-        # )
-
-        # for produto in produtos['produtos']:
-        #     print('-'*20)
-        #     print(produto)
         return render(self.request, 'produto/blank.html', context=produtos)
 
 

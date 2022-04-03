@@ -1,3 +1,7 @@
+from pprint import pprint
+import json
+
+
 def formata_preco(val):
     return f'R$ {val:0,.2f}'.replace(',', 'v').replace('.', ',').replace('v', '.')
 
@@ -12,3 +16,9 @@ def cart_total(carrinho):
         if item.get('preco_quantitativo_promocional')
         else item.get('preco_quantitativo') for item in carrinho.values()
     ])
+
+
+def json_web(item):
+    pprint(dir(item))
+    # pprint(vars(item))
+    return json.dumps(item)
