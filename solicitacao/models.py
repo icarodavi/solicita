@@ -35,7 +35,8 @@ class SolicitacaoItem(models.Model):
         _("Imagem"), max_length=2000, blank=True, null=True)
 
     def __str__(self):
-        return f'Item da Solicitação nº {self.solicitacao.id}'
+        # return f'Item da Solicitação nº {self.solicitacao.id}'
+        return self.produto
 
     class Meta:
         verbose_name = 'Item da Solicitação'

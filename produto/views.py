@@ -12,7 +12,7 @@ from django.views.generic.list import ListView
 
 from .forms import ProdutoForm
 from .models import Produto
-from solicitacao.models import Solicitacao
+from solicitacao.models import Solicitacao, SolicitacaoItem
 
 
 class ProdutoList(LoginRequiredMixin, ListView):
@@ -88,21 +88,45 @@ class Buscador(View):
         contexto = {'solicitacao': solicitacao}
         return render(self.request, 'produto/busca.html', context=contexto)
 
+    def post(self, *args, **kwargs):
+        produtos = {'produtos': json.loads(
+            self.request.POST.get('objProdutos'))}
+        solicitacao = Solicitacao.objects.filter(
+            pk=kwargs.get('pk')).first()
+        SolicitacaoItem.objects.bulk_create(
+            [SolicitacaoItem(
+                solicitacao=solicitacao,
+                produto=v['nome'],
+                produto_id=v['id'],
+                quantidade=v['quantidade'],
+                imagem=v['imagem'],
+            ) for v in produtos['produtos']]
+        )
+        return render(self.request, 'produto/blank.html', context=produtos)
+
 
 class Blank(View):
     def get(self, *args, **kwargs):
-        produtos = {'produtos': json.loads(
-            self.request.POST.get('objProdutos'))}
-        for i in produtos:
-            print(i)
         return render(self.request, 'produto/blank.html', context=produtos)
 
     def post(self, *args, **kwargs):
         produtos = {'produtos': json.loads(
             self.request.POST.get('objProdutos'))}
-        pprint(produtos)
-        for i in produtos:
-            print(i)
+        # solicitacao = Solicitacao.objects.filter(
+        #     pk=self.kwargs.get('pk')).first()
+        # SolicitacaoItem.objects.bulk_create(
+        #     [SolicitacaoItem(
+        #         solicitacao=solicitacao,
+        #         produto=v['nome'],
+        #         produto_id=v['id'],
+        #         quantidade=v['quantidade'],
+        #         imagem=v['imagem'],
+        #     ) for v in produtos['produtos']]
+        # )
+
+        # for produto in produtos['produtos']:
+        #     print('-'*20)
+        #     print(produto)
         return render(self.request, 'produto/blank.html', context=produtos)
 
 

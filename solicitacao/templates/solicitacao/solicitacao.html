@@ -28,14 +28,16 @@
                     </tr>
                     </thead>
                     <tbody>
+                      {% for item in solicitacao.solicitacaoitem_set.all %}
                         <tr>
-                            <td>01</td>
-                            <td>02</td>
-                            <td>03</td>
-                            <td>04</td>
-                            <td>05</td>
-                            <td>06</td>
+                            <td>{{item.id}}</td>
+                            <td>{{item}}</td>
+                            <td>{{solicitacao.objeto}}</td>
+                            <td>{{solicitacao.data}}</td>
+                            <td>{{solicitacao.status}}</td>
+                            <td>AÇÕES</td>
                           </tr>
+                        {% endfor %}
                         </tbody>
                         <tfoot>
                         <tr>

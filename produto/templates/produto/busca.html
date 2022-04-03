@@ -45,7 +45,7 @@
                   </tbody>
                 </table>
 
-                <form method="post" action="/produto/blank">{% csrf_token %}
+                <form method="post" action="{% url 'produto:busca' solicitacao.id %}">{% csrf_token %}
                   <input type="hidden" name="objProdutos" id="objProdutos" value="">
                   <div class="form-group w-100 ml-2 mt-2">
                     <label for="autoComplete">Produto:</label>

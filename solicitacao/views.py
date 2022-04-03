@@ -2,6 +2,8 @@ import os
 import tempfile
 from pprint import pprint
 from datetime import datetime
+from typing import Any
+from django.http import HttpRequest
 
 from django.shortcuts import redirect, render
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -177,7 +179,19 @@ class SolicitacaoEdit(LoginRequiredMixin, UpdateView):
     template_name = 'solicitacao/edit.html'
     # fields = '__all__'
     form_class = SolicitacaoForm
-    success_url = reverse_lazy('solicitacao:index')
+    # success_url = redirect('produto:busca' self)
+
+    # def post(self, request: HttpRequest, *args: Any, **kwargs: Any) -> HttpResponse:
+    #     #  redirect('produto:busca', kwargs={'pk': kwargs.get('pk')})
+    #     return super().post(request, *args, **kwargs)
+
+    def get_success_url(self, *args, **kwargs) -> str:
+        x = self.request.path_info
+        x.split('/')
+        print(x[-1])
+        # pprint(vars(self.request.get_full_path_info()))
+        # return reverse('produto:blank')
+        return reverse('produto:busca', args=[int(x[-1])])
 
 
 class SolicitacaoDeleteView(LoginRequiredMixin, DeleteView):
