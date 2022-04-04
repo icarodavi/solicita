@@ -211,4 +211,12 @@ TEMPUS_DOMINUS_DATETIME_FORMAT = 'DD/MM/YYYY HH:mm:ss'
 TEMPUS_DOMINUS_TIME_FORMAT = 'HH:mm:ss'
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = config('EMAIL_HOST')
+# EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+# EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+# EMAIL_PORT = config('EMAIL_PORT')
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = '983e754aa48f23'
+EMAIL_HOST_PASSWORD = 'ee20313a6805c5'
+EMAIL_PORT = '2525'
