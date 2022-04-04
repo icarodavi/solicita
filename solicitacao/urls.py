@@ -2,7 +2,7 @@ from django.urls import path
 
 from .views import (SolicitacaoCreateView, SolicitacaoDeleteView,
                     SolicitacaoDetailView, SolicitacaoDOCX, SolicitacaoEdit,
-                    SolicitacaoIndex, SolicitacaoPDF)
+                    SolicitacaoIndex, SolicitacaoPDF, password_reset_request)
 
 app_name = 'solicitacao'
 

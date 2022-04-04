@@ -10,10 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 from pathlib import Path
+
 import debug_toolbar
-from django.contrib.messages import constants
-from decouple import config
 import django_heroku
+from decouple import config
+from django.contrib.messages import constants
 from utils.s3urls import create_presigned_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -208,3 +209,6 @@ TEMPUS_DOMINUS_ASSETS = True
 TEMPUS_DOMINUS_DATE_FORMAT = 'DD/MM/YYYY'
 TEMPUS_DOMINUS_DATETIME_FORMAT = 'DD/MM/YYYY HH:mm:ss'
 TEMPUS_DOMINUS_TIME_FORMAT = 'HH:mm:ss'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

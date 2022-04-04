@@ -1,5 +1,7 @@
-from django.forms import ModelForm, DateField, DateInput
+from django.contrib.auth.models import User
+from django.forms import DateField, DateInput, ModelForm
 from tempus_dominus.widgets import DatePicker
+
 from .models import Solicitacao
 
 
@@ -21,3 +23,11 @@ class SolicitacaoForm(ModelForm):
         model = Solicitacao
         fields = '__all__'
         exclude = ('usuario', 'qtd_total',)
+
+
+class PasswordResetForm(ModelForm):
+
+    class Meta:
+        model = User
+        fields = ('email',)
+        # exclude = ('password', 'las_login')
