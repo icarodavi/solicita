@@ -105,31 +105,42 @@ class Buscador(View):
         p2 = SolicitacaoItem.objects.filter(
             solicitacao=solicitacao)
         # print(px == list(p2.values()))
-        if list(p2.values()) != px:
-            list_obj = self.list_solicitacao_item(px)
-            # print(list_obj)
-            # p2.delete(list_obj)
-            pprint(list(p2.in_bulk(list_obj)))
-            # pprint(px.keys()['id'])
-            pprint(dir(px))
-            x = [v['id'] for v in px]
-            pprint(set(x).difference(list(p2.in_bulk(list_obj))))
-            # SolicitacaoItem.objects.bulk_create(
-            #     [SolicitacaoItem(
-            #         solicitacao=solicitacao,
-            #         produto=v['produto'],
-            #         produto_id=v['id'],
-            #         quantidade=v['quantidade'],
-            #         imagem=v['imagem'],
-            #     ) for v in produtos['produtos']]
-            # )
+        # if list(p2.values()) != px:
+        list_obj = self.list_solicitacao_item(
+            px, solicitacao, p2)
+        # print(list_obj)
+        # p2.delete(list_obj)
+        # pprint(list(p2.in_bulk(list_obj)))
+        # pprint(px.keys()['id'])
+        # pprint(dir(px))
+        # x = [v['id'] for v in px]
+        print(list_obj)
+        # print(y)
+        # SolicitacaoItem.objects.bulk_create(
+        #     [SolicitacaoItem(
+        #         solicitacao=solicitacao,
+        #         produto=v['produto'],
+        #         produto_id=v['id'],
+        #         quantidade=v['quantidade'],
+        #         imagem=v['imagem'],
+        #     ) for v in produtos['produtos']]
+        # )
         return render(self.request, 'produto/blank.html', context=produtos)
 
-    def list_solicitacao_item(self, list_obj, *args, **kwargs):
+    def list_solicitacao_item(self, list_obj, solicitacao, p2, *args, **kwargs):
         obj = []
         for item in list_obj:
             obj.append(item['id'])
-        return obj
+        solicitacao = solicitacao
+        p2 = p2
+        # p2 =
+        x = []
+        y = list(set(obj).difference(list(p2.in_bulk(list_obj))))
+        for i in list_obj:
+            if y in i:
+                x.append(i)
+
+        return x
 
 
 class Blank(View):
