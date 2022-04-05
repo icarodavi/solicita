@@ -34,6 +34,9 @@ class SolicitacaoItem(models.Model):
         # return f'Item da Solicitação nº {self.solicitacao.id}'
         return self.produto
 
+    def get_nome(self):
+        return f'{self.produto}'
+
     class Meta:
         verbose_name = 'Item da Solicitação'
         verbose_name_plural = 'Itens da Solicitação'
