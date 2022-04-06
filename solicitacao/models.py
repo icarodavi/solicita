@@ -3,6 +3,7 @@ from pprint import pprint
 from django.contrib.auth.models import User
 from django.db import models
 from django.utils.translation import gettext as _
+from produto.models import Produto
 from secretaria.models import Secretaria
 
 
@@ -41,13 +42,13 @@ class SolicitacaoItem(models.Model):
     def get_nome(self):
         return f'{self.produto}'
 
+    def get_unidade(self):
+        unidade = Produto.objects.get(pk=self.produto_id).values('unidade')
+        return unidade
+
     class Meta:
         verbose_name = 'Item da Solicitação'
         verbose_name_plural = 'Itens da Solicitação'
-
-    # def clear(self, *args, **kwargs):
-    #     x = self.objects.all()
-    #     self.remove(x)
 
 
 class SolicitacaoQuantidade(models.Model):

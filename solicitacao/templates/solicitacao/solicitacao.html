@@ -71,4 +71,7 @@
       {{solicitacao.secretaria.prefeitura.get_logo}}
       <p>pois pé</p>
       <img src="{{solicitacao.secretaria.prefeitura.logotipo.name|s3url_media}}" />{% endcomment %}
+      {% for i in solicitacao.solicitacaoitem_set.all %}
+        {{i.get_unidade}}
+      {% endfor %}
       {% endblock conteudo %}  
