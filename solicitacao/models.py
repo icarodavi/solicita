@@ -3,7 +3,6 @@ from pprint import pprint
 from django.contrib.auth.models import User
 from django.db import models
 from django.utils.translation import gettext as _
-from produto.models import Produto
 from secretaria.models import Secretaria
 
 
@@ -28,10 +27,8 @@ class SolicitacaoItem(models.Model):
     solicitacao = models.ForeignKey(Solicitacao, on_delete=models.CASCADE)
     soliticao_item = models.ManyToManyField(
         Solicitacao, related_name='solicitacao', through='SolicitacaoQuantidade')
-    produto = models.ForeignKey(
-        Produto, verbose_name=_("Produto"), on_delete=models.CASCADE, blank=False, null=False)
-
-    #produto_id = models.PositiveIntegerField(_('Produto_ID'), )
+    produto = models.CharField(_('Produto'), max_length=255)
+    produto_id = models.PositiveIntegerField(_('Produto_ID'), )
     qtd = models.PositiveIntegerField(
         _('Quantidade'), default=1, blank=True, null=True)
     imagem = models.CharField(
@@ -39,14 +36,18 @@ class SolicitacaoItem(models.Model):
 
     def __str__(self):
         # return f'Item da Solicitação nº {self.solicitacao.id}'
-        return f'{self.produto.nome}'
+        return self.produto
 
     def get_nome(self):
-        return f'{self.produto.nome}'
+        return f'{self.produto}'
 
     class Meta:
         verbose_name = 'Item da Solicitação'
         verbose_name_plural = 'Itens da Solicitação'
+
+    # def clear(self, *args, **kwargs):
+    #     x = self.objects.all()
+    #     self.remove(x)
 
 
 class SolicitacaoQuantidade(models.Model):
