@@ -1,3 +1,5 @@
+from pprint import pprint
+
 from django.contrib.auth.models import User
 from django.db import models
 from django.utils.translation import gettext as _
@@ -28,7 +30,7 @@ class SolicitacaoItem(models.Model):
     produto = models.CharField(_('Produto'), max_length=255)
     produto_id = models.PositiveIntegerField(_('Produto_ID'), )
     qtd = models.PositiveIntegerField(
-        _('Quantidade'), blank=True, null=True)
+        _('Quantidade'), default=1, blank=True, null=True)
     imagem = models.CharField(
         _("Imagem"), max_length=2000, blank=True, null=True)
 
@@ -43,13 +45,17 @@ class SolicitacaoItem(models.Model):
         verbose_name = 'Item da Solicitação'
         verbose_name_plural = 'Itens da Solicitação'
 
+    # def clear(self, *args, **kwargs):
+    #     x = self.objects.all()
+    #     self.remove(x)
+
 
 class SolicitacaoQuantidade(models.Model):
     solicitacao = models.ForeignKey(
         Solicitacao, on_delete=models.CASCADE, related_name='quantidade')
     item_solicitacao = models.ForeignKey(
         SolicitacaoItem, on_delete=models.CASCADE, related_name='quantidade')
-    quantidade = models.PositiveIntegerField(default=0)
+    #quantidade = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return f'{self.solicitacaoitem.produto} - Qtd: {self.quantidade}'
@@ -57,6 +63,10 @@ class SolicitacaoQuantidade(models.Model):
     def get_qtd(self):
         return f'{self.quantidade}'
 
-    class Meta:
-        verbose_name = 'Through Quantidade'
-        verbose_name_plural = 'Through Quantidades'
+    def save(self, force_insert, force_update, using, update_fields):
+        # pprint(self.prefetch_related)
+        return super().save(force_insert, force_update, using, update_fields)
+
+    # class Meta:
+    #     verbose_name = 'Through Quantidade'
+    #     verbose_name_plural = 'Through Quantidades'

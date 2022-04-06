@@ -79,7 +79,6 @@ class ProdutoSearch(LoginRequiredMixin, View):
                     'descricao_longa': item.descricao_longa,
                     'imagem': item.imagem.name,
                     'unidade': item.unidade,
-                    'delete': False,
                 })
 
         return JsonResponse({
@@ -104,76 +103,22 @@ class Buscador(View):
     def post(self, *args, **kwargs):
 
         data = json.loads(self.request.POST.get('objProdutos'))
-        # pprint(data)
-        data_final = copy.deepcopy(data)
         produtos = {'produtos': data}
         solicitacao = Solicitacao.objects.filter(
             pk=kwargs.get('pk')).first()
-        solicitacao_itens = solicitacao.solicitacaoitem_set.all()
-        atualizar_itens = set([])
-        deletar_itens = set([])
-        criar_itens = set([])
-        for solicitacao_item in solicitacao_itens:
-            for data_item in data:
-                # print(data_item)
-                if data_item.get('delete'):
-                    deletar_itens.add(solicitacao_item)
-                    # print('delete')
-                else:
-                    if not solicitacao_item.get_nome() in list(data_item.values()):
-                        # if solicitacao_item.get_nome()
-                        # deletar_itens.add(solicitacao_item)
-                        pass
-                    else:
-                        atualizar_itens.add(data_item)
-                        index_data = data_final.index(data_item)
-                        data_final.pop(index_data)
+        list_data = [SolicitacaoItem(
+            solicitacao=solicitacao,
+            produto=v['produto'],
+            produto_id=v['id'],
+            qtd=v['qtd'],
+            imagem=v['imagem'],
+        ) for v in data]
 
-        criar_itens = [item for item in data_final]
-        atualizar_itens = [item for item in atualizar_itens]
-        deletar_itens = [item for item in deletar_itens]
-        pprint(criar_itens)
-        print('-'*100)
-        pprint(atualizar_itens)
-        print('-'*100)
-        pprint(deletar_itens)
-        print('-'*100)
-        # if deletar_itens:
-        #     # apagar = [SolicitacaoItem(id=item['id']) for item in deletar_itens]
-        #     SolicitacaoItem.delete(deletar_itens)
-        #     print('deletar_itens', deletar_itens)
-        #     # print(apagar)
-        #     pass
+        pprint(dir(solicitacao.solicitacaoitem_set.all().delete()))
+        # solicitacao.solicitacaoitem_set.clear()
+        solicitacao.solicitacaoitem_set.set(list_data, bulk=False, clear=True)
 
-        # if criar_itens:
-        #     SolicitacaoItem.objects.bulk_create(
-        #         [SolicitacaoItem(
-        #             solicitacao=solicitacao,
-        #             produto=v['produto'],
-        #             produto_id=v['id'],
-        #             quantidade=v['quantidade'],
-        #             imagem=v['imagem'],
-        #         ) for v in criar_itens]
-        #     )
-        # if atualizar_itens:
-        #     upds = SolicitacaoItem.objects.bulk_update(
-        #         [SolicitacaoItem(
-        #             id=v['id'],
-        #             quantidade=v['quantidade']
-        #         ) for v in atualizar_itens], ['quantidade'])
-        #     print(upds)
         return render(self.request, 'produto/blank.html', context=produtos)
-
-    def verifica_deletados(self, lista_deletados, lista_banco, *args, **kwargs):
-        deletados = [{'id': x.__dict__['id'],
-                      'solicitacao_id': x.__dict__['solicitacao_id'],
-                      'produto': x.__dict__['produto'],
-                      'produto_id': x.__dict__['produto_id'],
-                      'quantidade': x.__dict__['quantidade'],
-                      'imagem': x.__dict__['imagem'],
-                      } for x in lista_deletados]
-
-        return deletados
 
 
 class Blank(View):
