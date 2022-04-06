@@ -1,6 +1,8 @@
 import copy
+import itertools
 import json
 from pprint import pprint
+from tkinter.tix import Tree
 
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import JsonResponse
@@ -77,6 +79,7 @@ class ProdutoSearch(LoginRequiredMixin, View):
                     'descricao_longa': item.descricao_longa,
                     'imagem': item.imagem.name,
                     'unidade': item.unidade,
+                    'delete': False,
                 })
 
         return JsonResponse({
@@ -107,50 +110,61 @@ class Buscador(View):
         solicitacao = Solicitacao.objects.filter(
             pk=kwargs.get('pk')).first()
         solicitacao_itens = solicitacao.solicitacaoitem_set.all()
-        atualizar_itens = []
+        atualizar_itens = set([])
         deletar_itens = set([])
+        criar_itens = set([])
         for solicitacao_item in solicitacao_itens:
             for data_item in data:
-                if not solicitacao_item.get_nome() in list(data_item.values()):
-                    # if solicitacao_item.get_nome()
+                # print(data_item)
+                if data_item.get('delete'):
                     deletar_itens.add(solicitacao_item)
+                    # print('delete')
                 else:
-                    atualizar_itens.append(data_item)
-                    index_data = data_final.index(data_item)
-                    data_final.pop(index_data)
-        criar_itens = data_final
-        deletar_itens = self.verifica_deletados(deletar_itens, data)
-        # print('criar itens', '-'*100)
-        # print(criar_itens)
-        # print('-'*100)
-        # print(atualizar_itens)
-        # print('-'*100)
-        # print(deletar_itens)
-        # print('-'*100)
+                    if not solicitacao_item.get_nome() in list(data_item.values()):
+                        # if solicitacao_item.get_nome()
+                        # deletar_itens.add(solicitacao_item)
+                        pass
+                    else:
+                        atualizar_itens.add(data_item)
+                        index_data = data_final.index(data_item)
+                        data_final.pop(index_data)
 
-        if criar_itens:
-            SolicitacaoItem.objects.bulk_create(
-                [SolicitacaoItem(
-                    solicitacao=solicitacao,
-                    produto=v['produto'],
-                    produto_id=v['id'],
-                    quantidade=v['quantidade'],
-                    imagem=v['imagem'],
-                ) for v in criar_itens]
-            )
-        if atualizar_itens:
-            upds = SolicitacaoItem.objects.bulk_update(
-                [SolicitacaoItem(
-                    id=v['id'],
-                    quantidade=v['quantidade']
-                ) for v in atualizar_itens], ['quantidade'])
-        if deletar_itens:
-            apagar = [SolicitacaoItem(id=item['id']) for item in deletar_itens]
-            print(apagar)
+        criar_itens = [item for item in data_final]
+        atualizar_itens = [item for item in atualizar_itens]
+        deletar_itens = [item for item in deletar_itens]
+        pprint(criar_itens)
+        print('-'*100)
+        pprint(atualizar_itens)
+        print('-'*100)
+        pprint(deletar_itens)
+        print('-'*100)
+        # if deletar_itens:
+        #     # apagar = [SolicitacaoItem(id=item['id']) for item in deletar_itens]
+        #     SolicitacaoItem.delete(deletar_itens)
+        #     print('deletar_itens', deletar_itens)
+        #     # print(apagar)
+        #     pass
 
+        # if criar_itens:
+        #     SolicitacaoItem.objects.bulk_create(
+        #         [SolicitacaoItem(
+        #             solicitacao=solicitacao,
+        #             produto=v['produto'],
+        #             produto_id=v['id'],
+        #             quantidade=v['quantidade'],
+        #             imagem=v['imagem'],
+        #         ) for v in criar_itens]
+        #     )
+        # if atualizar_itens:
+        #     upds = SolicitacaoItem.objects.bulk_update(
+        #         [SolicitacaoItem(
+        #             id=v['id'],
+        #             quantidade=v['quantidade']
+        #         ) for v in atualizar_itens], ['quantidade'])
+        #     print(upds)
         return render(self.request, 'produto/blank.html', context=produtos)
 
-    def verifica_deletados(self, lista_deletados, lista_original, *args, **kwargs):
+    def verifica_deletados(self, lista_deletados, lista_banco, *args, **kwargs):
         deletados = [{'id': x.__dict__['id'],
                       'solicitacao_id': x.__dict__['solicitacao_id'],
                       'produto': x.__dict__['produto'],
@@ -159,19 +173,6 @@ class Buscador(View):
                       'imagem': x.__dict__['imagem'],
                       } for x in lista_deletados]
 
-        for item in lista_original:
-            for deletado in deletados:
-                if deletado['id'] == item['id']:
-                    print(deletado)
-                    print(deletados)
-                    _v = {'id': item['id'],
-                          'solicitacao_id': item['solicitacao_id'],
-                          'produto': item['produto'],
-                          'produto_id': item['produto_id'],
-                          'quantidade': item['quantidade'],
-                          'imagem': item['imagem']}
-                    index_data = deletados.index(_v)
-                    deletados.pop(index_data)
         return deletados
 
 

@@ -23,9 +23,11 @@ class Solicitacao(models.Model):
 
 class SolicitacaoItem(models.Model):
     solicitacao = models.ForeignKey(Solicitacao, on_delete=models.CASCADE)
+    soliticao_item = models.ManyToManyField(
+        Solicitacao, related_name='solicitacao', through='SolicitacaoQuantidade')
     produto = models.CharField(_('Produto'), max_length=255)
     produto_id = models.PositiveIntegerField(_('Produto_ID'), )
-    quantidade = models.PositiveIntegerField(
+    qtd = models.PositiveIntegerField(
         _('Quantidade'), blank=True, null=True)
     imagem = models.CharField(
         _("Imagem"), max_length=2000, blank=True, null=True)
@@ -40,3 +42,21 @@ class SolicitacaoItem(models.Model):
     class Meta:
         verbose_name = 'Item da Solicitação'
         verbose_name_plural = 'Itens da Solicitação'
+
+
+class SolicitacaoQuantidade(models.Model):
+    solicitacao = models.ForeignKey(
+        Solicitacao, on_delete=models.CASCADE, related_name='quantidade')
+    item_solicitacao = models.ForeignKey(
+        SolicitacaoItem, on_delete=models.CASCADE, related_name='quantidade')
+    quantidade = models.PositiveIntegerField(default=0)
+
+    def __str__(self):
+        return f'{self.solicitacaoitem.produto} - Qtd: {self.quantidade}'
+
+    def get_qtd(self):
+        return f'{self.quantidade}'
+
+    class Meta:
+        verbose_name = 'Through Quantidade'
+        verbose_name_plural = 'Through Quantidades'

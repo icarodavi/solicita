@@ -8,7 +8,7 @@ from .models import Solicitacao, SolicitacaoItem
 class SolicitacaoItemInline(admin.TabularInline):
     model = SolicitacaoItem
     extra = 1
-    # autocomplete_fields = ['se']
+    # autocomplete_fields = ['solicitacao_item']
 
 
 class SolicitacaoAdmin(admin.ModelAdmin):
