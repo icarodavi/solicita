@@ -67,16 +67,8 @@
       </div>
       </div>
       {% comment %} {{solicitacao.secretaria.get_logotipo}}
-      {{solicitacao.secretaria.endereco}} {% endcomment %}
+      {{solicitacao.secretaria.endereco}} 
       {{solicitacao.secretaria.prefeitura.get_logo}}
       <p>pois pé</p>
-      <img src="{{solicitacao.secretaria.prefeitura.logotipo.name|s3url_media}}" />
-      
-      {% comment %} {{solicitacao.solicitacaoitem_set.all}} 
-      {% for item in solicitacao.solicitacaoitem_set.all %}
-        {{item.solicitacao}} <br>
-        {{item.imagem}}<br>
-        {{item.produto}}<br>
-        {{item.produto_id}}<br>
-      {% endfor %} {% endcomment %}
+      <img src="{{solicitacao.secretaria.prefeitura.logotipo.name|s3url_media}}" />{% endcomment %}
       {% endblock conteudo %}  

@@ -14,7 +14,7 @@ class Produto(models.Model):
     slug = models.SlugField(blank=True, null=True)
 
     def __str__(self):
-        return self.nome
+        return f'{self.nome}'
 
     def save(self, *args, **kwargs):
         # max_img_size = 800

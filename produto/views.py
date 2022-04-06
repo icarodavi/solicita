@@ -17,8 +17,6 @@ from solicitacao.models import Solicitacao, SolicitacaoItem
 from .forms import ProdutoForm
 from .models import Produto
 
-# from pprint import pprint
-
 
 class ProdutoList(LoginRequiredMixin, ListView):
     model = Produto
@@ -114,8 +112,7 @@ class Buscador(View):
             imagem=v['imagem'],
         ) for v in data]
 
-        pprint(dir(solicitacao.solicitacaoitem_set.all().delete()))
-        # solicitacao.solicitacaoitem_set.clear()
+        solicitacao.solicitacaoitem_set.all().delete()
         solicitacao.solicitacaoitem_set.set(list_data, bulk=False, clear=True)
 
         return render(self.request, 'produto/blank.html', context=produtos)
