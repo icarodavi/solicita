@@ -85,57 +85,92 @@
 },
 {
     "model": "solicitacao.solicitacaoitem",
-    "pk": 2,
-    "fields": {
-        "solicitacao": 2,
-        "produto": "Caneta Preta",
-        "produto_id": 1,
-        "quantidade": 1,
-        "imagem": null
-    }
-},
-{
-    "model": "solicitacao.solicitacaoitem",
-    "pk": 3,
-    "fields": {
-        "solicitacao": 2,
-        "produto": "Cimento",
-        "produto_id": 2,
-        "quantidade": 10,
-        "imagem": null
-    }
-},
-{
-    "model": "solicitacao.solicitacaoitem",
-    "pk": 4,
-    "fields": {
-        "solicitacao": 2,
-        "produto": "Teste COVID",
-        "produto_id": 3,
-        "quantidade": 1000,
-        "imagem": null
-    }
-},
-{
-    "model": "solicitacao.solicitacaoitem",
     "pk": 5,
     "fields": {
         "solicitacao": 4,
-        "produto": "Insulina",
-        "produto_id": 4,
-        "quantidade": 1000,
+        "produto": 1,
+        "qtd": 1000,
         "imagem": null
     }
 },
 {
     "model": "solicitacao.solicitacaoitem",
-    "pk": 6,
+    "pk": 7,
+    "fields": {
+        "solicitacao": 9,
+        "produto": 1,
+        "qtd": 200,
+        "imagem": "produto_imagens/2022/03/176161z_3.webp"
+    }
+},
+{
+    "model": "solicitacao.solicitacaoitem",
+    "pk": 8,
+    "fields": {
+        "solicitacao": 9,
+        "produto": 1,
+        "qtd": 200,
+        "imagem": ""
+    }
+},
+{
+    "model": "solicitacao.solicitacaoitem",
+    "pk": 18,
     "fields": {
         "solicitacao": 5,
-        "produto": "Muda de arvore",
-        "produto_id": 5,
-        "quantidade": 100,
-        "imagem": null
+        "produto": 1,
+        "qtd": 200,
+        "imagem": "produto_imagens/2022/03/176161z_3.webp"
+    }
+},
+{
+    "model": "solicitacao.solicitacaoitem",
+    "pk": 19,
+    "fields": {
+        "solicitacao": 5,
+        "produto": 1,
+        "qtd": 200,
+        "imagem": ""
+    }
+},
+{
+    "model": "solicitacao.solicitacaoitem",
+    "pk": 45,
+    "fields": {
+        "solicitacao": 9,
+        "produto": 1,
+        "qtd": 100,
+        "imagem": "produto_imagens/2022/03/176161z_3.webp"
+    }
+},
+{
+    "model": "solicitacao.solicitacaoitem",
+    "pk": 46,
+    "fields": {
+        "solicitacao": 9,
+        "produto": 1,
+        "qtd": 100,
+        "imagem": "produto_imagens/2022/03/176161z_3.webp"
+    }
+},
+{
+    "model": "solicitacao.solicitacaoitem",
+    "pk": 47,
+    "fields": {
+        "solicitacao": 9,
+        "produto": 1,
+        "qtd": 10,
+        "imagem": ""
+    }
+},
+{
+    "model": "solicitacao.solicitacaoitem",
+    "pk": 63,
+    "fields": {
+        "solicitacao": 2,
+        "produto": 1,
+        "qtd": 1,
+        "imagem": ""
     }
 },
 {
@@ -145,360 +180,3825 @@
         "nome": "Caneta Preta",
         "descricao_curta": "Uma caneta da cor preta",
         "descricao_longa": "Uma caneta da cor preta com ponta 7.0",
+        "unidade": "UN",
         "imagem": "produto_imagens/2022/03/176161z_3.webp",
-        "slug": "caneta-preta"
+        "slug": null
     }
 },
 {
     "model": "produto.produto",
-    "pk": 3,
+    "pk": 36,
     "fields": {
-        "nome": "da Mata",
-        "descricao_curta": "['Officia temporibus repellat repellendus animi. Eaque nam suscipit ipsum officiis nulla libero. Blanditiis quis porro blanditiis autem nostrum cupiditate.']",
-        "descricao_longa": "['Perferendis voluptatum quam placeat et doloremque. Veniam nobis alias sapiente beatae consequatur. Repellendus et dolores ipsam est.', 'Sequi dolor quis quas fuga quis cupiditate. Enim vel illum eius doloremque eum similique.', 'In similique incidunt consequuntur odio. Sunt animi dolorum dignissimos architecto voluptatem quisquam.', 'Error odio aut dignissimos.', 'Fuga ad illo nulla blanditiis facere expedita officiis. Inventore excepturi vero.']",
+        "nome": "BROCA SDS PLUS",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
         "imagem": "",
-        "slug": "da-mata"
+        "slug": null
     }
 },
 {
     "model": "produto.produto",
-    "pk": 4,
+    "pk": 354,
     "fields": {
-        "nome": "Novaes",
-        "descricao_curta": "['Nisi molestias non corporis voluptates. Quasi esse ratione assumenda a accusamus. Deserunt quo temporibus eligendi laudantium quo quod corrupti.']",
-        "descricao_longa": "['Quaerat reprehenderit officiis. Occaecati ducimus minus magni illo exercitationem perspiciatis.', 'Cumque neque consectetur ex voluptates delectus. Consectetur odit qui dolor.', 'Nisi earum officiis debitis repellendus neque quis. Officiis recusandae magni totam.', 'Delectus cupiditate illum aspernatur exercitationem fugit. Deserunt atque magnam tenetur quaerat. Est dignissimos saepe ducimus.', 'Hic quibusdam enim culpa quis culpa pariatur. Quae doloribus modi quia incidunt ab. Architecto expedita impedit voluptates distinctio.']",
+        "nome": "BROCA SDS PLUS",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
         "imagem": "",
-        "slug": "novaes"
+        "slug": null
     }
 },
 {
     "model": "produto.produto",
-    "pk": 5,
+    "pk": 355,
     "fields": {
-        "nome": "Pinto Oliveira S.A.",
-        "descricao_curta": "['Exercitationem facilis perspiciatis hic inventore. Tempora nobis deleniti quidem ullam sed.']",
-        "descricao_longa": "['Modi hic accusamus ratione incidunt voluptate magnam repudiandae. Necessitatibus consequatur in vitae ad ipsam.', 'Nostrum cupiditate corporis autem. Ipsa nesciunt suscipit accusantium. Laboriosam eos quaerat ratione ad sequi.', 'Suscipit aperiam vel nisi sequi. Tenetur explicabo iure in. Voluptatum facere beatae.', 'Omnis hic ipsum quidem hic. A velit eos labore ratione.', 'Repudiandae iste modi facere tenetur maiores. Recusandae iusto veritatis quis cumque fuga. Dolorem aspernatur ea.']",
+        "nome": "MALHA DO CARRO DE IMPRESS├O PARA EQUIPAMENTO  PLOTTER HP DESIGNJET 4500 PRINTER SERIES",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
         "imagem": "",
-        "slug": "pinto-oliveira-sa"
+        "slug": null
     }
 },
 {
     "model": "produto.produto",
-    "pk": 6,
+    "pk": 356,
     "fields": {
-        "nome": "Peixoto",
-        "descricao_curta": "['Magnam dignissimos amet unde cum. Suscipit rerum delectus non adipisci eius dolor. Ab repellendus quis libero facere distinctio ad nobis.']",
-        "descricao_longa": "['Provident laudantium ad itaque. Exercitationem a quia ipsam blanditiis corrupti. Voluptatum molestiae laboriosam.', 'Non molestiae autem nisi voluptates repellat iste. Officia quos fuga autem. Velit recusandae voluptas qui.', 'Id tempore odit eos eum vero. Eius placeat debitis enim dolores est labore.', 'Atque voluptas similique perspiciatis sunt molestias earum. Nostrum rerum rerum nam dolores.', 'Temporibus mollitia sint maiores. Modi praesentium voluptates odit labore possimus quaerat. Fugit id recusandae necessitatibus perferendis nulla doloribus.']",
+        "nome": " SWITCH L2 52P EL╔TRICO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
         "imagem": "",
-        "slug": "peixoto"
+        "slug": null
     }
 },
 {
     "model": "produto.produto",
-    "pk": 7,
+    "pk": 357,
     "fields": {
-        "nome": "Azevedo",
-        "descricao_curta": "['Accusantium dignissimos ea sint nulla quisquam. Vel ad esse dolorem corporis corporis.']",
-        "descricao_longa": "['Quasi perspiciatis rerum illum nesciunt iste. Ea enim veniam culpa. Excepturi excepturi minus quisquam amet distinctio ab.', 'Tenetur tempora doloremque sed ipsam molestias. Sapiente incidunt nulla quibusdam. Eum praesentium quos ab incidunt.', 'Dicta in delectus officiis. Ab incidunt tenetur quis. Officiis tempora hic quibusdam corrupti ducimus magnam.', 'Animi ratione cum amet sed. Nulla aspernatur ab pariatur impedit laborum suscipit.', 'Quam vero qui ullam. Similique expedita molestias totam maxime aut. Tempore perspiciatis laudantium cumque assumenda vero.']",
+        "nome": "ABRACADEIRA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PC",
         "imagem": "",
-        "slug": "azevedo"
+        "slug": null
     }
 },
 {
     "model": "produto.produto",
-    "pk": 8,
+    "pk": 358,
     "fields": {
-        "nome": "da Cunha - EI",
-        "descricao_curta": "['Harum blanditiis dignissimos. Distinctio pariatur architecto praesentium nostrum dolorum aliquid. Molestias dolorum modi eos temporibus iure amet.']",
-        "descricao_longa": "['Odio sequi harum consequatur. Praesentium vel voluptatem iusto laboriosam numquam voluptas. Ipsa totam molestias magnam eligendi dicta.', 'Perferendis maiores deleniti numquam exercitationem dolor inventore. At consequatur iure quod ad ratione ad. Cum perspiciatis quia explicabo dolorum natus.', 'Aliquid rem pariatur omnis eum animi. Eligendi ipsam libero excepturi nulla inventore itaque.', 'Enim fugiat ipsum necessitatibus occaecati. Enim harum inventore voluptatum id deleniti. Non laudantium animi culpa laborum earum praesentium.', 'Veritatis aut explicabo animi. Blanditiis nihil sed porro iusto.']",
+        "nome": "ABRAÃADEIRA DE NYLON NA COR BRANCA.",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
         "imagem": "",
-        "slug": "da-cunha-ei"
+        "slug": null
     }
 },
 {
     "model": "produto.produto",
-    "pk": 9,
+    "pk": 359,
     "fields": {
-        "nome": "Oliveira Cunha - EI",
-        "descricao_curta": "['Similique voluptatibus consequatur vero. Ipsum eum aut dolores iste facilis fugiat atque.']",
-        "descricao_longa": "['Doloribus beatae aspernatur. Quo ad facere et nam.', 'Deleniti fugiat aliquid iste. Sapiente explicabo perspiciatis ducimus.', 'Voluptatum vel ipsa laboriosam aperiam illo molestiae porro. Dolor sequi vel.', 'Vero necessitatibus dolor numquam odio. Aliquid sint architecto quibusdam cupiditate dignissimos iusto.', 'Ipsum consectetur voluptatem. Illum assumenda ut asperiores earum. Illum atque ullam.']",
+        "nome": "ABRAÃADEIRA IN 03,6X300MM - PACOTE COM 100 UNIDADES",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PCT",
         "imagem": "",
-        "slug": "oliveira-cunha-ei"
+        "slug": null
     }
 },
 {
     "model": "produto.produto",
-    "pk": 10,
+    "pk": 360,
     "fields": {
-        "nome": "da Rocha",
-        "descricao_curta": "['Doloribus recusandae veritatis doloribus soluta. Tempore sit pariatur id earum. Exercitationem repellendus cum tenetur quisquam exercitationem. Vero sunt tenetur amet suscipit.']",
-        "descricao_longa": "['Cumque ad perspiciatis. Nam maxime animi alias. Ullam eius itaque corrupti ullam sit.', 'Reiciendis recusandae vel dolor. Impedit tenetur quo est.', 'Praesentium accusamus quo neque at. Ipsa quisquam suscipit voluptatibus totam. Provident id minima omnis ut.', 'Beatae sequi delectus doloremque exercitationem ratione veniam. Facilis voluptatum saepe ab modi.', 'Aliquid similique libero vero omnis facere voluptatem. Nobis veniam nesciunt cum modi et quos. Explicabo iste blanditiis necessitatibus molestiae ex cupiditate.']",
+        "nome": "ABRAÃADEIRA IN 04,8X200MM - PACOTE COM 100 UNIDADES",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PT",
         "imagem": "",
-        "slug": "da-rocha"
+        "slug": null
     }
 },
 {
     "model": "produto.produto",
-    "pk": 11,
+    "pk": 361,
     "fields": {
-        "nome": "Jesus",
-        "descricao_curta": "['Ipsum velit dolores perferendis culpa ullam. Atque sunt accusantium at porro.']",
-        "descricao_longa": "['Nisi sint quis sit sint et. Eos ab porro temporibus sint accusantium. Enim aspernatur ad eveniet.', 'Doloribus nemo quaerat. Libero eius quidem maiores beatae ea iusto. Deserunt esse qui quis nihil ex.', 'Exercitationem neque accusantium explicabo.', 'Odio ea eaque beatae ea ipsam. Dolor repellat praesentium sapiente eligendi magnam voluptatum repellat. Nulla quidem reprehenderit modi quam rem vel.', 'Quam voluptatibus pariatur qui deleniti laboriosam. Maiores laboriosam praesentium quidem a atque eius.']",
+        "nome": "ABRAÃADEIRA ROSCA SEM FIM 1/2'' X 5/8''",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PC",
         "imagem": "",
-        "slug": "jesus"
+        "slug": null
     }
 },
 {
     "model": "produto.produto",
-    "pk": 12,
+    "pk": 362,
     "fields": {
-        "nome": "Moura Peixoto S.A.",
-        "descricao_curta": "['Praesentium adipisci mollitia officia facere. Facere perferendis beatae ipsa voluptate qui praesentium. Adipisci illo accusamus illo voluptatum cupiditate.']",
-        "descricao_longa": "['Sunt in enim eligendi. Ipsam reprehenderit provident eum.', 'Optio necessitatibus cupiditate. Repudiandae minima aperiam ex ea saepe.', 'Maxime porro eaque vitae. Nemo maiores quia illo. Temporibus nulla est debitis. Hic officiis consequuntur quaerat illo.', 'Quia explicabo repellendus numquam. Placeat laudantium tempora modi. Deserunt consequuntur cumque distinctio accusantium aperiam.', 'Sunt recusandae facere atque.']",
+        "nome": "ACIONADOR BOT├O V┴LVULA DESCARGA REFER╩NCIA: ORIENTE - ANTERIOR A 1980 OU EQUIVALENTE.",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
         "imagem": "",
-        "slug": "moura-peixoto-sa"
+        "slug": null
     }
 },
 {
     "model": "produto.produto",
-    "pk": 13,
+    "pk": 363,
     "fields": {
-        "nome": "Pereira",
-        "descricao_curta": "['Omnis minima voluptas debitis. Blanditiis dolorem fugit. Modi illo quaerat totam sapiente quas.']",
-        "descricao_longa": "['Fugiat dolore unde autem. Expedita odio quaerat dolorem earum suscipit. Officia magnam ullam modi laudantium.', 'Ea aliquam sed corrupti veritatis. Ratione perferendis esse laudantium.', 'Blanditiis neque accusamus officiis aut laudantium magnam. Iusto maxime totam quaerat qui. Et placeat quasi quidem earum illo incidunt.', 'Dolores corporis incidunt. Voluptas itaque assumenda officia. Itaque possimus quo ipsum aliquam.', 'Molestiae architecto nisi illo nisi officiis. Voluptatibus sit temporibus veniam.']",
+        "nome": "ACOPLAMENTO 2P+T",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
         "imagem": "",
-        "slug": "pereira"
+        "slug": null
     }
 },
 {
     "model": "produto.produto",
-    "pk": 14,
+    "pk": 364,
     "fields": {
-        "nome": "Moura",
-        "descricao_curta": "['Dicta exercitationem ea laboriosam magnam. Sapiente eum ab ab repellat placeat minima.']",
-        "descricao_longa": "['Similique vitae porro dicta. Ipsa vel enim quibusdam. Quis natus repudiandae reiciendis vero optio.', 'Eum facilis facilis nihil fuga. Magni quis temporibus expedita.', 'Sapiente delectus totam facilis perferendis. Distinctio sunt dolore eveniet dolore. Aliquam nostrum distinctio alias repellat.', 'Illum laborum id ad at at perferendis. Adipisci nam iure assumenda. In maxime sapiente pariatur. Ex porro officia excepturi totam.', 'Velit earum totam ducimus. Libero eveniet molestias id.']",
+        "nome": "ADAPTADOR  DE VIDEO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
         "imagem": "",
-        "slug": "moura"
+        "slug": null
     }
 },
 {
     "model": "produto.produto",
-    "pk": 15,
+    "pk": 365,
     "fields": {
-        "nome": "Ribeiro",
-        "descricao_curta": "['Aperiam excepturi odit quisquam minima numquam officia nesciunt. Accusantium quod odit officia labore illo. Minima quisquam sapiente nemo illo occaecati. Consequatur dicta consequatur corrupti fugiat qui ullam in.']",
-        "descricao_longa": "['Eos quae fugiat dolorem modi esse. Esse officiis magni. Quia veniam exercitationem animi iusto.', 'Et blanditiis aspernatur ut. Occaecati deserunt provident impedit eligendi dicta aut veritatis.', 'Soluta at ea vel totam vero. Beatae quasi est nesciunt expedita. Explicabo magni magni tempora magnam.', 'Fuga architecto odio a a vitae impedit unde.', 'Explicabo quod natus repudiandae. Fugit illo doloribus necessitatibus.']",
+        "nome": "ADESIVO EPËXI EM MASSA  50G REFER╩NCIA:  LOCTITE OU EQUIVALENTE.",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
         "imagem": "",
-        "slug": "ribeiro"
+        "slug": null
     }
 },
 {
     "model": "produto.produto",
-    "pk": 16,
+    "pk": 366,
     "fields": {
-        "nome": "Martins e Filhos",
-        "descricao_curta": "['Hic quos earum excepturi voluptas recusandae. Accusantium minus magni. Aliquam voluptatibus laborum adipisci tenetur. Rerum facere optio delectus explicabo sit.']",
-        "descricao_longa": "['Aperiam consectetur id unde modi. Nemo non at laboriosam nam modi.', 'Ratione harum doloremque tenetur mollitia maxime vel. Autem adipisci vitae perspiciatis vel. Eveniet possimus quidem praesentium tenetur.', 'Ipsam incidunt enim blanditiis. Eius rerum enim illo. Doloremque deleniti rem numquam ipsam dolor minus. Praesentium ratione explicabo maiores.', 'Amet aperiam accusantium quae repellat.', 'Eligendi tempora exercitationem blanditiis nulla ullam. Occaecati libero molestias reiciendis officia quae deserunt. Explicabo nam veniam quo.']",
+        "nome": "ADESIVO ESTRUTURAL BI COMPONENTE └ BASE DE RESINA EPËXI",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
         "imagem": "",
-        "slug": "martins-e-filhos"
+        "slug": null
     }
 },
 {
     "model": "produto.produto",
-    "pk": 17,
+    "pk": 367,
     "fields": {
-        "nome": "Costa",
-        "descricao_curta": "['Dolorem porro maxime laudantium quisquam porro possimus. Deserunt fuga nisi qui enim perspiciatis architecto eum.']",
-        "descricao_longa": "['Dolor laborum minus nisi commodi esse. Maiores optio culpa iure praesentium quidem.', 'Sunt numquam similique aliquam porro facilis minus. Fugiat voluptates quasi aspernatur quas veniam. Quas deleniti occaecati culpa.', 'Quisquam fuga accusamus beatae ea. Commodi eaque consequatur necessitatibus doloribus.', 'Dignissimos sunt ut rem alias eaque. Optio quasi possimus voluptatem saepe commodi. Ducimus ipsum provident ducimus porro.', 'Autem error soluta quod. Reiciendis eos corrupti perspiciatis suscipit.']",
+        "nome": "ADESIVO PISO VINILICO - PVA - 4KG",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
         "imagem": "",
-        "slug": "costa"
+        "slug": null
     }
 },
 {
     "model": "produto.produto",
-    "pk": 18,
+    "pk": 368,
     "fields": {
-        "nome": "Nunes - ME",
-        "descricao_curta": "['Ipsam commodi pariatur. Quis itaque porro in eum deserunt est. Veniam eum vero soluta.']",
-        "descricao_longa": "['Voluptates odio quae esse mollitia ad voluptatum. Corrupti repudiandae nulla eligendi provident inventore. Quasi nobis fuga alias.', 'Porro eligendi eaque dolores. Expedita dicta maxime fuga aliquam. Non sed possimus occaecati asperiores quaerat eaque.', 'Dolor quae iusto quos perspiciatis possimus ut exercitationem. Vitae assumenda corporis ut nesciunt.', 'Iusto ab saepe atque numquam unde quod. Delectus facere suscipit ipsum. Odit aliquam quaerat pariatur culpa aliquam. Numquam tempore a sint quo quo necessitatibus nostrum.', 'Placeat nemo eaque unde omnis inventore. Officiis velit quis esse velit commodi. Reprehenderit dolorem molestias qui laudantium ipsum rerum inventore.']",
+        "nome": "ADESIVO PL┴STICO PARA PVC INCOLOR FRASCO 175G",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
         "imagem": "",
-        "slug": "nunes-me"
+        "slug": null
     }
 },
 {
     "model": "produto.produto",
-    "pk": 19,
+    "pk": 369,
     "fields": {
-        "nome": "Moreira Moreira - EI",
-        "descricao_curta": "['Incidunt nobis tempora nostrum distinctio cumque nulla. Illum repellendus vero. Pariatur optio architecto quis. Tempora architecto vel.']",
-        "descricao_longa": "['Unde quo facere temporibus sed. Incidunt quasi officiis commodi dolore assumenda.', 'Rerum vitae iusto nemo facilis necessitatibus deleniti eum. Libero consequatur nostrum beatae nam. Laborum quibusdam id quis fugiat provident beatae. Quas doloribus ratione pariatur.', 'Molestiae dolore non beatae ipsam.', 'Deserunt tempore quasi ducimus id. Impedit molestiae fugiat expedita. Inventore quas itaque minima praesentium.', 'Tenetur eaque illo modi. Delectus praesentium in fugit unde voluptates. Optio voluptates temporibus autem officiis eligendi.']",
+        "nome": "AGUARR┴S GAL├O DE 5 LITROS",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
         "imagem": "",
-        "slug": "moreira-moreira-ei"
+        "slug": null
     }
 },
 {
     "model": "produto.produto",
-    "pk": 20,
+    "pk": 370,
     "fields": {
-        "nome": "da Costa da Luz - ME",
-        "descricao_curta": "['Quo illo reiciendis nostrum a similique sapiente. Quam optio magnam dolores distinctio alias. Totam voluptatem aut repellendus illo ipsam provident.']",
-        "descricao_longa": "['Quis accusamus optio labore fugit veritatis ullam. Odio optio blanditiis animi autem magnam eaque cupiditate. Saepe officia aspernatur sequi mollitia doloribus nesciunt.', 'Dicta id voluptatum repellendus quibusdam sint veritatis. Consequatur possimus dolorum harum ut voluptatum eaque enim. Incidunt similique ratione laborum praesentium magnam itaque.', 'Commodi velit fugit natus. Magnam libero reprehenderit assumenda provident.', 'Laborum impedit deleniti dicta perspiciatis excepturi. Corporis amet unde ipsa quam architecto.', 'Facilis repellat magni id veniam eos. Autem sequi modi voluptas. Molestiae unde at eius.']",
+        "nome": "┴LCOOL GEL",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "LT",
         "imagem": "",
-        "slug": "da-costa-da-luz-me"
+        "slug": null
     }
 },
 {
     "model": "produto.produto",
-    "pk": 21,
+    "pk": 371,
     "fields": {
-        "nome": "Cavalcanti e Filhos",
-        "descricao_curta": "['Amet minima est excepturi vitae porro. Praesentium modi minus facere. Architecto nihil magni.']",
-        "descricao_longa": "['Sint reiciendis commodi ut porro. Architecto nemo perferendis. Earum odit illo reiciendis voluptatum eveniet amet.', 'Labore iusto est aliquam perspiciatis. Optio minus accusamus odio dolorem quis.', 'Distinctio animi et. Assumenda ex quasi et tenetur. Ratione harum natus explicabo doloremque natus.', 'Veritatis voluptas fugit quod fuga occaecati labore quo. Magni excepturi est repudiandae eligendi. Quia non rerum velit cupiditate modi.', 'Tempore culpa sunt atque. Atque dolores illo optio nostrum. Voluptatibus dicta nesciunt illo.']",
+        "nome": "ALICATE BICO MEIA CANA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
         "imagem": "",
-        "slug": "cavalcanti-e-filhos"
+        "slug": null
     }
 },
 {
     "model": "produto.produto",
-    "pk": 22,
+    "pk": 372,
     "fields": {
-        "nome": "Silva",
-        "descricao_curta": "['Eos labore reiciendis magnam quas. Soluta voluptatibus quos maiores distinctio.']",
-        "descricao_longa": "['A adipisci vitae vitae. Minima quo ipsam iure. Facere facilis neque eligendi quam numquam minima.', 'Exercitationem fugiat quas aliquid. Quis a asperiores earum.', 'Hic corporis temporibus repellendus unde. Laborum nesciunt eos assumenda deleniti corporis. Deleniti placeat reiciendis deserunt. Facilis debitis commodi molestias possimus sint.', 'Mollitia nesciunt officia vero nulla deleniti. Eaque ab aliquam blanditiis beatae in voluptas.', 'Unde soluta sapiente tempora sapiente repellat.']",
+        "nome": "ALICATE DE CORTE DIAGONAL",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
         "imagem": "",
-        "slug": "silva"
+        "slug": null
     }
 },
 {
     "model": "produto.produto",
-    "pk": 23,
+    "pk": 373,
     "fields": {
-        "nome": "Caldeira",
-        "descricao_curta": "['Incidunt amet soluta illum magnam veniam cupiditate excepturi. Maiores ipsum excepturi qui sapiente.']",
-        "descricao_longa": "['Reiciendis repudiandae culpa illo rem ipsa inventore maiores. Dolorum eius nobis perferendis voluptate quasi. Nesciunt illum sunt maiores doloremque.', 'Illum eligendi repellendus corporis. Deserunt odio veniam eum facilis tempore possimus. Aliquam aperiam facere quam iste eveniet.', 'Non nulla optio quod. Nulla explicabo voluptates nihil nam aut quos. Dignissimos voluptatum sint quisquam placeat.', 'Quos similique quisquam nemo suscipit nisi pariatur. Iste repellendus eaque quaerat.', 'Commodi cupiditate nisi doloribus explicabo laborum. Fugit quaerat tenetur occaecati. Ducimus magnam doloribus eius.']",
+        "nome": "ALICATE DE PRESS├O 10''",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
         "imagem": "",
-        "slug": "caldeira"
+        "slug": null
     }
 },
 {
     "model": "produto.produto",
-    "pk": 24,
+    "pk": 374,
     "fields": {
-        "nome": "Nascimento Ltda.",
-        "descricao_curta": "['Temporibus dolorem voluptate voluptas enim. Blanditiis necessitatibus eum neque tempora. Asperiores corrupti dolores reprehenderit culpa.']",
-        "descricao_longa": "['Architecto dolorum porro minus nam voluptatum eaque. Veniam doloremque consequatur dolores pariatur tempore doloribus.', 'Ut molestiae cum vel doloremque voluptatibus. Sunt error quae totam maiores nesciunt qui. Minima quasi cupiditate fuga. Tempore facilis debitis repudiandae vitae sequi nesciunt.', 'Nam dolor asperiores nesciunt a molestiae nihil.', 'Neque labore provident cum nam fuga ipsam. Consectetur sequi doloremque tenetur.', 'Voluptates excepturi et velit quos error perferendis cupiditate. Culpa maxime culpa odit delectus dolorem reprehenderit.']",
+        "nome": "ALICATE PARA AN╔IS INTERNOS",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
         "imagem": "",
-        "slug": "nascimento-ltda"
+        "slug": null
     }
 },
 {
     "model": "produto.produto",
-    "pk": 25,
+    "pk": 375,
     "fields": {
-        "nome": "da Cunha Melo e Filhos",
-        "descricao_curta": "['Odio quibusdam soluta fuga eum id hic. Labore cumque aspernatur totam.']",
-        "descricao_longa": "['Debitis amet dignissimos pariatur harum. Cupiditate occaecati quas quos incidunt accusamus temporibus. Totam quasi enim ad similique.', 'Nisi est aliquam ipsum. Consequatur est sunt optio. Nulla deserunt sed nam.', 'Necessitatibus assumenda explicabo tempora nemo doloribus libero. Asperiores labore rem. Debitis voluptates in.', 'Numquam neque beatae. Officia ipsa culpa ut saepe et similique. Eligendi sint modi aliquam incidunt.', 'Cupiditate numquam asperiores similique a ipsa accusantium. Blanditiis soluta perspiciatis hic. Recusandae nesciunt accusantium laborum aperiam tempore.']",
+        "nome": "ALICATE PARA GRIMPAR",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
         "imagem": "",
-        "slug": "da-cunha-melo-e-filhos"
+        "slug": null
     }
 },
 {
     "model": "produto.produto",
-    "pk": 26,
+    "pk": 376,
     "fields": {
-        "nome": "Vieira",
-        "descricao_curta": "['Qui qui iste deleniti. Optio odit corporis nemo distinctio. Aliquam quas aut inventore modi similique voluptatibus nemo.']",
-        "descricao_longa": "['Eligendi ipsum maiores corrupti ullam minima iusto. Ipsa aliquid est consequuntur temporibus modi. Repudiandae maiores iure voluptatem.', 'Nihil delectus modi sunt.', 'Assumenda fugiat veniam quidem. Voluptates occaecati facere esse harum dolore.', 'Sit dolorum sequi nobis voluptate. Quis quasi atque quia.', 'Doloribus reprehenderit odit fugit nostrum corporis. Quasi rerum fugit doloremque explicabo.']",
+        "nome": "ANEL DE VEDAÃ├O 40mm",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
         "imagem": "",
-        "slug": "vieira"
+        "slug": null
     }
 },
 {
     "model": "produto.produto",
-    "pk": 27,
+    "pk": 377,
     "fields": {
-        "nome": "Freitas",
-        "descricao_curta": "['Provident quos quia voluptatem odio. Quos corporis blanditiis eligendi non.']",
-        "descricao_longa": "['Nulla facilis iusto. Porro tempore error pariatur maiores dolorum dolorum. Nihil consequatur consequuntur distinctio recusandae. Distinctio nisi libero ut praesentium culpa maiores.', 'Natus mollitia optio quia tenetur accusantium suscipit perspiciatis. Fuga quidem itaque officia officiis.', 'Sapiente accusamus blanditiis nemo soluta rem sed. Autem minima ipsam nemo aut. Non est quas omnis doloremque suscipit.', 'Aperiam nostrum laborum error iste eveniet molestiae magnam. Iusto mollitia veritatis odit itaque aut illum officiis. Distinctio minus quo libero culpa.', 'Repudiandae alias doloribus dolorum fugit corrupti quos. Quia saepe voluptate neque doloremque blanditiis ipsum.']",
+        "nome": "ARAME GALVANIZADO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
         "imagem": "",
-        "slug": "freitas"
+        "slug": null
     }
 },
 {
     "model": "produto.produto",
-    "pk": 28,
+    "pk": 378,
     "fields": {
-        "nome": "Fogaþa Freitas e Filhos",
-        "descricao_curta": "['Quisquam mollitia tempore minima officiis quis alias. Autem quam officia eius.']",
-        "descricao_longa": "['Alias soluta ipsam. Cum labore reiciendis dolore ipsa id.', 'A consequuntur quibusdam asperiores. Vitae facilis est iste quos.', 'Sed fugit eius alias ad beatae laborum a.', 'Soluta excepturi sint iste nam odio fugit. Fugit asperiores minus dolorem fuga vitae debitis.', 'Officia quidem et consequatur consequuntur debitis. Perferendis modi repudiandae debitis. Ipsam repellendus veniam nesciunt aspernatur. Quisquam aperiam hic omnis blanditiis necessitatibus explicabo accusantium.']",
+        "nome": "ARAME PG 18",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
         "imagem": "",
-        "slug": "fogaca-freitas-e-filhos"
+        "slug": null
     }
 },
 {
     "model": "produto.produto",
-    "pk": 29,
+    "pk": 379,
     "fields": {
-        "nome": "Nunes",
-        "descricao_curta": "['Deleniti dolorem eveniet quibusdam velit molestias eos facere. Culpa eos laudantium. Dolore nesciunt vel.']",
-        "descricao_longa": "['Nihil assumenda cumque. Ipsum ex nihil explicabo sapiente tenetur sit doloremque. Et aperiam maxime accusantium exercitationem.', 'Nemo perspiciatis ratione totam ullam voluptas quibusdam repudiandae. Velit doloremque molestias similique id animi. In optio qui amet molestiae similique corporis nobis. Dolore hic ullam tenetur libero molestiae ipsum.', 'Doloremque quia eveniet beatae. Reprehenderit dolores quod veritatis a placeat. Exercitationem iusto odio neque. Aut dicta recusandae perspiciatis soluta ab nemo.', 'Non dolorem maiores cumque ipsam at autem placeat. Quam enim ratione veritatis aspernatur eligendi eum.', 'Cumque praesentium saepe mollitia fugit officia. In nihil eveniet quis. Ex provident illo cumque optio consequatur doloremque. Voluptates reprehenderit soluta.']",
+        "nome": "ARAME RECOZIDO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "ROLO",
         "imagem": "",
-        "slug": "nunes"
+        "slug": null
     }
 },
 {
     "model": "produto.produto",
-    "pk": 30,
+    "pk": 380,
     "fields": {
-        "nome": "Cunha Sales e Filhos",
-        "descricao_curta": "['Nemo maiores rem asperiores non explicabo inventore. Quam accusamus accusamus atque.']",
-        "descricao_longa": "['Inventore eius iste odit similique corporis minima excepturi. Facilis totam perspiciatis quos.', 'Adipisci vitae placeat totam eaque quis. In officiis eligendi occaecati sunt voluptates dignissimos.', 'Vitae ullam temporibus officia deleniti possimus ullam.', 'Neque sint libero incidunt laudantium eligendi minima. Assumenda fugiat facilis officiis consequuntur a. Consequuntur autem placeat consectetur tenetur nobis et.', 'A itaque libero magnam reiciendis distinctio repudiandae. Nulla provident nobis deleniti.']",
+        "nome": "ARCO DE SERRA MOVEL",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
         "imagem": "",
-        "slug": "cunha-sales-e-filhos"
+        "slug": null
     }
 },
 {
     "model": "produto.produto",
-    "pk": 31,
+    "pk": 381,
     "fields": {
-        "nome": "das Neves Cardoso e Filhos",
-        "descricao_curta": "['Nostrum dolores culpa perspiciatis provident nemo. Optio excepturi similique error reiciendis.']",
-        "descricao_longa": "['Odio totam impedit inventore rerum doloremque tempora ea. Adipisci odio praesentium illum. Tempore unde laboriosam aliquam.', 'Error itaque quis repudiandae architecto hic dicta. Voluptatibus cum alias fugiat dolor laborum. Beatae id similique pariatur eum tempore quia.', 'Ex facilis est adipisci sint eos. Distinctio in harum mollitia quas. Deleniti facilis rem sunt.', 'Distinctio dolores dolorum at saepe. Placeat aut distinctio dolores labore qui. Accusamus possimus aliquid.', 'Alias ducimus quaerat et possimus similique. Nemo sit totam numquam ipsum placeat deserunt. Ullam aliquid est suscipit.']",
+        "nome": "AREIA GRANULOMETRIA MEDIA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "M3",
         "imagem": "",
-        "slug": "das-neves-cardoso-e-filhos"
+        "slug": null
     }
 },
 {
     "model": "produto.produto",
-    "pk": 32,
+    "pk": 382,
     "fields": {
-        "nome": "Silveira S.A.",
-        "descricao_curta": "['Doloremque quam eveniet autem quam. Delectus numquam ipsam maxime culpa dolores. Quo molestias atque occaecati deserunt. Saepe consequuntur molestias autem voluptates.']",
-        "descricao_longa": "['Animi ut ut ullam minus sapiente recusandae. Perspiciatis deserunt nesciunt in eius accusamus.', 'Voluptatem earum porro at soluta. Repellendus reiciendis debitis placeat. Doloribus aperiam consectetur consequuntur. Aut illo quaerat nemo.', 'Aliquam harum explicabo deserunt. Eos ex officiis quas.', 'Doloremque officia laborum. Dolores ut eveniet. Possimus numquam dolor consequatur quibusdam totam et itaque.', 'Inventore recusandae ut voluptas ea incidunt. Possimus ex dolores accusamus atque quam nobis.']",
+        "nome": "AREIA LAVADA ENSACADA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "SC",
         "imagem": "",
-        "slug": "silveira-sa"
+        "slug": null
     }
 },
 {
     "model": "produto.produto",
-    "pk": 33,
+    "pk": 383,
     "fields": {
-        "nome": "Ramos S/A",
-        "descricao_curta": "['Pariatur iure fugiat recusandae voluptates aut. Eos non cupiditate quis itaque.']",
-        "descricao_longa": "['Impedit molestias earum quibusdam debitis dolorum.', 'Deleniti fuga a sunt facere. Amet totam provident consequuntur voluptatum.', 'Delectus facilis enim quasi explicabo fuga. Exercitationem repellendus iure nam voluptatem veritatis. Reiciendis expedita architecto tempore aperiam laborum. Laboriosam pariatur aspernatur dolor maxime adipisci et.', 'Sequi ab corporis exercitationem quibusdam. Harum temporibus maxime magni exercitationem totam. Provident in non quis.', 'Explicabo maxime dicta quos deleniti. Recusandae nulla quas eligendi.']",
+        "nome": "AREIA LAVADA GRANULOMETRIA GROSSA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "M3",
         "imagem": "",
-        "slug": "ramos-sa"
+        "slug": null
     }
 },
 {
     "model": "produto.produto",
-    "pk": 34,
+    "pk": 384,
     "fields": {
-        "nome": "Lima",
-        "descricao_curta": "['Libero similique perferendis sit quod. Officiis eum ea doloribus similique rem. Quibusdam quia officia deleniti vero.']",
-        "descricao_longa": "['Incidunt esse itaque iusto fuga labore repellendus. Ipsam sint esse necessitatibus aliquid. Facilis fugiat repellendus suscipit maxime non.', 'Eius totam ad reprehenderit. Exercitationem ratione voluptatibus neque unde.', 'Ratione dignissimos accusantium voluptas id accusamus. Rerum ut officiis. Non voluptatibus fugiat ex eius dolorum.', 'Iusto itaque explicabo suscipit quasi vitae iure. Vitae asperiores ab neque quia. Quo illum eaque eum.', 'Saepe debitis reprehenderit dolor iusto non. Nisi voluptatibus deserunt saepe.']",
+        "nome": "AREIA M╔DIA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "M3",
         "imagem": "",
-        "slug": "lima"
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 385,
+    "fields": {
+        "nome": "ARGAMASSA ACII",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "SC",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 386,
+    "fields": {
+        "nome": "ATIVO IMPERMEABILIZANTE",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 387,
+    "fields": {
+        "nome": "BARRA DE TUBO ROSCA 1/2",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 388,
+    "fields": {
+        "nome": "BARRA DE TUBO ROSCA 3/4",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 389,
+    "fields": {
+        "nome": "BATERIA ALCALINA 9 V",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 390,
+    "fields": {
+        "nome": "BATERIA DE L═TIO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PC",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 391,
+    "fields": {
+        "nome": "BATERIA DO TIPO VRLA (CHUMBO-┴CIDO REGULADA POR V┴LVULA) DE 12 V (VOLTS) E CORRENTE MINIMA DE 50  (CINQUENTA) AH (AMP╔RE",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 392,
+    "fields": {
+        "nome": "BATERIA DO TIPO VRLA (CHUMBO-┴CIDO REGULADA POR V┴LVULA) DE 12V (VOLTS) E CORRENTE M═NIMA DE 40 AH .",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 393,
+    "fields": {
+        "nome": "BATERIA NOTEBOOK  HP 4430s",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PC",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 394,
+    "fields": {
+        "nome": "BATERIA PARA AERONAVES REMOTAMENTE PILOTADAS (RPAs) - MODELO DJI PHANTOM 4 PRO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 395,
+    "fields": {
+        "nome": "BATERIA PARA COLETOR DE DADOS RECON TDS 3",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 396,
+    "fields": {
+        "nome": "BATERIA PARA RECEPTOR GPS PROXT",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 397,
+    "fields": {
+        "nome": "BITS PONTA DUPLA PHILLIPS PH2/PH2 100MM EM CROMO-VANADIUM",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 398,
+    "fields": {
+        "nome": "BLOCO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 399,
+    "fields": {
+        "nome": "BLOCO CANALETA 14x19x39",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "BL",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 400,
+    "fields": {
+        "nome": "BLOCO DE CONCRETO VAZADOS 14X19X39",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 401,
+    "fields": {
+        "nome": "BLOCO DE ESPUMA 13x06x22",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 402,
+    "fields": {
+        "nome": "BLOCO POST-IT NOVAS CORES",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 403,
+    "fields": {
+        "nome": "BOLSA DE VEDAÃ├O DE BACIA SANITARIA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 404,
+    "fields": {
+        "nome": "BOLSA DE VEDAÃ├O PARA CAIXA ACOPLADA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 405,
+    "fields": {
+        "nome": "BORRACHA PARA L┴PIS (GRAFITE), COR BRANCA, SEM CORANTE, MACIA, CAPACIDADE PARA APAGAR ESCRITAS SEM",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 406,
+    "fields": {
+        "nome": "BRITA GRANULOMETRIA TIPO N░1",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "M3",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 407,
+    "fields": {
+        "nome": "BRITA TIPO 1 -m3",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "M3",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 408,
+    "fields": {
+        "nome": "BRITA ZERO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "M",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 409,
+    "fields": {
+        "nome": "BRITA ZERO ENSACADA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "M",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 410,
+    "fields": {
+        "nome": "BROCA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 411,
+    "fields": {
+        "nome": "BUCHA C/PARAFUSO CABEÃA CHATA 10MM  PCT COM 100 UNIDADES",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PCT",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 412,
+    "fields": {
+        "nome": "BUCHA DE REDUÃAO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 413,
+    "fields": {
+        "nome": "BUCHA PL┴STICA 8mm C/PARAFUSO CABEÃA CHATA PCT C/100 UNIDADES.",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PCT",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 414,
+    "fields": {
+        "nome": "BUCHAS PLASTICAS",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PC",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 415,
+    "fields": {
+        "nome": "CABO CAT5E CM F/UTP 24AWGX4P BLINDADO INDOOR/OUTDOOR",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "M",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 416,
+    "fields": {
+        "nome": "CABO DE REDE AZUL  COM CX COM 100 METROS",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "CX",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 417,
+    "fields": {
+        "nome": "CABO DE REDE AZUL COM - ROLO COM 100 METROS",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 418,
+    "fields": {
+        "nome": "CABO DE TELEFONE PAR TRANÃADO - 100 METROS",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 419,
+    "fields": {
+        "nome": "CABO PAR TRANÃADO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "ROLO",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 420,
+    "fields": {
+        "nome": "CABO PP FLEX═VEL 3X4,0MM▓ 100M 1KV",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "M",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 421,
+    "fields": {
+        "nome": "CABO VGA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 422,
+    "fields": {
+        "nome": "CADEADO COM CHAVE 20MM",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 423,
+    "fields": {
+        "nome": "CADEADO COM CHAVE 40MM",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PC",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 424,
+    "fields": {
+        "nome": "CAIXA DE PAPEL├O",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 425,
+    "fields": {
+        "nome": "CAIXA PARA ARQUIVO, EM PAPEL├O ONDULADO KRAFT, COM FUROS LATERAIS PARA VENTILAÃ├O, TAMANHO OF═CIO,",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 426,
+    "fields": {
+        "nome": "CAIXA PL┴STICA DE PASSAGEM 4X2 EL╔TRICA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 427,
+    "fields": {
+        "nome": "CAIXA PL┴STICA DE PASSAGEM PARA LAJE 4X4 OCTOGONAL",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 428,
+    "fields": {
+        "nome": "CAL",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 429,
+    "fields": {
+        "nome": "CANETA DESTACA TEXTO, HIDROGR┴FICA, TINTA AMARELA, PONTA CHANFRADA, COM NO M═NIMO 3,6 MM DE LARGURA,",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 430,
+    "fields": {
+        "nome": "CANETA ESFEROGR┴FICA, TINTA COR AZUL, ESFERA DE TUNGST╩NIO, PONTA M╔DIA, COM 1.0 MM, CORPO EM",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 431,
+    "fields": {
+        "nome": "CANETA/PINCEL PARA QUADRO BRANCO OU MAGN╔TICO, PONTA COM NO M═NIMO 2,5 MM DE DI┬METRO, COR AZUL",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 432,
+    "fields": {
+        "nome": "CAPACETE",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 433,
+    "fields": {
+        "nome": "CAPACITOR  ELETRICO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 434,
+    "fields": {
+        "nome": "CARREGADOR PARA BATERIAS DO DRONE DJI PHANTOM 4 PRO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 435,
+    "fields": {
+        "nome": "CARV├O PARA MAKITA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 436,
+    "fields": {
+        "nome": "CELITE CUBA EMBUTIR OVAL S/LAD BRANCO 49x32,5 REF 1761170017300",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 437,
+    "fields": {
+        "nome": "CERTIFICADO DIGITAL e-CNPJ A1 - VALIDADE 01 ANO.",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 438,
+    "fields": {
+        "nome": "CERTIFICADO DIGITAL e-CNPJ A3 SOMENTE SOFTWARE, SEM FORNECIMENTO DE TOKEN - VALIDADE 03 ANOS.",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 439,
+    "fields": {
+        "nome": "CERTIFICADO DIGITAL e-CNPJ A3, COM FORNECIMENTO DE TOKEN - VALIDADE 03 ANOS.",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 440,
+    "fields": {
+        "nome": "CERTIFICADO DIGITAL e-CPF A1 - VALIDADE 01 ANO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 441,
+    "fields": {
+        "nome": "CERTIFICADO DIGITAL E-CPF A3 - NUVEM",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 442,
+    "fields": {
+        "nome": "CERTIFICADO DIGITAL e-CPF A3 COM FORNECIMENTO DE TOKEN - VALIDADE 03 ANOS",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 443,
+    "fields": {
+        "nome": "CERTIFICADO WEB SSL PARA SERVIDOR WEB/S═TIO, APLICAÃ├O OU CËDIGO - VALIDADE 01 ANO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 444,
+    "fields": {
+        "nome": "CHAVE GRIFO14\"",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 445,
+    "fields": {
+        "nome": "CHAVE INGLESA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 446,
+    "fields": {
+        "nome": "CHUMBADOR PARABOLT 3/8 - UMA CAIXA COM 100 UNIDADES",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 447,
+    "fields": {
+        "nome": "CIMENTO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "SC",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 448,
+    "fields": {
+        "nome": "CIMENTO CPII - PORTLAND PACOTE 50KG",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 449,
+    "fields": {
+        "nome": "CIMENTO CPIII - SACO 50KG",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 450,
+    "fields": {
+        "nome": "COLA BRANCA, └ BASE DE PVA, L═QUIDA, VISCOSA, COM BOA ADESIVIDADE, LAV┴VEL, ATËXICA, SECAGEM R┴PIDA,",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 451,
+    "fields": {
+        "nome": "COLA DE CONTATO LATA 200g",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "GL",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 452,
+    "fields": {
+        "nome": "COLETE DE IDENTIFICAÃ├O E SINALIZAÃ├O PERSONALIZADO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 453,
+    "fields": {
+        "nome": "COLETE DE IDENTIFICAÃ├O TAMANHO G",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 454,
+    "fields": {
+        "nome": "COLETE DE IDENTIFICAÃ├O TAMANHO GG",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 455,
+    "fields": {
+        "nome": "COLETE DE IDENTIFICAÃ├O TAMANHO M",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 456,
+    "fields": {
+        "nome": "CONECTOR MACHO CAT.5E RJ 45",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 457,
+    "fields": {
+        "nome": "CONECTOR RJ 45",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PC",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 458,
+    "fields": {
+        "nome": "CËPIA  DE  CHAVE  SIMPLES COM MODELO PARA FECHADURA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 459,
+    "fields": {
+        "nome": "CUBA PARA LAVATËRIA DE EMBUTIR",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 460,
+    "fields": {
+        "nome": "DESEMPENADEIRA PVC AZUL 17X30 REBOCO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 461,
+    "fields": {
+        "nome": "DESENGRIPANTE SPRAY 300 ML",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 462,
+    "fields": {
+        "nome": "DISCO DE CORTE INOX 4 ╣/▓",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 463,
+    "fields": {
+        "nome": "DISCO DESBASTE 4 1/2",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 464,
+    "fields": {
+        "nome": "DISCO PARA CORTE SEGMENTADO SECO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 465,
+    "fields": {
+        "nome": "DISCO PORCELANATO DIAMANTADO DIAMANTE AZUL",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 466,
+    "fields": {
+        "nome": "DISCO SEGMENTADO SECO DIAMANTE AZUL",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 467,
+    "fields": {
+        "nome": "ELETRODO 2,5 mm PARA AÃO CARBONO 1KG",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "KG",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 468,
+    "fields": {
+        "nome": "ENGATE FLEXIVEL PVC1/2x50cm",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 469,
+    "fields": {
+        "nome": "ESCADA DOBR┴VEL ALUM═NIO MULTFUNCIONAL 4 X 3 - 12 DEGRAUS",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 470,
+    "fields": {
+        "nome": "ESCADA EM ALUM═NIO EXTENS═VEL 10 DEGRAUS",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 471,
+    "fields": {
+        "nome": "ESPATULA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 472,
+    "fields": {
+        "nome": "ESP┴TULA DE SILICONE PARA REJUNTE A7X12,5CM",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 473,
+    "fields": {
+        "nome": "ESTANHO PARA SOLDA (CARRETEL)",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "ROLO",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 474,
+    "fields": {
+        "nome": "ESTILETE 18 mm EMBORRACHADO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 475,
+    "fields": {
+        "nome": "ESTOPA DE ALGOD├O",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "KG",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 476,
+    "fields": {
+        "nome": "ETIQUETA PARA ETIQUETADORA BROTHER WRITE 12MM 1/2 M-K231",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PC",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 477,
+    "fields": {
+        "nome": "FECHADURA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 478,
+    "fields": {
+        "nome": "FERRAMENTA DE INSERÃ├O IMPACTO PUNCH DOWN HY314B LAMINA 14B LARANJA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 479,
+    "fields": {
+        "nome": "FERRAMENTA DE LIMPEZA DE CONCECTORES ËPTICOS SC/ST/FC",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PC",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 480,
+    "fields": {
+        "nome": "FERRAMENTA PARA LIMPEZA DE CONECTORES E BULKEADS - 2,5MM (MACHO E F╩MEA)",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 481,
+    "fields": {
+        "nome": "FERRAMENTA PARA LIMPEZA DE CONECTORES E BULKHEADS - 1,25MM (MACHO E F╩MEA)",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 482,
+    "fields": {
+        "nome": "FERRO PARA SOLDA COM SUPORTE - 30W - 127V",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 483,
+    "fields": {
+        "nome": "FILME ESTIC┴VEL",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "KG",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 484,
+    "fields": {
+        "nome": "FITA ADESIVA CREPE 50MM X 50 METROS",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 485,
+    "fields": {
+        "nome": "FITA ADESIVA ISOLANTE",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 486,
+    "fields": {
+        "nome": "FITA ADESIVA PVC TRANSPARENTE",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 487,
+    "fields": {
+        "nome": "FITA ADESIVA TRANSPARENTE PARA EMBALAGEM",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 488,
+    "fields": {
+        "nome": "FITA CREPE",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "rolo",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 489,
+    "fields": {
+        "nome": "FITA CREPE 24X50",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 490,
+    "fields": {
+        "nome": "FITA DUPLA FACE 19mmx20m TRANSPARENTE",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 491,
+    "fields": {
+        "nome": "FITA ISOLANTE  19 X 20 MM )",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "rolo",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 492,
+    "fields": {
+        "nome": "FITA ISOLANTE AUTO FUS├O 19mm x 5m",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 493,
+    "fields": {
+        "nome": "FITA PARA IMPRESSORA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PC",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 494,
+    "fields": {
+        "nome": "FITA PARA ROTULADOR ELETRÈNICO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 495,
+    "fields": {
+        "nome": "FITA VEDA ROSCA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 496,
+    "fields": {
+        "nome": "FITA ZEBRADA PARA ISOLAMENTO, AMARELO COM PRETO -70mmx200m.",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 497,
+    "fields": {
+        "nome": "FITAS 8MM",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PC",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 498,
+    "fields": {
+        "nome": "FLANELA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 499,
+    "fields": {
+        "nome": "FONTE ALIMENTAÃ├O - RELËGIO DE PONTO ELETRONICO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 500,
+    "fields": {
+        "nome": "Frasco com 500 ml de ßlcool em gel glicerinado concentraþÒo 70% ph entre 6,5 e 7,5",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "FR",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 501,
+    "fields": {
+        "nome": "FUSIVEL DE 8 AMPARES 5X20MM",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 502,
+    "fields": {
+        "nome": "GAL├O TINTA AREIA ESMALTE 3,6 ML",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 503,
+    "fields": {
+        "nome": "GARRA JACARE",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 504,
+    "fields": {
+        "nome": "G┴S GLP",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 505,
+    "fields": {
+        "nome": "GASOLINA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "LT",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 506,
+    "fields": {
+        "nome": "GESSO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 507,
+    "fields": {
+        "nome": "GRAFITE EM PË 25 GR",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "TB",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 508,
+    "fields": {
+        "nome": "GRAMPEADOR DE MESA M╔DIO 26/6",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 509,
+    "fields": {
+        "nome": "GRAMPO PARA GRAMPEADOR, GALVANIZADO, 26/6 MM, CAIXA COM 5000 UNIDADES",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "CX",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 510,
+    "fields": {
+        "nome": "HELICE PLASTICA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PC",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 511,
+    "fields": {
+        "nome": "IMPERMEABILIZANTE NEUTROUL 3,6L",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 512,
+    "fields": {
+        "nome": "INSETICIDA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 513,
+    "fields": {
+        "nome": "INTERRUPTOR",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 514,
+    "fields": {
+        "nome": "JOELHO 20mm",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 515,
+    "fields": {
+        "nome": "JOELHO 20mm com bucha latÒo",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 516,
+    "fields": {
+        "nome": "JOELHO 20mmx1/2 Azul",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 517,
+    "fields": {
+        "nome": "JOELHO 90░ PVC 100mm BRANCO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PC",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 518,
+    "fields": {
+        "nome": "JOELHO DE 40NBR",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 519,
+    "fields": {
+        "nome": "JOELHO DE 45 PVC 100mm branco",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 520,
+    "fields": {
+        "nome": "JOELHO SOLDAVEL 40mm",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 521,
+    "fields": {
+        "nome": "JOGO DE GUARNIÃ├O (ALISAR) PARA PORTA DE GIRO \"ANGELIN\" 6 CM",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 522,
+    "fields": {
+        "nome": "KIT BROCA AÃO R┴PIDO ENCAIXE SDS PLUS",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 523,
+    "fields": {
+        "nome": "KIT DE CHAVE DE PRECIS├O",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "CJ",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 524,
+    "fields": {
+        "nome": "KIT DE FERRAMENTAS PARA MANUTENÃ├O DE NOTEBOOK",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "CJ",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 525,
+    "fields": {
+        "nome": "KIT DOBRADIÃA PARA PORTA 3.1/2\" AÃO CROMADO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 526,
+    "fields": {
+        "nome": "KIT JOGO BROCAS AÃO CARBONO- 13 PEÃAS",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 527,
+    "fields": {
+        "nome": "KIT JOGO BROCAS AÃO R┴PIDO 13 PEÃAS",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 528,
+    "fields": {
+        "nome": "KIT JOGO DE BROCAS DE MADEIRA -13 PEÃAS",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 529,
+    "fields": {
+        "nome": "KIT MICRO SCANNER POE",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 530,
+    "fields": {
+        "nome": "LACXE BETUME",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "LT",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 531,
+    "fields": {
+        "nome": "LAJE PRE-MOLDADA TRELIÃADA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "M2",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 532,
+    "fields": {
+        "nome": "L┬MINA DE SERRA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 533,
+    "fields": {
+        "nome": "LAMPADA FLUORESCENTE ELETRONICA E-27 25W 220 VOLTS",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PC",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 534,
+    "fields": {
+        "nome": "L┬MPADA LED DE BULBO - 20W",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 535,
+    "fields": {
+        "nome": "L┬MPADA LED TUBULAR",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 536,
+    "fields": {
+        "nome": "LAMPADA LED TUBULAR - 9W 60CM",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 537,
+    "fields": {
+        "nome": "LEITOR DE CËDIGO DE BARRA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PC",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 538,
+    "fields": {
+        "nome": "LIMA  CHATA BASTARDA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 539,
+    "fields": {
+        "nome": "LIQUIDO BRILHO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 540,
+    "fields": {
+        "nome": "LIXA D'┴GUA 150",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 541,
+    "fields": {
+        "nome": "LIXA DE FERRO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 542,
+    "fields": {
+        "nome": "LIXA MADEIRA NORTON",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 543,
+    "fields": {
+        "nome": "LONA EM PL┴STICO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "M",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 544,
+    "fields": {
+        "nome": "LUVA 1/2 COM ROSCA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 545,
+    "fields": {
+        "nome": "LUVA DE CORRER 1/2",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 546,
+    "fields": {
+        "nome": "LUVA DE CORRER 3/4",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 547,
+    "fields": {
+        "nome": "LUVA PVC ESGOTO DE 40MM",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 548,
+    "fields": {
+        "nome": "LUVAS PVC 100 ESGOSTO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 549,
+    "fields": {
+        "nome": "MANGUEIRA CORRUGADA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "M",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 550,
+    "fields": {
+        "nome": "MARTELO CARPINTEIRO 25MM",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 551,
+    "fields": {
+        "nome": "MARTELO CARPINTEIRO29mm",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 552,
+    "fields": {
+        "nome": "M┴SCARA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PC",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 553,
+    "fields": {
+        "nome": "MASSA CORRIDA 18 LITROS PVA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 554,
+    "fields": {
+        "nome": "MASSA CORRIDA LATA DE 18 LITROS",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 555,
+    "fields": {
+        "nome": "MASSA PL┴STICA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 556,
+    "fields": {
+        "nome": "MICROSCËPIO PARA INSPEÃ├O DE CONECTORES DE REDE ËPTICA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 557,
+    "fields": {
+        "nome": "MINI GABINETE RACKMAC MINI PART NUMBER: RACK-MINI-2XA PARA MAC MINI OU MAC MINI SERVER",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 558,
+    "fields": {
+        "nome": "MOTOR STEP SWING DA ALETA 35BYJ46-517 AR CONDICIONADO LG",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 559,
+    "fields": {
+        "nome": "MOUSE PADR├O USB",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 560,
+    "fields": {
+        "nome": "NOBREAK GERENCI┴VEL 3KVA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PC",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 561,
+    "fields": {
+        "nome": "ËLEO DIESEL  DO TIPO  S500.",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "LT",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 562,
+    "fields": {
+        "nome": "ËLEO DIESEL  DO TIPO S10.",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "LT",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 563,
+    "fields": {
+        "nome": "ORGANIZADOR DE CHAVES",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PT",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 564,
+    "fields": {
+        "nome": "PAPEL SULFITE, REPROGR┴FICO, COR ULTRA BRANCA, GRAMATURA 75 G/M▓, FORMATO A4 (210 X 297 MM), PARA US",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "RSM",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 565,
+    "fields": {
+        "nome": "PARAFUSO SEXTAVADO 10MM - CAIXA 100 UNIDADES",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PC",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 566,
+    "fields": {
+        "nome": "PARAFUSO SEXTAVADO 8MM - CAIXA 100 UNIDADES",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PC",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 567,
+    "fields": {
+        "nome": "PASTA PARA FERRAMENTAS (REFORÃADAS) EM COURO PRETO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 568,
+    "fields": {
+        "nome": "PASTA T╔RMICA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 569,
+    "fields": {
+        "nome": "PERFURADOR DE PAP╔IS GRANDE, PRETO, 30 FOLHAS 02 FUROS",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 570,
+    "fields": {
+        "nome": "Pia de cozinha em granito tipo Aqualux 180 cm x 60 cm",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 571,
+    "fields": {
+        "nome": "Pilha alcalina, tipo AA, uso geral, 1,5 Volts",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 572,
+    "fields": {
+        "nome": "Pilha alcalina, tipo AAA, uso geral, 1,5 Volts",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 573,
+    "fields": {
+        "nome": "PINÃA PONTA RETA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 574,
+    "fields": {
+        "nome": "PINCEL AZUL PARA QUADRO BRANCO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "CX12",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 575,
+    "fields": {
+        "nome": "PINCEL VERDE PARA QUADRO BRANCO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "CX",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 576,
+    "fields": {
+        "nome": "PINCEL VERMELHO PARA QUADRO BRANCO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "CX",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 577,
+    "fields": {
+        "nome": "PISO PAVIFLEX",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "CX",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 578,
+    "fields": {
+        "nome": "PLUG CANOM FEMEA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 579,
+    "fields": {
+        "nome": "PLUG RJ45",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PC",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 580,
+    "fields": {
+        "nome": "PONTALETE PINUS 7X7X300 CM",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 581,
+    "fields": {
+        "nome": "PORCA  1/4",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 582,
+    "fields": {
+        "nome": "POST-IT - ADESIVOS P/ RECADOS  AMARELO C/ HT - 100 FLS 76X76 MM BLOCO COM 100 FOLHAS",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "BL",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 583,
+    "fields": {
+        "nome": "PREGO 17X21",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PT",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 584,
+    "fields": {
+        "nome": "PREGO 18X27",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PT",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 585,
+    "fields": {
+        "nome": "PRIMER FUNDO PREPARADOR PARA METAIS - 3,6L",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "GL",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 586,
+    "fields": {
+        "nome": "PROJETOR HALOG. 100/150W",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 587,
+    "fields": {
+        "nome": "PUBLICAÃ├O DE MAT╔RIA NO JORNAL DI┴RIO OFICIAL DO ESTADO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 588,
+    "fields": {
+        "nome": "PUBLICAÃıES DE MAT╔RIAIS  EM JORNAL DE  GRANDE CIRCULAÃ├O.",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 589,
+    "fields": {
+        "nome": "PULVERIZADOR MANUAL DOM╔STICO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 590,
+    "fields": {
+        "nome": "R┴DIO COMUNICADOR",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PAR",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 591,
+    "fields": {
+        "nome": "REBITE DE REPUXO 4,0X6MM",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "P100",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 592,
+    "fields": {
+        "nome": "REBITE DE REPUXO 4,0X8MM",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 593,
+    "fields": {
+        "nome": "RECARGA DE EXTINTOR ABC 8KG",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 594,
+    "fields": {
+        "nome": "RECARGA DE EXTINTOR AP 10L",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 595,
+    "fields": {
+        "nome": "RECARGA DE EXTINTOR CO2 6KG",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 596,
+    "fields": {
+        "nome": "RECARGA DE EXTINTOR PQS 6KG",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 597,
+    "fields": {
+        "nome": "RECARGA EXTINTOR PQS 8KG",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 598,
+    "fields": {
+        "nome": "REGISTRO DE GAVETA 1/2",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 599,
+    "fields": {
+        "nome": "REGISTRO DE GAVETA 3/4",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 600,
+    "fields": {
+        "nome": "Rodabanca de 20cm largura e 180 cm de comprimento",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 601,
+    "fields": {
+        "nome": "Rodabanca de 20cm largura e 45 cm de comprimento",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 602,
+    "fields": {
+        "nome": "RODEL P/CORTADOR PISO 80mm  REFER╩NCIA: CORTAG OU EQUIVALENTE.",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 603,
+    "fields": {
+        "nome": "ROLO DE ESPUMA  15cm",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 604,
+    "fields": {
+        "nome": "ROLO DE ESPUMA - 5 cm",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 605,
+    "fields": {
+        "nome": "ROLO DE ESPUMA 9CM",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 606,
+    "fields": {
+        "nome": "ROLO DE PINTURA 15CM L├ SINT╔TICA ANTI-RESPINGO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 607,
+    "fields": {
+        "nome": "ROLO DE PINTURA 23CM L├ SINT╔TICA ANTI-GOTA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 608,
+    "fields": {
+        "nome": "ROTULADOR ELETRÈNICO PORT┴TIL",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PC",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 609,
+    "fields": {
+        "nome": "SABONETEIRA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PC",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 610,
+    "fields": {
+        "nome": "SACO PARA LIXO 200 LITROS",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 611,
+    "fields": {
+        "nome": "SACOS DE RAFIA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 612,
+    "fields": {
+        "nome": "SELANTE PU N35 CONSTRUCAO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 613,
+    "fields": {
+        "nome": "SERRA COPO BI-METAL 35MM",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 614,
+    "fields": {
+        "nome": "SOLDA ELETRONICA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PC",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 615,
+    "fields": {
+        "nome": "SOLUÃ├O LIMPADORA PARA TUBO E CONEXıES PVC",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 616,
+    "fields": {
+        "nome": "SONDA PASSA FIO DE PVC COM ALMA DE AÃO 15",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 617,
+    "fields": {
+        "nome": "SOPRANO FECH EXT 0742/15",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 618,
+    "fields": {
+        "nome": "SUGADOR DE SOLDA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 619,
+    "fields": {
+        "nome": "T' 20mm",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 620,
+    "fields": {
+        "nome": "T ESGOSTO 100mm",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 621,
+    "fields": {
+        "nome": "T ESGOSTO 40mm",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 622,
+    "fields": {
+        "nome": "T┴BUA DE PINOS  30X300CM",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 623,
+    "fields": {
+        "nome": "TABUA DE PINOS 20X300CM",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 624,
+    "fields": {
+        "nome": "TALHADEIRA M╔DIA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 625,
+    "fields": {
+        "nome": "TAMPA/ASSENTE DE VASO SANITARIO PNE",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 626,
+    "fields": {
+        "nome": "TAMPA/ASSENTO DE VASO SANITARIO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 627,
+    "fields": {
+        "nome": "TECLADO COM INTERFACE USB, NA COR PRETA, PADR├O ABNT2, COM NO MINIMO 105 TECLAS PADR├O",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 628,
+    "fields": {
+        "nome": "TERMINAL",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 629,
+    "fields": {
+        "nome": "TESTE  BOMBA DE INC╩NDIO E SEUS SISTEMAS DE FUNCIONAMENTO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 630,
+    "fields": {
+        "nome": "THINNER",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 631,
+    "fields": {
+        "nome": "THINNER GAL├O DE 5 LITROS",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 632,
+    "fields": {
+        "nome": "TIJOLO CERAMICO 8 FUROS 14X19X29",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 633,
+    "fields": {
+        "nome": "TIJOLO CER┬MICO 8 FUROS 9X19X29",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 634,
+    "fields": {
+        "nome": "TINTA ACRILICA 18 LITROS COR AREIA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 635,
+    "fields": {
+        "nome": "TINTA CORANTE",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 636,
+    "fields": {
+        "nome": "TINTA L┴TEX 18 LITROS COR BRANCO NEVE",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 637,
+    "fields": {
+        "nome": "TINTA L┴TEX PVA - COR CONCRETO - GAL├O DE 18 LITROS",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 638,
+    "fields": {
+        "nome": "TINTA SINT╔TICA (ESMALTE ) ACETINADO BRANCO NEVE 3,6 LITROS",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 639,
+    "fields": {
+        "nome": "TINTA SINT╔TICA ACETINADO - COR: COLONIAL - GAL├O 3,6 LITROS",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 640,
+    "fields": {
+        "nome": "TINTA SINT╔TICA COR AREIA - GAL├O 3,6 LITROS",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 641,
+    "fields": {
+        "nome": "TORNEIRA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PC",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 642,
+    "fields": {
+        "nome": "TORNEIRA AUTOMATICA  1/2 REFER╩NCIA DOCOL OU EQUIVALENTE",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 643,
+    "fields": {
+        "nome": "Torneira de cozinha flexÝvel de mesa, metal cromado com arejador",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 644,
+    "fields": {
+        "nome": "TORNEIRA PARA JARDIM",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "PC",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 645,
+    "fields": {
+        "nome": "TORNO DE BANCADA 5'' COM BASE GIRATËRIA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 646,
+    "fields": {
+        "nome": "TREINAMENTO OFICIAL  CA SERVICE DESK MANAGER ACADEMY.",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 647,
+    "fields": {
+        "nome": "TREINAMENTO OFICIAL CA ENTERPRISE MANAGER ACADEMY",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 648,
+    "fields": {
+        "nome": "TRINCHA DE PINTURA  2,5",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 649,
+    "fields": {
+        "nome": "TRINCHA DE PINTURA SEDA 2'",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 650,
+    "fields": {
+        "nome": "TRINCHA P╩LO DE MANTA 1\"",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 651,
+    "fields": {
+        "nome": "TRINCHA P╩LO DE MANTA 2  1/2\"",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 652,
+    "fields": {
+        "nome": "TUBO CIL═NDRICO DE 1\" - 6M COMPRIMENTO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "MT",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 653,
+    "fields": {
+        "nome": "TUBO CIL═NDRICO DE 2\" X3,25MM - 6M COMPRIMENTO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "MT",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 654,
+    "fields": {
+        "nome": "TUBO DE SILICONE 280 GRAMAS",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 655,
+    "fields": {
+        "nome": "TUBO ESPUMA EXPANSIVA POLIURETANO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 656,
+    "fields": {
+        "nome": "TUBO PVC ESGOTO DE 40MM",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "MT",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 657,
+    "fields": {
+        "nome": "TUBO PVC PAR ESGOSTO DE 100mm 6m",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 658,
+    "fields": {
+        "nome": "TUBO SOLD. 32 MM",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "M",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 659,
+    "fields": {
+        "nome": "TUBO SOLD┴VEL 20mm",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 660,
+    "fields": {
+        "nome": "UNI├O SOLDAVEL 40mm",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 661,
+    "fields": {
+        "nome": "V┴LVULA AMERICANA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 662,
+    "fields": {
+        "nome": "V┴LVULA DE ESCOAMENTO PARA PIA",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 663,
+    "fields": {
+        "nome": "VALVULA PARA MICTORIO 1/2",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 664,
+    "fields": {
+        "nome": "VEDA ROSCA 18MMX50M",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 665,
+    "fields": {
+        "nome": "VERGALH├O 10MM",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 666,
+    "fields": {
+        "nome": "VERGALH├O 6MM",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 667,
+    "fields": {
+        "nome": "VERGALH├O CA 50 - 10MM COM 12M COMPRIMENTO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 668,
+    "fields": {
+        "nome": "VERGALH├O CA 50 - 5MM COM 12M COMPRIMENTO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 669,
+    "fields": {
+        "nome": "VERNIZ MAR═TIMO ACETINADO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "LT",
+        "imagem": "",
+        "slug": null
+    }
+},
+{
+    "model": "produto.produto",
+    "pk": 670,
+    "fields": {
+        "nome": "XADREZ L═QUIDO",
+        "descricao_curta": "aa",
+        "descricao_longa": "aaa",
+        "unidade": "UN",
+        "imagem": "",
+        "slug": null
     }
 },
 {
@@ -506,7 +4006,7 @@
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$320000$wFE8db63c1aAggo7eq0mfH$nEus5d+aH6kPhf/qmlcZgw99tZUIrQwNYheQxXY6pE4=",
-        "last_login": "2022-04-02T15:08:08.659Z",
+        "last_login": "2022-04-04T03:07:52.045Z",
         "is_superuser": true,
         "username": "icaro",
         "first_name": "Icaro",
@@ -533,14 +4033,6 @@
     "fields": {
         "session_data": ".eJxVjMEOwiAQBf-FsyFAgQWP3v0GssAiVQNJaU_Gf9cmPej1zcx7sYDbWsM2aAlzZmcm2el3i5ge1HaQ79hunafe1mWOfFf4QQe_9kzPy-H-HVQc9VuXiSw5MEUKbb3xhAKkdiJr6R0mHY1XIKIrkwZHqAQokJiiUHZSqBV7fwDANjaw:1nafMG:DRm6ZUysU2JNA3QTGM74Liqg1e7I5Fo5y5b5MeRdQP0",
         "expire_date": "2022-04-16T15:08:08.665Z"
-    }
-},
-{
-    "model": "sessions.session",
-    "pk": "5uflpi7iampcqxwin8fjxvbmrsfhbaoa",
-    "fields": {
-        "session_data": ".eJxVjMEOwiAQBf-FsyFAgQWP3v0GssAiVQNJaU_Gf9cmPej1zcx7sYDbWsM2aAlzZmcm2el3i5ge1HaQ79hunafe1mWOfFf4QQe_9kzPy-H-HVQc9VuXiSw5MEUKbb3xhAKkdiJr6R0mHY1XIKIrkwZHqAQokJiiUHZSqBV7fwDANjaw:1nZMD7:9GvICBW_58UG8N9W9CmsnkGbTXZoJQqTYdWyEFuUiuQ",
-        "expire_date": "2022-04-13T00:29:17.759Z"
     }
 },
 {
@@ -584,6 +4076,14 @@
     }
 },
 {
+    "model": "sessions.session",
+    "pk": "z2b2tykeyy8e6ncfpohhyuyii9gik66p",
+    "fields": {
+        "session_data": ".eJxVjTtuwzAQRO_COha45Iofl-5zBmJJ7kaODdEQJaQwfPdIgIuknTfz5qkSbeuUts5LulZ1VqA-_maZyo3nA9Rvmr_aUNq8Ltc8HJXhTfvw2SrfL-_uP8FEfdrXYtlx8KOARhfHyKQ9YNAVIQYqmMdovM5BLPrAZLQ3HqhkbZw1hOaQPqj3n7bUtHDnNa1tf9vV2RaI5YTeCIpkMTY6EYrgCwWMDkJGgKJev7rhSzQ:1nbEH8:32R1ILvohv8boYC-DoLg6-tV9XNJCxNaw0VYfRLn1qg",
+        "expire_date": "2022-04-18T04:25:10.758Z"
+    }
+},
+{
     "model": "perfil.perfil",
     "pk": 1,
     "fields": {
@@ -611,7 +4111,7 @@
         ],
         "objeto": "AquisiþÒo de caneta preta para a Secretaria de EducaþÒo do MunicÝpio de Vßrzea Alegre",
         "secretaria": 1,
-        "data": "2022-02-04",
+        "data": "2022-01-21",
         "status": "P"
     }
 },
@@ -648,7 +4148,7 @@
         "usuario": [
             "icaro"
         ],
-        "objeto": null,
+        "objeto": "",
         "secretaria": 4,
         "data": "2022-03-23",
         "status": "P"
