@@ -88,29 +88,10 @@
     "pk": 5,
     "fields": {
         "solicitacao": 4,
-        "produto": 1,
+        "produto": "PRODUTO",
+        "produto_id": 1,
         "qtd": 1000,
         "imagem": null
-    }
-},
-{
-    "model": "solicitacao.solicitacaoitem",
-    "pk": 7,
-    "fields": {
-        "solicitacao": 9,
-        "produto": 1,
-        "qtd": 200,
-        "imagem": "produto_imagens/2022/03/176161z_3.webp"
-    }
-},
-{
-    "model": "solicitacao.solicitacaoitem",
-    "pk": 8,
-    "fields": {
-        "solicitacao": 9,
-        "produto": 1,
-        "qtd": 200,
-        "imagem": ""
     }
 },
 {
@@ -118,7 +99,8 @@
     "pk": 18,
     "fields": {
         "solicitacao": 5,
-        "produto": 1,
+        "produto": "PRODUTO",
+        "produto_id": 1,
         "qtd": 200,
         "imagem": "produto_imagens/2022/03/176161z_3.webp"
     }
@@ -128,47 +110,173 @@
     "pk": 19,
     "fields": {
         "solicitacao": 5,
-        "produto": 1,
+        "produto": "PRODUTO",
+        "produto_id": 1,
         "qtd": 200,
         "imagem": ""
     }
 },
 {
     "model": "solicitacao.solicitacaoitem",
-    "pk": 45,
+    "pk": 74,
     "fields": {
         "solicitacao": 9,
-        "produto": 1,
-        "qtd": 100,
-        "imagem": "produto_imagens/2022/03/176161z_3.webp"
-    }
-},
-{
-    "model": "solicitacao.solicitacaoitem",
-    "pk": 46,
-    "fields": {
-        "solicitacao": 9,
-        "produto": 1,
-        "qtd": 100,
-        "imagem": "produto_imagens/2022/03/176161z_3.webp"
-    }
-},
-{
-    "model": "solicitacao.solicitacaoitem",
-    "pk": 47,
-    "fields": {
-        "solicitacao": 9,
-        "produto": 1,
+        "produto": "CABO DE TELEFONE PAR TRANÃADO - 100 METROS",
+        "produto_id": 73,
         "qtd": 10,
         "imagem": ""
     }
 },
 {
     "model": "solicitacao.solicitacaoitem",
-    "pk": 63,
+    "pk": 75,
+    "fields": {
+        "solicitacao": 9,
+        "produto": "ALICATE BICO MEIA CANA",
+        "produto_id": 371,
+        "qtd": 9,
+        "imagem": ""
+    }
+},
+{
+    "model": "solicitacao.solicitacaoitem",
+    "pk": 76,
+    "fields": {
+        "solicitacao": 9,
+        "produto": "ACIONADOR BOT├O V┴LVULA DESCARGA REFER╩NCIA: ORIENTE - ANTERIOR A 1980 OU EQUIVALENTE.",
+        "produto_id": 362,
+        "qtd": 2,
+        "imagem": ""
+    }
+},
+{
+    "model": "solicitacao.solicitacaoitem",
+    "pk": 80,
     "fields": {
         "solicitacao": 2,
-        "produto": 1,
+        "produto": "Caneta Preta",
+        "produto_id": 77,
+        "qtd": 1,
+        "imagem": "produto_imagens/2022/03/176161z_3.webp"
+    }
+},
+{
+    "model": "solicitacao.solicitacaoitem",
+    "pk": 81,
+    "fields": {
+        "solicitacao": 2,
+        "produto": "Rodabanca de 20cm largura e 45 cm de comprimento",
+        "produto_id": 78,
+        "qtd": 1,
+        "imagem": ""
+    }
+},
+{
+    "model": "solicitacao.solicitacaoitem",
+    "pk": 82,
+    "fields": {
+        "solicitacao": 2,
+        "produto": "CIMENTO CPII - PORTLAND PACOTE 50KG",
+        "produto_id": 79,
+        "qtd": 2,
+        "imagem": ""
+    }
+},
+{
+    "model": "solicitacao.solicitacaoitem",
+    "pk": 83,
+    "fields": {
+        "solicitacao": 2,
+        "produto": "DISCO PORCELANATO DIAMANTADO DIAMANTE AZUL",
+        "produto_id": 465,
+        "qtd": 10000,
+        "imagem": ""
+    }
+},
+{
+    "model": "solicitacao.solicitacaoitem",
+    "pk": 84,
+    "fields": {
+        "solicitacao": 2,
+        "produto": "FERRO PARA SOLDA COM SUPORTE - 30W - 127V",
+        "produto_id": 482,
+        "qtd": 100000,
+        "imagem": ""
+    }
+},
+{
+    "model": "solicitacao.solicitacaoitem",
+    "pk": 85,
+    "fields": {
+        "solicitacao": 2,
+        "produto": "JOGO DE GUARNIÃ├O (ALISAR) PARA PORTA DE GIRO \"ANGELIN\" 6 CM",
+        "produto_id": 521,
+        "qtd": 99999,
+        "imagem": ""
+    }
+},
+{
+    "model": "solicitacao.solicitacaoitem",
+    "pk": 88,
+    "fields": {
+        "solicitacao": 10,
+        "produto": "ALICATE DE CORTE DIAGONAL",
+        "produto_id": 86,
+        "qtd": 1000,
+        "imagem": ""
+    }
+},
+{
+    "model": "solicitacao.solicitacaoitem",
+    "pk": 89,
+    "fields": {
+        "solicitacao": 10,
+        "produto": "DISCO DE CORTE INOX 4 ╣/▓",
+        "produto_id": 87,
+        "qtd": 1111,
+        "imagem": ""
+    }
+},
+{
+    "model": "solicitacao.solicitacaoitem",
+    "pk": 90,
+    "fields": {
+        "solicitacao": 10,
+        "produto": "FERRO PARA SOLDA COM SUPORTE - 30W - 127V",
+        "produto_id": 482,
+        "qtd": 5555,
+        "imagem": ""
+    }
+},
+{
+    "model": "solicitacao.solicitacaoitem",
+    "pk": 91,
+    "fields": {
+        "solicitacao": 11,
+        "produto": "CELITE CUBA EMBUTIR OVAL S/LAD BRANCO 49x32,5 REF 1761170017300",
+        "produto_id": 436,
+        "qtd": 1,
+        "imagem": ""
+    }
+},
+{
+    "model": "solicitacao.solicitacaoitem",
+    "pk": 92,
+    "fields": {
+        "solicitacao": 12,
+        "produto": "MALHA DO CARRO DE IMPRESS├O PARA EQUIPAMENTO  PLOTTER HP DESIGNJET 4500 PRINTER SERIES",
+        "produto_id": 355,
+        "qtd": 1,
+        "imagem": ""
+    }
+},
+{
+    "model": "solicitacao.solicitacaoitem",
+    "pk": 93,
+    "fields": {
+        "solicitacao": 12,
+        "produto": "GAL├O TINTA AREIA ESMALTE 3,6 ML",
+        "produto_id": 502,
         "qtd": 1,
         "imagem": ""
     }
@@ -4111,7 +4219,7 @@
         ],
         "objeto": "AquisiþÒo de caneta preta para a Secretaria de EducaþÒo do MunicÝpio de Vßrzea Alegre",
         "secretaria": 1,
-        "data": "2022-01-21",
+        "data": "2022-01-18",
         "status": "P"
     }
 },
@@ -4200,8 +4308,47 @@
         "usuario": [
             "icaro"
         ],
-        "objeto": "AquisiþÒo de material de construþÒo para reforma da secretaria de infraestrutura ",
+        "objeto": "AquisiþÒo de material de construþÒo para reforma da secretaria de infraestrutura",
         "secretaria": 2,
+        "data": "2022-04-01",
+        "status": "P"
+    }
+},
+{
+    "model": "solicitacao.solicitacao",
+    "pk": 10,
+    "fields": {
+        "usuario": [
+            "icaro"
+        ],
+        "objeto": "ContrataþÒo de serviþo de fiscalizaþÒo de contrato",
+        "secretaria": 2,
+        "data": "2022-04-03",
+        "status": "P"
+    }
+},
+{
+    "model": "solicitacao.solicitacao",
+    "pk": 11,
+    "fields": {
+        "usuario": [
+            "icaro"
+        ],
+        "objeto": "AquisiþÒo de ................................................",
+        "secretaria": 1,
+        "data": "2022-04-06",
+        "status": "P"
+    }
+},
+{
+    "model": "solicitacao.solicitacao",
+    "pk": 12,
+    "fields": {
+        "usuario": [
+            "icaro"
+        ],
+        "objeto": "ContratþÒo de serviþo de ...................",
+        "secretaria": 3,
         "data": "2022-04-02",
         "status": "P"
     }
