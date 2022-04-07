@@ -66,7 +66,7 @@
                           Quantidade: 
                           <input name="quantidade-{{item.id}}" id="quantidade-{{item.id}}" type="number" class="form-text form-control mr-2 ml-2" 
                           onchange="modifica_quantidade({{item.id}})" required value="{{item.qtd}}">
-                        <a href="#" class="btn btn-danger li-produto mr-1" onclick='removerProduto("li-{{item.id}}",{{item.id}})'>
+                        <a href="javascript:void(0)" class="btn btn-danger li-produto mr-1" onclick='removerProduto("li-{{item.id}}",{{item.id}})'>
                           <i class="fas fa-trash-can"></i>
                         </a>
                       </div>
