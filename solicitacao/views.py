@@ -2,8 +2,8 @@ import os
 import tempfile
 from datetime import datetime
 from pprint import pprint
-from typing import Any
 
+from decouple import config
 from django.contrib.auth.forms import PasswordResetForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
@@ -208,7 +208,8 @@ def password_reset_request(request):
                     email_template_name = "password/templates/password_reset_email.txt"
                     c = {
                         "email": user.email,
-                        'domain': '127.0.0.1:8000',
+                        # 'domain': '127.0.0.1:8000',
+                        'domain': config('DOMAIN_URL'),
                         'site_name': 'Solicitação v1.0',
                         "uid": urlsafe_base64_encode(force_bytes(user.pk)),
                         "user": user,
@@ -217,7 +218,7 @@ def password_reset_request(request):
                     }
                     email = render_to_string(email_template_name, c)
                     try:
-                        send_mail(subject, email, 'contato@icarodavi.com',
+                        send_mail(subject, email, 'icarodavi@gmail.com',
                                   [user.email], fail_silently=False)
                     except BadHeaderError:
                         return HttpResponse('Invalid header found.')
