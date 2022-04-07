@@ -47,8 +47,8 @@
                   <tbody>
                     {% for solicitacao in solicitacoes %}
                   <tr>
-                    <td><a href="{% url 'solicitacao:edit' solicitacao.id %}">{{solicitacao.id}}</a></td>
-                    <td>{{solicitacao.secretaria.get_nome}}</td>
+                    <td>{{solicitacao.id}}</td>
+                    <td><a href="{% url 'solicitacao:edit' solicitacao.id %}">{{solicitacao.secretaria.get_nome}}</a></td>
                     <td>{{solicitacao.objeto}}</td>
                     <td>{{solicitacao.data}}</td>
                     <td>{{solicitacao.get_status_display}}</td>
