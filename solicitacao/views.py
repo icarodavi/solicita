@@ -204,7 +204,7 @@ def password_reset_request(request):
             associated_users = User.objects.filter(Q(email=data))
             if associated_users.exists():
                 for user in associated_users:
-                    subject = "Password Reset Requested"
+                    subject = "Requisição para resetar senha - Solicitações App"
                     email_template_name = "password/templates/password_reset_email.txt"
                     c = {
                         "email": user.email,
@@ -214,7 +214,7 @@ def password_reset_request(request):
                         "uid": urlsafe_base64_encode(force_bytes(user.pk)),
                         "user": user,
                         'token': default_token_generator.make_token(user),
-                        'protocol': 'http',
+                        'protocol': config('DOMAIN_PROTOCOL'),
                     }
                     email = render_to_string(email_template_name, c)
                     try:

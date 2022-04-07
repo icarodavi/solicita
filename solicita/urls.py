@@ -21,7 +21,7 @@ from django.urls import include, path
 from solicitacao.views import password_reset_request
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('__admin___/', admin.site.urls),
     path('perfil/', include('perfil.urls')),
     path('produto/', include('produto.urls')),
     path('prefeitura/', include('prefeitura.urls')),
