@@ -20,6 +20,7 @@ class Solicitacao(models.Model):
     class Meta:
         verbose_name = 'Solicitação'
         verbose_name_plural = 'Solicitações'
+        ordering = ['-id']
 
 
 class SolicitacaoItem(models.Model):

@@ -42,17 +42,14 @@ class SolicitacaoIndex(LoginRequiredMixin, ListView):
         query_set = query_set.select_related('secretaria')
         return query_set
 
+    class Meta:
+        ordering = ['-id']
+
 
 class SolicitacaoDetailView(LoginRequiredMixin, DetailView):
     model = Solicitacao
     template_name = "solicitacao/solicitacao.html"
     context_object_name = 'solicitacao'
-
-    # def get(self):
-    #     return render(self.request, self.template_name)
-    # def get_queryset(self):
-    #     qs = super().get_queryset()
-    #     qs = qs.select_related()
 
 
 class SolicitacaoPDF(LoginRequiredMixin, View):
@@ -71,9 +68,6 @@ class SolicitacaoPDF(LoginRequiredMixin, View):
         # find the template and render it.
         template = get_template(template_path)
         html = template.render(context)
-        # pprint(solicitacao.secretaria.prefeitura.logotipo.open())
-        # pprint(dir(solicitacao.secretaria.prefeitura.logotipo))
-        # pprint(vars(solicitacao.secretaria.prefeitura.logotipo))
         # create a pdf
         pisa_status = pisa.CreatePDF(
             html, dest=response)

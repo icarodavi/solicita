@@ -85,7 +85,7 @@ class ProdutoSearch(LoginRequiredMixin, View):
         })
 
 
-class Buscador(View):
+class Buscador(LoginRequiredMixin, View):
     def get(self, *args, **kwargs):
         solicitacao = Solicitacao.objects.filter(pk=kwargs.get(
             'pk')).first()
@@ -118,7 +118,7 @@ class Buscador(View):
         return redirect('solicitacao:edit', solicitacao.id)
 
 
-class Blank(View):
+class Blank(LoginRequiredMixin, View):
     def get(self, *args, **kwargs):
         return render(self.request, 'produto/blank.html')
 
