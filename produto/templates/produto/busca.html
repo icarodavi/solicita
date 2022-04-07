@@ -65,7 +65,7 @@
                         <div class="form-row form-inline">
                           Quantidade: 
                           <input name="quantidade-{{item.id}}" id="quantidade-{{item.id}}" type="number" class="form-text form-control mr-2 ml-2" 
-                          onchange="modifica_quantidade({{item.id}})" required value="{{item.qtd}}">
+                          onchange="modifica_quantidade({{item.id}})" required value="{{item.quantidade}}">
                         <a href="#" class="btn btn-danger li-produto mr-1" onclick='removerProduto("li-{{item.id}}",{{item.id}})'>
                           <i class="fas fa-trash-can"></i>
                         </a>
@@ -132,6 +132,7 @@
           input: {
             selection: (event) => {
               const selection = event.detail.selection.value;
+              selection.remover = false;
               adiciciona_produto_e_verifica_adicao(selection);
             },
           },
@@ -174,24 +175,30 @@
         </li>`;
           atualiza_obj();
         }
-      }
+        /*for (let i = 0; i < ob.length; i++) {
+          if(ob[i].quantidade) {
+            id_qtd = "quantidade-"+ob[i].id;
+            element = document.getElementById(id_qtd);
+            element.value = ob[i].quantidade;
+          }*/
+        }
       
       function atualiza_obj() {
         objProdutos.value = JSON.stringify(ob);
         for (let i = 0; i < ob.length; i++) {
-          if(ob[i].qtd) {
+          if(ob[i].quantidade) {
             id_qtd = "quantidade-"+ob[i].id;
             element = document.getElementById(id_qtd);
-            element.value = ob[i].qtd;
+            element.value = ob[i].quantidade;
           }
         }
       }
       function removerProduto(item, id) {
         for (let i = 0; i < ob.length; i++) {
           if (ob[i].id == id) {
-            //ob[i].delete = true;
-            // ob[i].remover = true;
-            ob.splice(i, 1);
+            ob[i].delete = true;
+            ob[i].remover = true;
+            // ob.splice(i, 1);
             document.getElementById(item).remove();
           }
         }
@@ -203,7 +210,7 @@
           if (ob[i].id == item) {
             id_qtd = "quantidade-"+item;
             let obj = document.getElementById(id_qtd);
-            ob[i].qtd = obj.value;
+            ob[i].quantidade = obj.value;
             atualiza_obj();
             console.log(ob);
           }

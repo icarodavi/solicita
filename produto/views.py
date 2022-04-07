@@ -76,6 +76,7 @@ class ProdutoSearch(LoginRequiredMixin, View):
                     'descricao_longa': item.descricao_longa,
                     'imagem': item.imagem.name,
                     'unidade': item.unidade,
+                    'delete': False,
                 })
 
         return JsonResponse({
@@ -100,6 +101,8 @@ class Buscador(View):
     def post(self, *args, **kwargs):
 
         data = json.loads(self.request.POST.get('objProdutos'))
+        # pprint(data)
+        data_final = copy.deepcopy(data)
         produtos = {'produtos': data}
         solicitacao = Solicitacao.objects.filter(
             pk=kwargs.get('pk')).first()
@@ -115,6 +118,17 @@ class Buscador(View):
         solicitacao.solicitacaoitem_set.set(list_data, bulk=False, clear=True)
 
         return render(self.request, 'produto/blank.html', context=produtos)
+
+    def verifica_deletados(self, lista_deletados, lista_banco, *args, **kwargs):
+        deletados = [{'id': x.__dict__['id'],
+                      'solicitacao_id': x.__dict__['solicitacao_id'],
+                      'produto': x.__dict__['produto'],
+                      'produto_id': x.__dict__['produto_id'],
+                      'quantidade': x.__dict__['quantidade'],
+                      'imagem': x.__dict__['imagem'],
+                      } for x in lista_deletados]
+
+        return deletados
 
 
 class Blank(View):
