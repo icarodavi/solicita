@@ -29,9 +29,7 @@ class Prefeitura(models.Model):
         return f'Prefeitura de {self.nome}'
 
     def save(self, *args, **kwargs):
-
         super().save(*args, **kwargs)
-        print(self.logotipo._file)
 
     def get_logo(self):
         tempdir = tempfile.mkdtemp()
@@ -44,6 +42,8 @@ class Prefeitura(models.Model):
             with open(os.path.join(tempdir, 'logotipo'+filext), "wb") as f:
                 f.write(file.content)
                 logo = f
+        print(url)
+        pprint(file)
         return logo.name
 
     @staticmethod

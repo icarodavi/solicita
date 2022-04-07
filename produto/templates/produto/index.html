@@ -9,10 +9,14 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>Produtos</h1>
-          </div>
+        <div class="row mb-2 d-flex-inline justify-content-between">
+            <div class="col">
+              <h1>Produtos</h1>
+            </div>
+            <div class="col d-flex justify-content-end">
+              <a href="{% url 'produto:add' %}" class="btn btn-info"><i class="fa fa-add"></i> Criar Produto</a>
+            </div>
+          
         </div>
       </div><!-- /.container-fluid -->
     </section>

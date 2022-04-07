@@ -1,15 +1,16 @@
 from pprint import pprint
+
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.shortcuts import redirect, render, get_object_or_404
+from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic.edit import DeleteView, UpdateView
 from django.views.generic.list import ListView
+from utils.resize import resize_image
 
 from .forms import PrefeituraForm
 from .models import Prefeitura
 
-from utils.resize import resize_image
 # Create your views here.
 
 
@@ -36,7 +37,8 @@ class PrefeituraCreate(LoginRequiredMixin, View):
         form = PrefeituraForm(data=self.request.POST, files=self.request.FILES)
         if form.is_valid():
             form.save(commit=False)
-            x = resize_image(form.files.get('logotipo'), 800)
+            # x = resize_image(form.files.get('logotipo'), 800)
+            x = False
             if x:
                 form.files.logotipo = x
                 form.save()

@@ -74,10 +74,10 @@
                 aria-expanded="false" class="dropdown-item dropdown-toggle">Solicitações</a>
               <ul aria-labelledby="dropdownSubMenu2" class="dropdown-menu border-0 shadow">
                 <li>
-                  <a tabindex="-1" href="#" class="dropdown-item">Adicionar Solicitações</a>
+                  <a tabindex="-1" href="{% url 'solicitacao:add' %}" class="dropdown-item">Adicionar Solicitações</a>
                 </li>
                 <li>
-                  <a tabindex="-1" href="#" class="dropdown-item">Listar Solicitações</a>
+                  <a tabindex="-1" href="{% url 'solicitacao:index' %}" class="dropdown-item">Listar Solicitações</a>
                 </li>
               </ul>
             </li>
