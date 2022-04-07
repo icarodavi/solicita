@@ -17,10 +17,7 @@ class Produto(models.Model):
         return f'{self.nome}'
 
     def save(self, *args, **kwargs):
-        # max_img_size = 800
         if not self.slug:
             slug = slugify(self.nome)
             self.slug = slug
         super().save(*args, **kwargs)
-        # if self.imagem:
-        #     resize_image(self.imagem, max_img_size)

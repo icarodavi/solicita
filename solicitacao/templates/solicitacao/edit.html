@@ -28,7 +28,8 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                    <form method="post" action="{{ action_url }}" enctype='multipart/form-data'>
+                    {% comment %} <form method="post" action="{% url 'produto/busca' %}" enctype='multipart/form-data'> {% endcomment %}
+                    <form method="post" action="{{  action_url }}" enctype='multipart/form-data'>
                         {% csrf_token %}
                         {{form|crispy}}
                         <input type="submit" value="Salvar" class="btn btn-success">
@@ -39,4 +40,5 @@
         </div>
     </div>
 </section>
+
 {% endblock %}

@@ -192,12 +192,8 @@ class SolicitacaoEdit(LoginRequiredMixin, UpdateView):
     #     return super().post(request, *args, **kwargs)
 
     def get_success_url(self, *args, **kwargs) -> str:
-        x = self.request.path_info
-        x.split('/')
-        print(x[-1])
-        # pprint(vars(self.request.get_full_path_info()))
-        # return reverse('produto:blank')
-        return reverse('produto:busca', args=[int(x[-1])])
+        x = self.kwargs.get('pk')
+        return reverse('produto:busca', args=[x])
 
 
 class SolicitacaoDeleteView(LoginRequiredMixin, DeleteView):

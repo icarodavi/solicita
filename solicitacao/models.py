@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
 from django.utils.translation import gettext as _
+from produto.models import Produto
 from secretaria.models import Secretaria
 
 
@@ -33,11 +34,14 @@ class SolicitacaoItem(models.Model):
         _("Imagem"), max_length=2000, blank=True, null=True)
 
     def __str__(self):
-        # return f'Item da Solicitação nº {self.solicitacao.id}'
         return self.produto
 
     def get_nome(self):
         return f'{self.produto}'
+
+    def get_unidade(self):
+        unidade = Produto.objects.get(pk=self.produto_id).values('unidade')
+        return f'{unidade}'
 
     class Meta:
         verbose_name = 'Item da Solicitação'
@@ -49,13 +53,10 @@ class SolicitacaoQuantidade(models.Model):
         Solicitacao, on_delete=models.CASCADE, related_name='quantidade')
     item_solicitacao = models.ForeignKey(
         SolicitacaoItem, on_delete=models.CASCADE, related_name='quantidade')
-    quantidade = models.PositiveIntegerField(default=0)
+    # quantidade = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return f'{self.solicitacaoitem.produto} - Qtd: {self.quantidade}'
-
-    def get_qtd(self):
-        return f'{self.quantidade}'
 
     class Meta:
         verbose_name = 'Through Quantidade'

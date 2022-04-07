@@ -101,9 +101,7 @@ class Buscador(View):
     def post(self, *args, **kwargs):
 
         data = json.loads(self.request.POST.get('objProdutos'))
-        # pprint(data)
-        data_final = copy.deepcopy(data)
-        produtos = {'produtos': data}
+        # produtos = {'produtos': data}
         solicitacao = Solicitacao.objects.filter(
             pk=kwargs.get('pk')).first()
         list_data = [SolicitacaoItem(
@@ -113,22 +111,11 @@ class Buscador(View):
             qtd=v['qtd'],
             imagem=v['imagem'],
         ) for v in data]
-
         solicitacao.solicitacaoitem_set.all().delete()
         solicitacao.solicitacaoitem_set.set(list_data, bulk=False, clear=True)
 
-        return render(self.request, 'produto/blank.html', context=produtos)
-
-    def verifica_deletados(self, lista_deletados, lista_banco, *args, **kwargs):
-        deletados = [{'id': x.__dict__['id'],
-                      'solicitacao_id': x.__dict__['solicitacao_id'],
-                      'produto': x.__dict__['produto'],
-                      'produto_id': x.__dict__['produto_id'],
-                      'quantidade': x.__dict__['quantidade'],
-                      'imagem': x.__dict__['imagem'],
-                      } for x in lista_deletados]
-
-        return deletados
+        # return render(self.request, 'produto/blank.html', context=produtos)
+        return redirect('solicitacao:edit', solicitacao.id)
 
 
 class Blank(View):
