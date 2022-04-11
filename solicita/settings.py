@@ -11,11 +11,9 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 from pathlib import Path
 
-import debug_toolbar
 import django_heroku
 from decouple import config
 from django.contrib.messages import constants
-from utils.s3urls import create_presigned_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -84,7 +82,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLIcATION = 'solicita.wsgi.application'
+WSGI_APPLIcATION = 'solicita.wsgi.application'  # pylint: disable=invalid-name
 
 
 # Database
@@ -107,16 +105,16 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',  # noqa: E501 #pylint: disable=line-too-long
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',  # noqa: E501
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',  # noqa: E501
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',  # noqa: E501
     },
 ]
 
@@ -167,13 +165,13 @@ django_heroku.settings(locals())
 
 # STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 # STATIC_URL = 'https://solicitacao.herokuapp.com/static/'
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' # noqa: E501
 
 AWS_S3_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 AWS_S3_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
 AWS_S3_FILE_OVERWRITE = True
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME  # noqa: E501 #pylint: disable=consider-using-f-string
 AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400',
 }
@@ -187,7 +185,8 @@ AWS_HEADERS = {'Access-Control-Allow-Origin': '*'}
 AWS_PUBLIC_MEDIA_LOCATION = 'media/public'
 DEFAULT_FILE_STORAGE = 'solicita.storage_backends.PublicMediaStorage'
 STATICFILES_STORAGE = 'solicita.storage_backends.StaticStorage'
-STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN,  # noqa: E501 #pylint: disable=consider-using-f-string
+                                 AWS_LOCATION)  # noqa: E501 # pylint: disable=unused-argument
 AWS_PRIVATE_MEDIA_LOCATION = 'media/private'
 PRIVATE_FILE_STORAGE = 'solicita.storage_backends.PrivateMediaStorage'
 
@@ -197,13 +196,13 @@ INTERNAL_IPS = [
     # ...
 ]
 if DEBUG:
-    def show_toolbar(request):
+    def show_toolbar(request):  # type: ignore #pylint: disable=unused-argument
         return True
     DEBUG_TOOLBAR_CONFIG = {
         "SHOW_TOOLBAR_CALLBACK": show_toolbar
     }
-#
-#APPEND_SLASH = False
+
+
 TEMPUS_DOMINUS_LOCALIZE = True
 TEMPUS_DOMINUS_ASSETS = True
 TEMPUS_DOMINUS_DATE_FORMAT = 'DD/MM/YYYY'
